@@ -1,24 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    // Liste des objets dans l'inventaire
-    [SerializeField] private List<GameObject> items;
+    [SerializeField] private InventoryDisplay Display;
+    private InventoryData data;
 
-    // UI inventaire
-    [SerializeField] private GameObject UIWindow;
-
-    // Start is called before the first frame update
-    void Start()
+    // Awake is called when the script instance is being loaded.
+    void Awake()
     {
-        
+        int slotCount = Display.Initialize();
+
+        //data = new InventoryData();
     }
 
-    // Update is called once per frame
-    void Update()
+    public Item AddItem(Item _item)
     {
-        
+        return _item;
+    }
+
+    public Item PickItem(int IDSlot)
+    {
+        return new Item();
     }
 }
+
+// Affichage de l'inventaire
+public class InventoryDisplay : MonoBehaviour
+{
+    private Slot[] slots;
+    public int Initialize()
+    {
+        slots = GetComponentsInChildren<Slot>();
+        return slots.Length;
+    }
+
+    public void UpdateDisplay(Item[] dataArray)
+    {
+
+    }
+}
+
+public class InventoryData
+{
+    public InventoryData(int slotCount)
+    {
+        items = new Item[slotCount];
+    }
+
+    public Item[] items { private set; get;}
+}
+

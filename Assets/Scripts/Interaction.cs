@@ -28,5 +28,6 @@ public class Interaction : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Je touche "+other);
+        InteractInput();
     }
 }
