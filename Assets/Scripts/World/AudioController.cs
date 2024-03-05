@@ -20,7 +20,7 @@ public class AudioController : MonoBehaviour
        gameObject.AddComponent<AudioSource>();
        Source = GetComponent<AudioSource>();
 
-       Volume = 0.5f;
+       Volume = 0.2f;
        Pitch = 1f; 
     }
 
