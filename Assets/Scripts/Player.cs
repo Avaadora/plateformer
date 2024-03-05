@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         UpdateGroundCheckOffset();
         HorizontalInput = Input.GetAxisRaw("Horizontal");
 
-        Collider2D col = Physics2D.OverlapBox(GroundCheckPosition, new Vector2(GroundCheckWidth, GroundCheckHeight), 0, JumpLayerMask); //Overlap -> boîte fictive qui permets de checks si le payer est en collision avec le sol ou pas pour le faire sauter
+        Collider2D col = Physics2D.OverlapBox(GroundCheckPosition, new Vector2(GroundCheckWidth, GroundCheckHeight), 0, JumpLayerMask); //Overlap -> boîte fictive qui permets de checks si le player est en collision avec le sol ou pas pour le faire sauter
         // isGrounded = (col != null); //If statement plus court
         if (col != null)
         {
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    //Permet de temporisé un certain temps (CoyoteTime), sur le saut hors d'une plateforme 
+    //Permet de temporiser un certain temps (CoyoteTime), sur le saut hors d'une plate-forme 
     private IEnumerator UpdateisGroundedState(bool isGroundedState)
     {
         yield return new WaitForSeconds(CoyoteTime);
