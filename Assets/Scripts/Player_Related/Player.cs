@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    
     public GameManager gameManager;
 
     [SerializeField] private float JumpForce;
@@ -22,7 +21,7 @@ public class Player : MonoBehaviour
     private float HorizontalInput;
     private Vector2 GroundCheckPosition;
     private float GravityScale;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -43,11 +42,11 @@ public class Player : MonoBehaviour
             //Sol sous les pieds
             gameManager.setIsGrounded(true);
         }
-        else if(gameManager.getIsGrounded())
+        else if (gameManager.getIsGrounded())
         {
             //En l'air mais a sauté donc sol sous les pieds
             StartCoroutine(UpdateisGroundedState(false)); //Assynchrone
-        }      
+        }
 
         if (Input.GetButton("Jump") && gameManager.getIsGrounded())
         {
@@ -107,13 +106,10 @@ public class Player : MonoBehaviour
         GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - height / 2f);
     }
 
-    /// <summary>
-    /// Callback to draw gizmos that are pickable and always drawn.
-    /// </summary>
+    // Callback to draw gizmos that are pickable and always drawn.
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawCube(GroundCheckPosition, new Vector2(GroundCheckWidth, GroundCheckHeight));
     }
-
 }

@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private int ItemCount;
     [SerializeField] List<Item> ContentInventory = new List<Item>();
+    private Item ItemToPickUp;
 
     public static Inventory instance;
-
 
     // Awake is called when the script instance is being loaded.
     void Awake()
@@ -27,13 +26,15 @@ public class Inventory : MonoBehaviour
         //ContentInventory.Remove(currentItem) -> pour enlever l'élément de la liste et donc de l'inventaire
     }
 
-    public void AddItem(int count)
+    public void AddItemToInventory(Item Item)
     {
-        ItemCount += count;
+        Debug.Log(ItemToPickUp);
+        ContentInventory.Add(ItemToPickUp);
+        // ItemCount += count;
     }
 
     public void RemoveItem(int count)
     {
-        ItemCount -= count;
+        // ItemCount -= count;
     }
 }
