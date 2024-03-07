@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] List<Item> ContentInventory = new List<Item>();
-    private Item ItemToPickUp;
+    // private Item ItemToPickUp;
 
     public static Inventory instance;
 
@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
         //ContentInventory.Remove(currentItem) -> pour enlever l'élément de la liste et donc de l'inventaire
     }
 
-    public void AddItemToInventory(Item Item)
+    public void AddItemToInventory(Item ItemToPickUp)
     {
         Debug.Log(ItemToPickUp);
         ContentInventory.Add(ItemToPickUp);
