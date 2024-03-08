@@ -5,8 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] List<Item> ContentInventory = new List<Item>();
-    // private Item ItemToPickUp;
-
+    private Sprite InventoryUI;
     public static Inventory instance;
 
     // Awake is called when the script instance is being loaded.
@@ -20,6 +19,11 @@ public class Inventory : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        InventoryUI = GetComponent<Sprite>();
+    }
+
     public void UseItem()
     {
         Debug.Log("Item sorti de l'inventaire pour le cuisiner");
@@ -28,13 +32,28 @@ public class Inventory : MonoBehaviour
 
     public void AddItemToInventory(Item ItemToPickUp)
     {
-        Debug.Log(ItemToPickUp);
+        //Debug.Log(ItemToPickUp);
         ContentInventory.Add(ItemToPickUp);
-        // ItemCount += count;
     }
 
-    public void RemoveItem(int count)
+    public void LinkedToUI(Item ItemToPickUp)
     {
-        // ItemCount -= count;
+        foreach (var item in ContentInventory)
+        {
+            if (true)
+            {
+
+            }
+
+        }
+
+
     }
+
+
+
+    // public void RemoveItem(int count)
+    // {
+    //     // ItemCount -= count;
+    // }
 }
