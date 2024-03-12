@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 240148428}
   m_Layer: 5
   m_Name: Item_Sprite
-  m_TagString: Untagged
+  m_TagString: Slot_Item_Sprite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8117ad03e7d28324f97b6eddfdcd1e1d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 447636096}
   m_Layer: 5
   m_Name: Item_Sprite
-  m_TagString: Untagged
+  m_TagString: Slot_Item_Sprite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8117ad03e7d28324f97b6eddfdcd1e1d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 632221008}
   m_Layer: 5
   m_Name: Item_Sprite
-  m_TagString: Untagged
+  m_TagString: Slot_Item_Sprite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1095,7 +1095,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3c0f49491ca1984db8f070190a53b2a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1228,7 +1228,7 @@ GameObject:
   - component: {fileID: 709200173}
   m_Layer: 5
   m_Name: Item_Sprite
-  m_TagString: Untagged
+  m_TagString: Slot_Item_Sprite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8117ad03e7d28324f97b6eddfdcd1e1d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1745,7 +1745,7 @@ GameObject:
   - component: {fileID: 1023133897}
   m_Layer: 5
   m_Name: Item_Sprite
-  m_TagString: Untagged
+  m_TagString: Slot_Item_Sprite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1789,7 +1789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8117ad03e7d28324f97b6eddfdcd1e1d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3749,7 +3749,7 @@ GameObject:
   - component: {fileID: 1817352234}
   m_Layer: 5
   m_Name: Item_Sprite
-  m_TagString: Untagged
+  m_TagString: Slot_Item_Sprite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3793,7 +3793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8117ad03e7d28324f97b6eddfdcd1e1d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3910,7 +3910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e511f4e86a6ddd42bbcfc24570fad32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 844786919}
   JumpForce: 4.8
   GroundCheckWidth: 0.9
   GroundCheckHeight: 0.1

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] List<Item> ContentInventory = new List<Item>();
-    private Sprite InventoryUI;
+    // private Sprite InventoryUI;
     public static Inventory instance;
 
     // Awake is called when the script instance is being loaded.
@@ -21,7 +21,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        InventoryUI = GetComponent<Sprite>();
+        // InventoryUI = GetComponent<Sprite>();
     }
 
     public void UseItem()
@@ -36,24 +36,12 @@ public class Inventory : MonoBehaviour
         ContentInventory.Add(ItemToPickUp);
     }
 
-    public void LinkedToUI(Item ItemToPickUp)
+    public void LinkedToUI(Item ItemStored)
     {
-        foreach (var item in ContentInventory)
+        if (ContentInventory.Contains(ItemStored))
         {
-            if (true)
-            {
-
-            }
+            //Remplacer le sprite de l'image vide par celui de l'item
 
         }
-
-
     }
-
-
-
-    // public void RemoveItem(int count)
-    // {
-    //     // ItemCount -= count;
-    // }
 }

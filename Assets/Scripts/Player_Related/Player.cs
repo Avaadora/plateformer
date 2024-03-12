@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameManager gameManager;
-
     [SerializeField] private float JumpForce;
 
     [SerializeField] private float GroundCheckWidth;
@@ -27,6 +25,7 @@ public class Player : MonoBehaviour
     {
         RbPlayer = GetComponent<Rigidbody2D>();
         GravityScale = RbPlayer.gravityScale;
+        
     }
 
     // Update is called once per frame
@@ -40,21 +39,21 @@ public class Player : MonoBehaviour
         if (col != null)
         {
             //Sol sous les pieds
-            gameManager.setIsGrounded(true);
+            GameManager.instanceGM.setIsGrounded(true);
         }
-        else if (gameManager.getIsGrounded())
+        else if (GameManager.instanceGM.getIsGrounded())
         {
             //En l'air mais a sauté donc sol sous les pieds
             StartCoroutine(UpdateisGroundedState(false)); //Assynchrone
         }
 
-        if (Input.GetButton("Jump") && gameManager.getIsGrounded())
+        if (Input.GetButton("Jump") && GameManager.instanceGM.getIsGrounded())
         {
-            gameManager.setIsJumping(true);
+            GameManager.instanceGM.setIsJumping(true);
         }
         else
         {
-            gameManager.setIsJumping(false);
+            GameManager.instanceGM.setIsJumping(false);
         }
     }
 
@@ -62,7 +61,7 @@ public class Player : MonoBehaviour
     {
         Move();
 
-        if (gameManager.getIsJumping())
+        if (GameManager.instanceGM.getIsJumping())
         {
             Jump();
         }
@@ -83,15 +82,15 @@ public class Player : MonoBehaviour
     private IEnumerator UpdateisGroundedState(bool isGroundedState)
     {
         yield return new WaitForSeconds(CoyoteTime);
-        gameManager.setIsGrounded(isGroundedState);
+        GameManager.instanceGM.setIsGrounded(isGroundedState);
     }
 
     // Déplacement du joueur sur l'axe horizontal
     //OPTI : Tout mettre dans le FixedUpdate()
     private void Move()
     {
-        Vector2 targetVelocity = new Vector2(HorizontalInput * gameManager.getSpeed(), RbPlayer.velocity.y);
-        RbPlayer.velocity = Vector2.SmoothDamp(RbPlayer.velocity, targetVelocity, ref targetVelocity, gameManager.getSmoothing());
+        Vector2 targetVelocity = new Vector2(HorizontalInput * GameManager.instanceGM.getSpeed(), RbPlayer.velocity.y);
+        RbPlayer.velocity = Vector2.SmoothDamp(RbPlayer.velocity, targetVelocity, ref targetVelocity, GameManager.instanceGM.getSmoothing());
     }
 
     private void Jump()

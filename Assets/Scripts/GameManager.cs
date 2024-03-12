@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public static GameManager instanceGM;
+
     #region Player
     /*-------------VARIABLES PLAYER-------------*/
     [SerializeField] private float Speed; //Vitesse du player

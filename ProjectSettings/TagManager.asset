@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - Slot_Item
+  - Slot_Item_Sprite
   layers:
   - Default
   - TransparentFX
