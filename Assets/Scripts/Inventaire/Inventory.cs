@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] List<Item> ContentInventory = new List<Item>();
-    // private Sprite InventoryUI;
     public static Inventory instance;
 
+    [SerializeField] List<Item> ContentInventory = new List<Item>();
+   // [SerializeField] private GameObject InventoryUI;
+    
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
@@ -21,7 +23,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        // InventoryUI = GetComponent<Sprite>();
+        //InventoryUI = GetComponent<GameObject>();
     }
 
     public void UseItem()
@@ -36,12 +38,12 @@ public class Inventory : MonoBehaviour
         ContentInventory.Add(ItemToPickUp);
     }
 
-    public void LinkedToUI(Item ItemStored)
-    {
-        if (ContentInventory.Contains(ItemStored))
-        {
-            //Remplacer le sprite de l'image vide par celui de l'item
-
-        }
-    }
+//     public void LinkedToUI(Item ItemStored)
+//     {
+//         if (ContentInventory.Contains(ItemStored) && InventoryUI.gameObject.CompareTag("Slot_Item_Sprite"))
+//         {
+//             //Remplacer le sprite de l'image vide par celui de l'item
+//             //InventoryUI = ItemStored.ItemImage;
+//         }
+//     }
 }

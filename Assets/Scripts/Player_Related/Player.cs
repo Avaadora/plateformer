@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
         {
             //Sol sous les pieds
             GameManager.instanceGM.setIsGrounded(true);
+            // GameManager.instanceGM.setIsGrounded(true);
         }
         else if (GameManager.instanceGM.getIsGrounded())
         {

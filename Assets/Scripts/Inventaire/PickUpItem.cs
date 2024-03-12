@@ -22,6 +22,7 @@ public class PickUpItem : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Inventory.instance.AddItemToInventory(Item);
+            //Inventory.instance.LinkedToUI(Item);
             Destroy(gameObject);
         }
     }

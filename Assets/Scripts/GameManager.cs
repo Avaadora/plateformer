@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager instanceGM;
 
     #region Player
     /*-------------VARIABLES PLAYER-------------*/
-    [SerializeField] private float Speed; //Vitesse du player
-    [SerializeField] private float Smoothing; //Valeur de smoothing accélération au départ et ralentissement lors de l'arrêt du joueur
-    private bool isJumping;
-    private bool isGrounded;
+    [SerializeField] private float Speed; // Vitesse du player
+    [SerializeField] private float Smoothing; // Valeur de smoothing accélération au départ et ralentissement lors de l'arrêt du joueur
+    [SerializeField] private bool isJumping;
+    [SerializeField] private bool isGrounded;
+
     /*-------------GETTERS & SETTERS PLAYER-------------*/
     public bool getIsJumping()
     {
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         Speed = SpeedPlayer;
     }
 
-        public float getSmoothing()
+    public float getSmoothing()
     {
         return Smoothing;
     }
@@ -55,5 +55,16 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    
+    // Awake is called when the script instance is being loaded.
+    void Awake()
+    {
+        if (instanceGM != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance GAMEMANAGER dans la scène");
+            return;
+        }
+        instanceGM = this;
+    }
+
+
 }
