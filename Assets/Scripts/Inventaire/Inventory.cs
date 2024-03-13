@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
 
     [SerializeField] List<Item> ContentInventory = new List<Item>();
-   // [SerializeField] private GameObject InventoryUI;
-    
+    [SerializeField] Dictionary<GameObject, SpriteRenderer> InventoryUI = new Dictionary<GameObject, SpriteRenderer>();
+    [SerializeField] private SpriteRenderer ItemSpriteUI;
+
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
@@ -23,7 +25,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        //InventoryUI = GetComponent<GameObject>();
+        ItemSpriteUI.GetComponent<SpriteRenderer>();
     }
 
     public void UseItem()
@@ -36,14 +38,19 @@ public class Inventory : MonoBehaviour
     {
         //Debug.Log(ItemToPickUp);
         ContentInventory.Add(ItemToPickUp);
+        LinkedToUI(ItemToPickUp);
     }
 
-//     public void LinkedToUI(Item ItemStored)
-//     {
-//         if (ContentInventory.Contains(ItemStored) && InventoryUI.gameObject.CompareTag("Slot_Item_Sprite"))
-//         {
-//             //Remplacer le sprite de l'image vide par celui de l'item
-//             //InventoryUI = ItemStored.ItemImage;
-//         }
-//     }
+    public void LinkedToUI(Item ItemStored)
+    {
+        for (int i = 0; i < InventoryUI.Count; i++)
+        {
+            InventoryUI.Add(gameObject.transform.GetChild(i).GetChild(0).gameObject, ItemSpriteUI); // InventoryUI : récupère l'enfant de l'enfant du Item_Panel avec son sprite
+
+            if (ContentInventory.Contains(ItemStored))
+            {
+                ItemSpriteUI = ItemStored.ItemSprite;
+            }
+        }
+    }
 }
