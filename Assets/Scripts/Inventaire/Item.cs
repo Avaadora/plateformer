@@ -7,7 +7,7 @@ public class Item : ScriptableObject
 {
     [SerializeField] private string ItemName;
     [SerializeField] private string ItemDescription;
-    [SerializeField] public SpriteRenderer ItemSprite;
+    [SerializeField] public Sprite ItemSprite;
     [SerializeField] float Sweetness;
     [SerializeField] float Bitterness;
 }

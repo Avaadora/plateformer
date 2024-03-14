@@ -9,8 +9,7 @@ public class Inventory : MonoBehaviour
     public static Inventory instance;
 
     [SerializeField] List<Item> ContentInventory = new List<Item>();
-    [SerializeField] Dictionary<GameObject, SpriteRenderer> InventoryUI = new Dictionary<GameObject, SpriteRenderer>();
-    [SerializeField] private SpriteRenderer ItemSpriteUI;
+    Image SlotInventory;
 
     // Awake is called when the script instance is being loaded.
     void Awake()
@@ -25,7 +24,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        ItemSpriteUI.GetComponent<SpriteRenderer>();
+
     }
 
     public void UseItem()
@@ -36,20 +35,12 @@ public class Inventory : MonoBehaviour
 
     public void AddItemToInventory(Item ItemToPickUp)
     {
-        //Debug.Log(ItemToPickUp);
         ContentInventory.Add(ItemToPickUp);
-        LinkedToUI(ItemToPickUp);
-    }
-
-    public void LinkedToUI(Item ItemStored)
-    {
-        for (int i = 0; i < InventoryUI.Count; i++)
+        foreach (var itemToStore in ContentInventory)
         {
-            InventoryUI.Add(gameObject.transform.GetChild(i).GetChild(0).gameObject, ItemSpriteUI); // InventoryUI : récupère l'enfant de l'enfant du Item_Panel avec son sprite
-
-            if (ContentInventory.Contains(ItemStored))
+            if (SlotInventory.sprite == null)
             {
-                ItemSpriteUI = ItemStored.ItemSprite;
+                SlotInventory.sprite = itemToStore.ItemSprite;
             }
         }
     }
