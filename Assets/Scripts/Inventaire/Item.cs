@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Item", menuName = "Inventory Item")]
 public class Item : ScriptableObject
 {
+    [SerializeField] private int Index;
     [SerializeField] private string ItemName;
     [SerializeField] private string ItemDescription;
     [SerializeField] public Sprite ItemSprite;

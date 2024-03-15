@@ -8,9 +8,10 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
 
-    [SerializeField] List<Item> ContentInventory = new List<Item>();
-    Image SlotInventory;
-
+    [SerializeField] private List<Item> ContentInventory = new List<Item>();
+    [SerializeField] private List<Image> SlotsInventory = new List<Image>();
+    [SerializeField] private Image PrefabSlotInventory;
+    [SerializeField] private GameObject ParentInventory;
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
@@ -36,11 +37,18 @@ public class Inventory : MonoBehaviour
     public void AddItemToInventory(Item ItemToPickUp)
     {
         ContentInventory.Add(ItemToPickUp);
-        foreach (var itemToStore in ContentInventory)
+        SlotsInventory.Add(PrefabSlotInventory);
+
+        // Récupération dynamique des slots d'items, pour ne pas avoir de limites dans l'inventaire
+        foreach (var slot in SlotsInventory)
         {
-            if (SlotInventory.sprite == null)
+            if (slot.sprite == null && ContentInventory.Contains(ItemToPickUp))
             {
-                SlotInventory.sprite = itemToStore.ItemSprite;
+                foreach (var item in ContentInventory)
+                {
+                    Instantiate(PrefabSlotInventory, ParentInventory.transform);
+                    slot.sprite = item.ItemSprite;
+                }
             }
         }
     }
