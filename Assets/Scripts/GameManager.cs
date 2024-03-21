@@ -6,6 +6,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instanceGM;
 
+    // Awake is called when the script instance is being loaded.
+    void Awake()
+    {
+        if (instanceGM != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance GAMEMANAGER dans la scène");
+            return;
+        }
+        instanceGM = this;
+    }
+
     #region Player
     /*-------------VARIABLES PLAYER-------------*/
     [SerializeField] private float Speed; // Vitesse du player
@@ -54,17 +65,5 @@ public class GameManager : MonoBehaviour
         Smoothing = SmoothingWalk;
     }
     #endregion
-
-    // Awake is called when the script instance is being loaded.
-    void Awake()
-    {
-        if (instanceGM != null)
-        {
-            Debug.LogWarning("Il y a plus d'une instance GAMEMANAGER dans la scène");
-            return;
-        }
-        instanceGM = this;
-    }
-
 
 }
