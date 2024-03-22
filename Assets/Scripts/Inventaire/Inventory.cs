@@ -37,11 +37,7 @@ public class Inventory : MonoBehaviour
     public void AddItemToInventory(Item ItemToPickUp)
     {
         ContentInventory.Add(ItemToPickUp);
-
         Instantiate(PrefabSlotInventory, ParentInventory.transform);
-
-        Debug.Log(ItemToPickUp.ItemSprite);
-
-        PrefabSlotInventory.GetComponent<Image>().sprite = ItemToPickUp.ItemSprite; // Affichage du sprite dans l'UI, mais ça ne fonctionne pas
+        PrefabSlotInventory.GetComponent<Image>().sprite = ItemToPickUp.ItemSprite; // Affichage du sprite dans l'UI
     }
 }
