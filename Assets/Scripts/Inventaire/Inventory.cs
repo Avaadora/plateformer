@@ -8,10 +8,10 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
 
-    [SerializeField] private List<Item> ContentInventory = new List<Item>();
-    [SerializeField] private List<Image> SlotsInventory = new List<Image>();
-    [SerializeField] private Image PrefabSlotInventory;
+    [SerializeField] private List<Item> ContentInventory = new List<Item>(); // Inventaire qui contient les ITEM
+    [SerializeField] private GameObject PrefabSlotInventory;
     [SerializeField] private GameObject ParentInventory;
+
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
         instance = this;
     }
 
-    private void Start()
+    void Start()
     {
 
     }
@@ -37,19 +37,11 @@ public class Inventory : MonoBehaviour
     public void AddItemToInventory(Item ItemToPickUp)
     {
         ContentInventory.Add(ItemToPickUp);
-        SlotsInventory.Add(PrefabSlotInventory);
 
-        // Récupération dynamique des slots d'items, pour ne pas avoir de limites dans l'inventaire
-        foreach (var slot in SlotsInventory)
-        {
-            if (slot.sprite == null && ContentInventory.Contains(ItemToPickUp))
-            {
-                foreach (var item in ContentInventory)
-                {
-                    Instantiate(PrefabSlotInventory, ParentInventory.transform);
-                    slot.sprite = item.ItemSprite;
-                }
-            }
-        }
+        Instantiate(PrefabSlotInventory, ParentInventory.transform);
+
+        Debug.Log(ItemToPickUp.ItemSprite);
+
+        PrefabSlotInventory.GetComponent<Image>().sprite = ItemToPickUp.ItemSprite; // Affichage du sprite dans l'UI, mais ça ne fonctionne pas
     }
 }
