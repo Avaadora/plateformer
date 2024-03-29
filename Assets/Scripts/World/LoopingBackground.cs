@@ -22,7 +22,6 @@ public class LoopingBackground : MonoBehaviour
             Width = SpriteChild.GetComponent<SpriteRenderer>().bounds.size.x;
             Instantiate(SpriteChild, new Vector3(SpriteChild.position.x + Width, SpriteChild.position.y, 0), Quaternion.identity, transform);
         }
-
     }
 
     // Update is called once per frame
