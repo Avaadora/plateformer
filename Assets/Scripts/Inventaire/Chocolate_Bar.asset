@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141ef5dbd5433614ea6412a37c09af29, type: 3}
   m_Name: Chocolate_Bar
   m_EditorClassIdentifier: 
+  Index: 2
   ItemName: Barre au chocolat
   ItemDescription: Au chocolat au lait
   ItemSprite: {fileID: 1520990331, guid: 57409d6ec1fe7184d9ac8fbea8aeb225, type: 3}
