@@ -5,6 +5,7 @@ using UnityEngine;
 public class FollowsPlayer : MonoBehaviour
 {
     [SerializeField] Transform followTransform;
+    [SerializeField] private float YAjustment;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,6 @@ public class FollowsPlayer : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        transform.position = new Vector3(followTransform.position.x, followTransform.position.y, transform.position.z);
+        transform.position = new Vector3(followTransform.position.x, followTransform.position.y + YAjustment, transform.position.z);
     }
 }

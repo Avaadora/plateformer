@@ -4,12 +4,44 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instanceGM;
+    private static GameManager _Instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            if (_Instance == null)
+            {
+                var obj = new GameObject().AddComponent<GameManager>();
+                obj.name = "GameManager Object";
+                _Instance = obj.GetComponent<GameManager>();
+            }
+            return _Instance;
+        }
+    }
+    private void Awake()
+    {
+        if (_Instance != null)
+        {
+            Debug.LogWarning("Second instance of GameManager created.Automatic self - destruct triggered.");
+            Destroy(this.gameObject);
+        }
+    }
+    private void OnDestroy()
+    {
+        if (_Instance == this)
+        {
+            _Instance = null;
+        }
+    }
+    void OnEnable()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     #region Player
     /*-------------VARIABLES PLAYER-------------*/
-    [SerializeField] private float Speed; // Vitesse du player
-    [SerializeField] private float Smoothing; // Valeur de smoothing accélération au départ et ralentissement lors de l'arrêt du joueur
+    [SerializeField] private float Speed = 10f; // Vitesse du player
+    [SerializeField] private float Smoothing = 0.7f; // Valeur de smoothing accélération au départ et ralentissement lors de l'arrêt du joueur
     [SerializeField] private bool isJumping;
     [SerializeField] private bool isGrounded;
 
@@ -54,17 +86,6 @@ public class GameManager : MonoBehaviour
         Smoothing = SmoothingWalk;
     }
     #endregion
-
-    // Awake is called when the script instance is being loaded.
-    void Awake()
-    {
-        if (instanceGM != null)
-        {
-            Debug.LogWarning("Il y a plus d'une instance GAMEMANAGER dans la scène");
-            return;
-        }
-        instanceGM = this;
-    }
 
 
 }
