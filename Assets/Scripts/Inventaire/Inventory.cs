@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
@@ -36,8 +37,14 @@ public class Inventory : MonoBehaviour
 
     public void AddItemToInventory(Item ItemToPickUp)
     {
-        ContentInventory.Add(ItemToPickUp);
-        Instantiate(PrefabSlotInventory, ParentInventory.transform);
-        PrefabSlotInventory.GetComponent<Image>().sprite = ItemToPickUp.ItemSprite; // Affichage du sprite dans l'UI
+        GameObject slot = Instantiate(PrefabSlotInventory, ParentInventory.transform);
+        if (!ContentInventory.Contains(ItemToPickUp))
+        {
+            ContentInventory.Add(ItemToPickUp);
+            Debug.Log(ItemToPickUp);
+            Instantiate(ItemToPickUp, slot.transform); //Prends toujours le cookie, oskur
+
+            // PrefabSlotInventory.GetComponent<Image>().sprite = ItemToPickUp.ItemSprite; // Affichage du sprite dans l'UI
+        }
     }
 }
