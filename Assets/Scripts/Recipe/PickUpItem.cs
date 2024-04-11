@@ -10,7 +10,7 @@ public class PickUpItem : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Inventory.instance.AddItemToInventory(Item);
+            RecipeManager.Instance.CheckForCraftRecipe(Item);
             Destroy(gameObject);
         }
     }

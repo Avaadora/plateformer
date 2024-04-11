@@ -1,38 +1,41 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float JumpForce;
-
     [SerializeField] private float GroundCheckWidth;
     [SerializeField] private float GroundCheckHeight;
+    [SerializeField] private float FallGravityScaleMultiplier = 1f;
+
+    private float HorizontalInput;
+    private float GravityScale;
 
     [SerializeField] private LayerMask JumpLayerMask;
 
-    [SerializeField] private float FallGravityScaleMultiplier = 1f;
-    [SerializeField] private float CoyoteTime;
-
-    private Rigidbody2D RbPlayer;
-    private float HorizontalInput;
     private Vector2 GroundCheckPosition;
-    private float GravityScale;
     
+    private Rigidbody2D RbPlayer;
+
+    private InputController MyInputActions;
+
     // Start is called before the first frame update
     void Start()
     {
         RbPlayer = GetComponent<Rigidbody2D>();
         GravityScale = RbPlayer.gravityScale;
-        
+
+        MyInputActions = new InputController();
+        MyInputActions.Player.Enable();
+
+        MyInputActions.Player.Jump.started += ctx => StartJump();
+        MyInputActions.Player.Jump.canceled += ctx => StopJump();
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdateGroundCheckOffset();
-        HorizontalInput = Input.GetAxisRaw("Horizontal");
+        HorizontalInput = MyInputActions.Player.HorizontalMove.ReadValue<float>();
 
         Collider2D col = Physics2D.OverlapBox(GroundCheckPosition, new Vector2(GroundCheckWidth, GroundCheckHeight), 0, JumpLayerMask); //Overlap -> boîte fictive qui permets de checks si le player est en collision avec le sol ou pas pour le faire sauter
         // isGrounded = (col != null); //If statement plus court
@@ -47,7 +50,7 @@ public class Player : MonoBehaviour
             StartCoroutine(UpdateisGroundedState(false)); //Assynchrone
         }
 
-        if (Input.GetButton("Jump") && GameManager.Instance.getIsGrounded())
+        if (MyInputActions.Player.Jump.IsPressed() && GameManager.Instance.getIsGrounded())
         {
             GameManager.Instance.setIsJumping(true);
         }
@@ -81,7 +84,7 @@ public class Player : MonoBehaviour
     //Permet de temporiser un certain temps (CoyoteTime), sur le saut hors d'une plate-forme 
     private IEnumerator UpdateisGroundedState(bool isGroundedState)
     {
-        yield return new WaitForSeconds(CoyoteTime);
+        yield return new WaitForSeconds(GameManager.Instance.getCoyoteTime());
         GameManager.Instance.setIsGrounded(isGroundedState);
     }
 
@@ -95,7 +98,8 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, JumpForce);
+        RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, GameManager.Instance.getJumpForce());
+        // GameManager.Instance.setIsGrounded(false);
     }
 
     private void UpdateGroundCheckOffset()
@@ -103,6 +107,16 @@ public class Player : MonoBehaviour
         SpriteRenderer spritePlayer = GetComponent<SpriteRenderer>(); //Récupération du sprite du joueur
         float height = spritePlayer.bounds.size.y; //Récupération de la hauteur du sprite du joueur
         GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - height / 2f);
+    }
+
+    private void StartJump()
+    {
+        GameManager.Instance.setIsJumping(true);
+    }
+
+    private void StopJump()
+    {
+        GameManager.Instance.setIsJumping(false);
     }
 
     // Callback to draw gizmos that are pickable and always drawn.

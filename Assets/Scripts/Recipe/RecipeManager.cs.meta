@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: db697febe8befd844aa2f95dc52166ab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Cookie: {fileID: 11400000, guid: ba0914b1ed9411348ba14bd657372db7, type: 2}
+  - ChocolateBar: {fileID: 11400000, guid: 7e7955874b706b14d906c069a08e5cbb, type: 2}
+  - Watermelon: {fileID: 11400000, guid: b3a1dae672886d447a1b7e9b33fec8be, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

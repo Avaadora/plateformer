@@ -1,5 +1,5 @@
 {
-    "name": "InputControl",
+    "name": "InputController",
     "maps": [
         {
             "name": "Player",
@@ -9,6 +9,15 @@
                     "name": "HorizontalMove",
                     "type": "Button",
                     "id": "69345c62-a7d1-4cc2-8135-6bfff04c484f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "581cc88a-0848-4307-9b91-fdc8cd63da5b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -70,6 +79,17 @@
                     "action": "HorizontalMove",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "908e382b-65c8-402b-ab93-b13789b3b048",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
@@ -78,6 +98,11 @@
         {
             "name": "Keyboard & Mouse",
             "bindingGroup": "Keyboard & Mouse",
+            "devices": []
+        },
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
             "devices": []
         }
     ]

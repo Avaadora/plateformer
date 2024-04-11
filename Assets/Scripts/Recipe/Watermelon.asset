@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141ef5dbd5433614ea6412a37c09af29, type: 3}
   m_Name: Watermelon
   m_EditorClassIdentifier: 
-  Index: 3
-  ItemName: "Past\xE8que"
+  Index: 2
+  ItemName: watermelon
   ItemDescription: Fruit
   ItemSprite: {fileID: 1749468053, guid: 57409d6ec1fe7184d9ac8fbea8aeb225, type: 3}
-  Sweetness: 0
-  Bitterness: 0
