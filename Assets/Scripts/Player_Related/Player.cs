@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask JumpLayerMask;
 
     private Vector2 GroundCheckPosition;
-    
+
     private Rigidbody2D RbPlayer;
 
     private InputController MyInputActions;
@@ -29,6 +29,9 @@ public class Player : MonoBehaviour
 
         MyInputActions.Player.Jump.started += ctx => StartJump();
         MyInputActions.Player.Jump.canceled += ctx => StopJump();
+
+        MyInputActions.Player.Glide.started += ctx => StartGlide();
+        MyInputActions.Player.Glide.canceled += ctx => StopGlide();
     }
 
     // Update is called once per frame
@@ -117,6 +120,16 @@ public class Player : MonoBehaviour
     private void StopJump()
     {
         GameManager.Instance.setIsJumping(false);
+    }
+
+    private void StartGlide()
+    {
+        RecipeManager.Instance.setCanGlide(true);
+    }
+
+    private void StopGlide()
+    {
+        RecipeManager.Instance.setCanGlide(false);
     }
 
     // Callback to draw gizmos that are pickable and always drawn.

@@ -13,7 +13,7 @@ public class LoopingBackground : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        OriginX = transform.position.x * 2;
+        OriginX = transform.position.x;
         int NbSpriteChild = transform.childCount;
 
         for (int i = 0; i < NbSpriteChild; i++)

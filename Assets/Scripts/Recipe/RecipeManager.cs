@@ -42,16 +42,18 @@ public class RecipeManager : MonoBehaviour
     }
 
     [Header("------------Recipe------------")]
-    [SerializeField] private Item[] recipe; // La recette à valider
-    [SerializeField] private Image[] image; // La recette à valider
+    [SerializeField] private Item[] recipe; // Recette à valider
+    [SerializeField] private Image[] image;
     [SerializeField] private Item Cookie, ChocolateBar, Watermelon;
-    [SerializeField] private Image CookieSprite, ChocolateBarSprite, WatermelonSprite;
+    [SerializeField] private Image CookieSprite, ChocolateBarSprite, WatermelonSprite, Check;
+
+    private bool canGlide;
 
     private int currentIndex = 0;
 
     void Start()
     {
-        // Setup de la première recette
+        // Setup des recettes
         recipe = new Item[3];
         recipe[0] = Cookie;
         recipe[1] = ChocolateBar;
@@ -68,11 +70,13 @@ public class RecipeManager : MonoBehaviour
         if (currentIndex < recipe.Length && ItemToPickUp == recipe[currentIndex])
         {
             Debug.Log("Ingrédient collecté : " + ItemToPickUp.ItemName);
-            image[currentIndex].color = new Color(0, 255, 0);
+            Instantiate(Check, image[currentIndex].transform);
+            // image[currentIndex].color = new Color(0, 255, 0);
             currentIndex++;
             if (currentIndex == recipe.Length)
             {
                 Debug.Log("Recette terminée avec succès !");
+                canGlide = true;
             }
         }
         else
@@ -88,4 +92,15 @@ public class RecipeManager : MonoBehaviour
         ChocolateBarSprite.sprite = ChocolateBar;
         WatermelonSprite.sprite = Watermelon;
     }
+
+    public bool getCanGlide()
+    {
+        return canGlide;
+    }
+
+    public void setCanGlide(bool canGlide)
+    {
+        this.canGlide = canGlide;
+    }
+
 }
