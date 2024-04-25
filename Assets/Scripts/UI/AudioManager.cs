@@ -4,38 +4,26 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager _Instance;
-    public static AudioManager Instance
-    {
-        get
-        {
-            if (_Instance == null)
-            {
-                var obj = new GameObject().AddComponent<AudioManager>();
-                obj.name = "AudioManager Object";
-                _Instance = obj.GetComponent<AudioManager>();
-            }
-            return _Instance;
-        }
-    }
-    private void Awake()
-    {
-        Debug.Log("AUDIO" + _Instance);
-        if (_Instance != null)
-        {
-            Debug.LogWarning("Second instance of AudioManager created. Automatic self - destruct triggered.");
-            Destroy(gameObject);
-        }
+    [Header("------------Audio Source------------")]
+    [SerializeField] AudioSource MainTheme;
+    [SerializeField] AudioSource SFXSound;
 
-    }
-    private void OnDestroy()
+    [Header("------------Audio Clip------------")]
+    public AudioClip Background;
+    public AudioClip RecipeCompleted;
+    public AudioClip Walk;
+
+
+    private void Start()
     {
-        if (_Instance == this)
-        {
-            _Instance = null;
-        }
+        MainTheme.clip = Background;
+        MainTheme.Play();
     }
-    void OnEnable() => DontDestroyOnLoad(gameObject);
+
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSound.PlayOneShot(clip);
+    }
 
 
 }
