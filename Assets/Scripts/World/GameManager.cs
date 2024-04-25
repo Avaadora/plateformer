@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    #region GameManager
+    [Header("------------GameManager------------")]
     private static GameManager _Instance;
     public static GameManager Instance
     {
@@ -35,9 +35,8 @@ public class GameManager : MonoBehaviour
         }
     }
     void OnEnable() => DontDestroyOnLoad(gameObject);
-    #endregion
 
-    #region Player
+    [Header("------------Player------------")]
     /*-------------VARIABLES PLAYER-------------*/
     private float Speed = 10f; // Vitesse du player
     private float Smoothing = 0.7f; // Valeur de smoothing accélération au départ et ralentissement lors de l'arrêt du joueur
@@ -106,5 +105,4 @@ public class GameManager : MonoBehaviour
     {
         this.CoyoteTime = CoyoteTime;
     }
-    #endregion
 }

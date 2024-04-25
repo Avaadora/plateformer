@@ -41,7 +41,7 @@ public class RecipeManager : MonoBehaviour
         }
     }
 
-    #region Recipe
+    [Header("------------Recipe------------")]
     [SerializeField] private Item[] recipe; // La recette à valider
     [SerializeField] private Image[] image; // La recette à valider
     [SerializeField] private Item Cookie, ChocolateBar, Watermelon;
@@ -88,5 +88,4 @@ public class RecipeManager : MonoBehaviour
         ChocolateBarSprite.sprite = ChocolateBar;
         WatermelonSprite.sprite = Watermelon;
     }
-    #endregion
 }
