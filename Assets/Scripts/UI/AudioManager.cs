@@ -20,13 +20,13 @@ public class AudioManager : MonoBehaviour
     }
     private void Awake()
     {
+        Debug.Log("AUDIO" + _Instance);
         if (_Instance != null)
         {
             Debug.LogWarning("Second instance of AudioManager created. Automatic self - destruct triggered.");
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(MainTheme);
     }
     private void OnDestroy()
     {
@@ -37,6 +37,5 @@ public class AudioManager : MonoBehaviour
     }
     void OnEnable() => DontDestroyOnLoad(gameObject);
 
-    [SerializeField] GameObject MainTheme;
 
 }
