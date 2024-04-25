@@ -33,8 +33,7 @@ Transform:
   m_LocalPosition: {x: -5.051, y: -3.445, z: 0}
   m_LocalScale: {x: 1.4889336, y: 1.4889336, z: 1.4889336}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6700109407101989682}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1335284541578173544
@@ -78,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 90adde91147fa4b4eac16ed9c7b7f74a, type: 3}
+  m_Sprite: {fileID: 2084233412, guid: 313dba763ce173149a884a35abe3f965, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,14 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e511f4e86a6ddd42bbcfc24570fad32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 4.8
   GroundCheckWidth: 0.9
   GroundCheckHeight: 0.1
+  FallGravityScaleMultiplier: 2
   JumpLayerMask:
     serializedVersion: 2
     m_Bits: 8
-  FallGravityScaleMultiplier: 2
-  CoyoteTime: 0.08
 --- !u!50 &7753497749661208856
 Rigidbody2D:
   serializedVersion: 4
@@ -168,18 +165,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013518751, y: -0.110725865}
+  m_Offset: {x: -0.053420275, y: -0.015112653}
   m_SpriteTilingProperty:
-    border: {x: 0.37109375, y: 0.15625, z: 0.37109375, w: 0.40234375}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 2}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26583818, y: 0.45754877}
+  m_Size: {x: 0.38478982, y: 0.49218032}
   m_EdgeRadius: 0
 --- !u!95 &1612976597146251886
 Animator:
@@ -202,50 +199,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &5850490392806510497
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6700109407101989682}
-  - component: {fileID: 1660119508757959906}
-  m_Layer: 0
-  m_Name: Inventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6700109407101989682
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5850490392806510497}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.14641364, z: -1.9912655}
-  m_LocalScale: {x: 0.6716217, y: 0.6716217, z: 0.6716217}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1285804487435860794}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1660119508757959906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5850490392806510497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dfc6bbd3ed25de4ab71617d154e8086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ContentInventory: []
-  PrefabSlotInventory: {fileID: 8704974481248883526, guid: fb78b1624c7b17644bcafd206ff5e9f3, type: 3}
-  ParentInventory: {fileID: 0}
