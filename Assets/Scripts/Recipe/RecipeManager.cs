@@ -45,7 +45,7 @@ public class RecipeManager : MonoBehaviour
     [SerializeField] private Item[] recipe; // Recette à valider
     [SerializeField] private Image[] image;
     [SerializeField] private Item Cookie, ChocolateBar, Watermelon;
-    [SerializeField] private Image CookieSprite, ChocolateBarSprite, WatermelonSprite, Check;
+    [SerializeField] private Image CookieSprite, ChocolateBarSprite, WatermelonSprite, Check, Wing;
 
     private bool canGlide;
 
@@ -71,11 +71,11 @@ public class RecipeManager : MonoBehaviour
         {
             Debug.Log("Ingrédient collecté : " + ItemToPickUp.ItemName);
             Instantiate(Check, image[currentIndex].transform);
-            // image[currentIndex].color = new Color(0, 255, 0);
             currentIndex++;
             if (currentIndex == recipe.Length)
             {
                 Debug.Log("Recette terminée avec succès !");
+                Instantiate(Check, Wing.transform);
                 canGlide = true;
             }
         }

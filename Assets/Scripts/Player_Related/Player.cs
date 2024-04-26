@@ -7,8 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float FallGravityScaleMultiplier = 1f;
     private float GroundCheckWidth = 0.9f;
     private float GroundCheckHeight = 0.1f;
-    private float HorizontalInput;
-    private float GravityScale;
+    private float HorizontalInput, GravityScale;
 
     [SerializeField] private LayerMask JumpLayerMask;
 
@@ -41,15 +40,15 @@ public class Player : MonoBehaviour
         HorizontalInput = MyInputActions.Player.HorizontalMove.ReadValue<float>();
 
         Collider2D col = Physics2D.OverlapBox(GroundCheckPosition, new Vector2(GroundCheckWidth, GroundCheckHeight), 0, JumpLayerMask); //Overlap -> boîte fictive qui permets de checks si le player est en collision avec le sol ou pas pour le faire sauter
-        // isGrounded = (col != null); //If statement plus court
+        // isGrounded = (col != null); // If statement plus court
         if (col != null)
         {
-            //Sol sous les pieds
+            // Sol sous les pieds
             GameManager.Instance.setIsGrounded(true);
         }
         else if (GameManager.Instance.getIsGrounded())
         {
-            //En l'air mais a sauté donc sol sous les pieds
+            // En l'air mais a sauté donc sol sous les pieds
             StartCoroutine(UpdateisGroundedState(false)); //Assynchrone
         }
 
@@ -64,9 +63,10 @@ public class Player : MonoBehaviour
         }
 
         // PLANER
-        if (MyInputActions.Player.Glide.IsPressed() && RecipeManager.Instance.getCanGlide() && !GameManager.Instance.getIsGrounded())
+        if (MyInputActions.Player.Jump.IsPressed() && RecipeManager.Instance.getCanGlide() && !GameManager.Instance.getIsGrounded())
         {
             RecipeManager.Instance.setCanGlide(true);
+            StartCoroutine(UpdateisJumpState(false));
         }
         else
         {
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
 
         if (RbPlayer.velocity.y < 0)
         {
-            //En train de descendre (rechute) -> pour redescendre plus vite que le saut
+            // En train de descendre (rechute) -> pour redescendre plus vite que le saut
             RbPlayer.gravityScale = GravityScale * FallGravityScaleMultiplier;
 
             if (RecipeManager.Instance.getCanGlide())
@@ -95,20 +95,26 @@ public class Player : MonoBehaviour
         }
         else
         {
-            //En saut ou au sol (montée)
+            // En saut ou au sol (montée)
             RbPlayer.gravityScale = GravityScale;
         }
     }
 
-    //Permet de temporiser un certain temps (CoyoteTime), sur le saut hors d'une plate-forme 
+    // Permet de temporiser un certain temps (CoyoteTime), sur le saut hors d'une plate-forme 
     private IEnumerator UpdateisGroundedState(bool isGroundedState)
     {
         yield return new WaitForSeconds(GameManager.Instance.getCoyoteTime());
         GameManager.Instance.setIsGrounded(isGroundedState);
     }
 
+    private IEnumerator UpdateisJumpState(bool isJumpState)
+    {
+        yield return new WaitForSeconds(GameManager.Instance.getCoyoteTime());
+        GameManager.Instance.setIsJumping(isJumpState);
+    }
+
     // Déplacement du joueur sur l'axe horizontal
-    //OPTI : Tout mettre dans le FixedUpdate()
+    // OPTI : Tout mettre dans le FixedUpdate()
     private void Move()
     {
         Vector2 targetVelocity = new Vector2(HorizontalInput * GameManager.Instance.getSpeed(), RbPlayer.velocity.y);
@@ -129,8 +135,8 @@ public class Player : MonoBehaviour
 
     private void UpdateGroundCheckOffset()
     {
-        SpriteRenderer spritePlayer = GetComponent<SpriteRenderer>(); //Récupération du sprite du joueur
-        float height = spritePlayer.bounds.size.y; //Récupération de la hauteur du sprite du joueur
+        SpriteRenderer spritePlayer = GetComponent<SpriteRenderer>(); // Récupération du sprite du joueur
+        float height = spritePlayer.bounds.size.y; // Récupération de la hauteur du sprite du joueur
         GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - height / 2f);
     }
 

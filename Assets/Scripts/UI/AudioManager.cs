@@ -5,14 +5,26 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [Header("------------Audio Source------------")]
-    [SerializeField] AudioSource MainTheme;
-    [SerializeField] AudioSource SFXSound;
+    [SerializeField] AudioSource MainTheme, SFXSound;
 
     [Header("------------Audio Clip------------")]
-    public AudioClip Background;
-    public AudioClip RecipeCompleted;
-    public AudioClip Walk;
+    public AudioClip Background, RecipeCompleted, Walk;
 
+    public static AudioManager _Instance;
+
+    private void Awake()
+    {
+        if (_Instance == null)
+        {
+            _Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
+    }
 
     private void Start()
     {
