@@ -10,12 +10,6 @@ public class RecipeManager : MonoBehaviour
     {
         get
         {
-            if (_instance == null)
-            {
-                var obj = new GameObject().AddComponent<RecipeManager>();
-                obj.name = "RecipeManager Object";
-                _instance = obj.GetComponent<RecipeManager>();
-            }
             return _instance;
         }
     }
@@ -74,7 +68,6 @@ public class RecipeManager : MonoBehaviour
             currentIndex++;
             if (currentIndex == recipe.Length)
             {
-                Debug.Log("Recette terminée avec succès !");
                 Instantiate(Check, Wing.transform);
                 canGlide = true;
             }
