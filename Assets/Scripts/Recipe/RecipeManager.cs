@@ -82,6 +82,7 @@ public class RecipeManager : MonoBehaviour
         else
         {
             Debug.Log("Ingrédient incorrect ou hors d'ordre.");
+            canGlide = false;
         }
     }
 

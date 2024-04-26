@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float GroundCheckWidth;
-    [SerializeField] private float GroundCheckHeight;
-    [SerializeField] private float FallGravityScaleMultiplier = 1f;
 
+    [SerializeField] private float FallGravityScaleMultiplier = 1f;
+    private float GroundCheckWidth = 0.9f;
+    private float GroundCheckHeight = 0.1f;
     private float HorizontalInput;
     private float GravityScale;
 
@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
             StartCoroutine(UpdateisGroundedState(false)); //Assynchrone
         }
 
+        // SAUTER
         if (MyInputActions.Player.Jump.IsPressed() && GameManager.Instance.getIsGrounded())
         {
             GameManager.Instance.setIsJumping(true);
@@ -60,6 +61,16 @@ public class Player : MonoBehaviour
         else
         {
             GameManager.Instance.setIsJumping(false);
+        }
+
+        // PLANER
+        if (MyInputActions.Player.Glide.IsPressed() && RecipeManager.Instance.getCanGlide() && !GameManager.Instance.getIsGrounded())
+        {
+            RecipeManager.Instance.setCanGlide(true);
+        }
+        else
+        {
+            RecipeManager.Instance.setCanGlide(false);
         }
     }
 
@@ -76,6 +87,11 @@ public class Player : MonoBehaviour
         {
             //En train de descendre (rechute) -> pour redescendre plus vite que le saut
             RbPlayer.gravityScale = GravityScale * FallGravityScaleMultiplier;
+
+            if (RecipeManager.Instance.getCanGlide())
+            {
+                Glide();
+            }
         }
         else
         {
@@ -103,6 +119,12 @@ public class Player : MonoBehaviour
     {
         RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, GameManager.Instance.getJumpForce());
         // GameManager.Instance.setIsGrounded(false);
+    }
+
+    private void Glide()
+    {
+        RbPlayer.gravityScale = 0;
+        RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, -GameManager.Instance.getGlideSpeed());
     }
 
     private void UpdateGroundCheckOffset()

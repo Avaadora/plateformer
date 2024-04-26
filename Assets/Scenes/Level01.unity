@@ -4569,6 +4569,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4572134051847809265, guid: b19442df5d7361b47ac131015ef9cb6f, type: 3}
     - target: {fileID: 3028146182028080087, guid: 7c7b4863aef559b4793cb18abf354681, type: 3}
+      propertyPath: check
+      value: 
+      objectReference: {fileID: 3571717642021958529, guid: b19442df5d7361b47ac131015ef9cb6f, type: 3}
+    - target: {fileID: 3028146182028080087, guid: 7c7b4863aef559b4793cb18abf354681, type: 3}
       propertyPath: GlideSprite
       value: 
       objectReference: {fileID: 811609276}
@@ -4611,6 +4615,10 @@ PrefabInstance:
     - target: {fileID: 5315149772390356912, guid: 7c7b4863aef559b4793cb18abf354681, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529273508194100869, guid: 7c7b4863aef559b4793cb18abf354681, type: 3}
+      propertyPath: FallGravityScaleMultiplier
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 7911093542189049691, guid: 7c7b4863aef559b4793cb18abf354681, type: 3}
       propertyPath: m_AnchorMax.y
