@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Item
-  - Slot_Item_Sprite
+  - Glide
+  - Dig
   layers:
   - Default
   - TransparentFX

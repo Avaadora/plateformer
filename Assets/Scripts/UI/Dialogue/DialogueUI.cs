@@ -7,10 +7,10 @@ public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private GameObject DialogueBox;
     [SerializeField] private TMP_Text LabelText;
-    [SerializeField] private DialogueObject dialogueObject;
+    [SerializeField] private DialogueObject[] dialogueObject;
 
     private TypeWritterEffect typeWritterEffect;
-    private bool hasShownDialogue = false;
+    private bool hasShownDialogue;
 
     private void Start()
     {
@@ -24,7 +24,7 @@ public class DialogueUI : MonoBehaviour
     {
         if (RecipeManager.Instance.getCanGlide() && !hasShownDialogue)
         {
-            ShowDialogue(dialogueObject);
+            ShowDialogue(dialogueObject[1]);
             hasShownDialogue = true;
         }
     }
@@ -55,7 +55,7 @@ public class DialogueUI : MonoBehaviour
     {
         if (RecipeManager.Instance.getCanGlide())
         {
-            ShowDialogue(dialogueObject);
+            ShowDialogue(dialogueObject[1]);
         }
     }
 }

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 141ef5dbd5433614ea6412a37c09af29, type: 3}
+  m_Name: Chicken
+  m_EditorClassIdentifier: 
+  Index: 3
+  ItemName: chicken
+  ItemDescription: Poulet
+  Tag: Dig
+  ItemSprite: {fileID: -664430563, guid: 57409d6ec1fe7184d9ac8fbea8aeb225, type: 3}
