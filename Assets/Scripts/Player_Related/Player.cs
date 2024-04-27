@@ -63,14 +63,14 @@ public class Player : MonoBehaviour
         }
 
         // PLANER
-        if (MyInputActions.Player.Jump.IsPressed() && RecipeManager.Instance.getCanGlide() && !GameManager.Instance.getIsGrounded())
+        if (MyInputActions.Player.Glide.ReadValue<float>() > 0 && RecipeManager.Instance.getIsGliding() && !GameManager.Instance.getIsGrounded())
         {
-            RecipeManager.Instance.setCanGlide(true);
+            RecipeManager.Instance.setIsGliding(true);
             StartCoroutine(UpdateisJumpState(false));
         }
         else
         {
-            RecipeManager.Instance.setCanGlide(false);
+            RecipeManager.Instance.setIsGliding(false);
         }
     }
 
@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
             // En train de descendre (rechute) -> pour redescendre plus vite que le saut
             RbPlayer.gravityScale = GravityScale * FallGravityScaleMultiplier;
 
-            if (RecipeManager.Instance.getCanGlide())
+            if (RecipeManager.Instance.getIsGliding() == RecipeManager.Instance.getCanGlide())
             {
                 Glide();
             }
@@ -152,12 +152,12 @@ public class Player : MonoBehaviour
 
     private void StartGlide()
     {
-        RecipeManager.Instance.setCanGlide(true);
+        RecipeManager.Instance.setIsGliding(true);
     }
 
     private void StopGlide()
     {
-        RecipeManager.Instance.setCanGlide(false);
+        RecipeManager.Instance.setIsGliding(false);
     }
 
     // Callback to draw gizmos that are pickable and always drawn.

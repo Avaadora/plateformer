@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class RecipeManager : MonoBehaviour
 {
+    [Header("------------Singleton------------")]
     private static RecipeManager _instance;
     public static RecipeManager Instance
     {
@@ -25,7 +27,6 @@ public class RecipeManager : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
     }
     void OnDestroy()
     {
@@ -41,7 +42,9 @@ public class RecipeManager : MonoBehaviour
     [SerializeField] private Item Cookie, ChocolateBar, Watermelon;
     [SerializeField] private Image CookieSprite, ChocolateBarSprite, WatermelonSprite, Check, Wing;
 
-    private bool canGlide;
+    private bool canGlide, isGliding;
+
+    public UnityEvent OnCanGlideChanged;
 
     private int currentIndex = 0;
 
@@ -70,6 +73,8 @@ public class RecipeManager : MonoBehaviour
             {
                 Instantiate(Check, Wing.transform);
                 canGlide = true;
+
+                OnCanGlideChanged.Invoke();
             }
         }
         else
@@ -77,6 +82,8 @@ public class RecipeManager : MonoBehaviour
             Debug.Log("Ingrédient incorrect ou hors d'ordre.");
             canGlide = false;
         }
+
+        // Debug.Log("RECIPE_MANAGER : " + canGlide);
     }
 
     // Lier l'UI aux Item
@@ -97,4 +104,14 @@ public class RecipeManager : MonoBehaviour
         this.canGlide = canGlide;
     }
 
+    // Pour le player
+    public bool getIsGliding()
+    {
+        return isGliding;
+    }
+
+    public void setIsGliding(bool isGliding)
+    {
+        this.isGliding = isGliding;
+    }
 }

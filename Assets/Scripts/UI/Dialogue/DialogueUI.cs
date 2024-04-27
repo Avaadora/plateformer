@@ -10,16 +10,23 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private DialogueObject dialogueObject;
 
     private TypeWritterEffect typeWritterEffect;
+    private bool hasShownDialogue = false;
 
     private void Start()
     {
         typeWritterEffect = GetComponent<TypeWritterEffect>();
         CloseDialogueBox();
+
+        RecipeManager.Instance.OnCanGlideChanged.AddListener(OnCanGlideChangedHandler);
     }
 
-    private void OnEnable()
+    public void OnEventTriggered()
     {
-        ShowDialogue(dialogueObject);
+        if (RecipeManager.Instance.getCanGlide() && !hasShownDialogue)
+        {
+            ShowDialogue(dialogueObject);
+            hasShownDialogue = true;
+        }
     }
 
     public void ShowDialogue(DialogueObject ShowdialogueObject)
@@ -42,5 +49,13 @@ public class DialogueUI : MonoBehaviour
     {
         DialogueBox.SetActive(false);
         LabelText.text = string.Empty;
+    }
+
+    private void OnCanGlideChangedHandler()
+    {
+        if (RecipeManager.Instance.getCanGlide())
+        {
+            ShowDialogue(dialogueObject);
+        }
     }
 }
