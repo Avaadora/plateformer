@@ -13,11 +13,13 @@ public class KillZone : MonoBehaviour
         Debug.Log("START "+lastknownPosition);
     }
 
+    // Il faut destroy le GO pour le ré-intantier ça marche faut suivre le tuto
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
-            Player.transform.position = lastknownPosition;
+            Destroy(Player);
+            Instantiate(Player, lastknownPosition, Quaternion.identity);
         }
         Debug.Log("COLLISION "+Player.transform.position);
     }
