@@ -38,14 +38,17 @@ public class GameManager : MonoBehaviour
 
     [Header("------------Player------------")]
     /*-------------VARIABLES PLAYER-------------*/
-    private float Speed = 7f; // Vitesse du player
-    private float Smoothing = 0.5f; // Valeur de smoothing accélération au départ et ralentissement lors de l'arrêt du joueur
-    private float JumpForce = 3f;
+    private float Speed = 8f; // Vitesse du player
+    private float Smoothing = 0.3f; // Valeur de smoothing accélération au départ et ralentissement lors de l'arrêt du joueur
+    private float JumpForce = 3.5f;
     private float GlideSpeed = 1f;
     private float CoyoteTime = 0.3f;
 
     private bool isJumping;
     private bool isGrounded;
+
+
+
 
     /*-------------GETTERS & SETTERS PLAYER-------------*/
     public bool getIsJumping()
@@ -109,11 +112,12 @@ public class GameManager : MonoBehaviour
 
     public float getGlideSpeed()
     {
-        return this.GlideSpeed;
+        return GlideSpeed;
     }
 
     public void setGlideSpeed(float GlideSpeed)
     {
         this.GlideSpeed = GlideSpeed;
     }
+
 }

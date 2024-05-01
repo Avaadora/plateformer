@@ -17,8 +17,7 @@ public class Player : MonoBehaviour
 
     private InputController MyInputActions;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         RbPlayer = GetComponent<Rigidbody2D>();
         GravityScale = RbPlayer.gravityScale;
@@ -63,7 +62,7 @@ public class Player : MonoBehaviour
         }
 
         // PLANER
-        if (MyInputActions.Player.Glide.ReadValue<float>() > 0 && GameManager.Instance.getIsGrounded())
+        if (MyInputActions.Player.Glide.ReadValue<float>() > 0  && !GameManager.Instance.getIsGrounded() && RecipeManager.Instance.getCanGlide())
         {
             RecipeManager.Instance.setIsGliding(true);
             StartCoroutine(UpdateisJumpState(false));
@@ -88,8 +87,9 @@ public class Player : MonoBehaviour
             // En train de descendre (rechute) -> pour redescendre plus vite que le saut
             RbPlayer.gravityScale = GravityScale * FallGravityScaleMultiplier;
 
-            if(RecipeManager.Instance.getCanGlide())
+            if(RecipeManager.Instance.getIsGliding())
             {
+                RbPlayer.gravityScale = 0;
                 Glide();    
             }
         }
@@ -129,7 +129,6 @@ public class Player : MonoBehaviour
 
     private void Glide()
     {
-        RbPlayer.gravityScale = 0;
         RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, -GameManager.Instance.getGlideSpeed());
     }
 

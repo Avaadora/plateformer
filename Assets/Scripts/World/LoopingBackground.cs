@@ -8,7 +8,7 @@ public class LoopingBackground : MonoBehaviour
     private float Width;
     private float OriginX;
 
-    [SerializeField] private float SpeedMultiplier = 1f;
+    [SerializeField] private float SpeedMultiplier = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class LoopingBackground : MonoBehaviour
         {
             SpriteChild = transform.GetChild(i);
             Width = SpriteChild.GetComponent<SpriteRenderer>().bounds.size.x;
-            Instantiate(SpriteChild, new Vector3(SpriteChild.position.x + Width, SpriteChild.position.y, 0), Quaternion.identity, transform);
+            Instantiate(SpriteChild, new Vector3(SpriteChild.position.x + Width, SpriteChild.position.y, 0), SpriteChild.transform.rotation, transform);
         }
     }
 
@@ -28,10 +28,10 @@ public class LoopingBackground : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * SpeedMultiplier * Time.deltaTime);
-        if (transform.position.x < OriginX - Width)
-        {
-            transform.position = new Vector3(OriginX, transform.position.y, 0);
-        }
+        // if (transform.position.x < OriginX - Width)
+        // {
+        //     transform.position = new Vector3(OriginX, transform.position.y, 0);
+        // }
 
     }
 }

@@ -18,14 +18,24 @@ public class DialogueUI : MonoBehaviour
         CloseDialogueBox();
 
         RecipeManager.Instance.OnCanGlideChanged.AddListener(OnCanGlideChangedHandler);
+        RecipeManager.Instance.OnCanDigChanged.AddListener(OnCanDigChangedHandler);
     }
 
     public void OnEventTriggered()
     {
         if (RecipeManager.Instance.getCanGlide() && !hasShownDialogue)
         {
-            ShowDialogue(dialogueObject[1]);
+            ShowDialogue(dialogueObject[0]);
             hasShownDialogue = true;
+        }
+        else
+        {
+            if (RecipeManager.Instance.getCanDig() && !hasShownDialogue)
+            {
+                ShowDialogue(dialogueObject[1]);
+                hasShownDialogue = true;
+
+            }
         }
     }
 
@@ -54,6 +64,13 @@ public class DialogueUI : MonoBehaviour
     private void OnCanGlideChangedHandler()
     {
         if (RecipeManager.Instance.getCanGlide())
+        {
+            ShowDialogue(dialogueObject[0]);
+        }
+    }
+    private void OnCanDigChangedHandler()
+    {
+        if (RecipeManager.Instance.getCanDig())
         {
             ShowDialogue(dialogueObject[1]);
         }

@@ -125,7 +125,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f5e30074-826f-49e9-be7c-9681792879ac"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",

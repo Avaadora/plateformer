@@ -45,13 +45,13 @@ public class RecipeManager : MonoBehaviour
     [SerializeField]
     private Image CookieSprite, ChocolateBarSprite, WatermelonSprite,
                                     ChickenSprite, PieSprite, SushiSprite,
-                                    Check, Wing;
+                                    Check, Wing, Shovel;
 
     private bool canGlide, isGliding, canDig, isDigging;
 
     private int GlideIndex, DigIndex = 0;
 
-    public UnityEvent OnCanGlideChanged;
+    public UnityEvent OnCanGlideChanged, OnCanDigChanged;
 
     void Start()
     {
@@ -83,20 +83,17 @@ public class RecipeManager : MonoBehaviour
     {
         if (GlideIndex < GlideRecipe.Length && ItemToPickUp == GlideRecipe[GlideIndex])
         {
-            Debug.Log("Ingrédient collecté : " + ItemToPickUp.ItemName);
             Instantiate(Check, GlideImage[GlideIndex].transform);
             GlideIndex++;
             if (GlideIndex == GlideRecipe.Length)
             {
                 Instantiate(Check, Wing.transform);
                 canGlide = true;
-                Debug.Log("RECETTE DIG");
                 OnCanGlideChanged.Invoke();
             }
         }
         else
         {
-            Debug.Log("Ingrédient incorrect ou hors d'ordre.");
             canGlide = false;
         }
     }
@@ -105,21 +102,17 @@ public class RecipeManager : MonoBehaviour
     {
         if (DigIndex < DigRecipe.Length && ItemToPickUp == DigRecipe[DigIndex])
         {
-            Debug.Log("Ingrédient collecté : " + ItemToPickUp.ItemName);
             Instantiate(Check, DigImage[DigIndex].transform);
             DigIndex++;
             if (DigIndex == DigRecipe.Length)
             {
-                Debug.Log("RECETTE DIG");
-                // Instantiate(Check, Wing.transform);
+                Instantiate(Check, Shovel.transform);
                 canDig = true;
-
-                // OnCanGlideChanged.Invoke();
+                OnCanDigChanged.Invoke();
             }
         }
         else
         {
-            Debug.Log("Ingrédient incorrect ou hors d'ordre.");
             canDig = false;
         }
     }
@@ -157,7 +150,7 @@ public class RecipeManager : MonoBehaviour
     {
         this.isGliding = isGliding;
     }
-    public bool isCanDig()
+    public bool getCanDig()
     {
         return canDig;
     }
