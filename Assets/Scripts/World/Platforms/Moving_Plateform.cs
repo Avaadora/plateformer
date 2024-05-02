@@ -12,10 +12,6 @@ public class Moving_Plateform : Plateforme_Mobile
     private float Speed = 5.5f;
     private int Sens = 1;
 
-    [SerializeField] private Color textColor = Color.white;
-    [SerializeField] private Vector2 TextOffset;
-
-    [SerializeField] private int TextSize = 3;
     [SerializeField] private bool IsPingPong;
 
     [SerializeField] private float Delay;
@@ -72,27 +68,27 @@ public class Moving_Plateform : Plateforme_Mobile
         StartCoroutine(Move());
     }
 
-    private void OnDrawGizmos()
-    {
-        GUI.color = textColor;
-        GUIStyle labelStyle = GUI.skin.label;
-        labelStyle.fontStyle = FontStyle.Bold;
-        labelStyle.fontSize = TextSize;
+    // private void OnDrawGizmos()
+    // {
+    //     GUI.color = textColor;
+    //     GUIStyle labelStyle = GUI.skin.label;
+    //     labelStyle.fontStyle = FontStyle.Bold;
+    //     labelStyle.fontSize = TextSize;
 
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Handles.Label((Vector2)transform.GetChild(i).position + TextOffset, i.ToString(), labelStyle);
-            if (i < transform.childCount-1)
-            {
-                Handles.DrawLine(transform.GetChild(i).position, transform.GetChild(i + 1).position, 2f);
-            }
-            else
-            {
-                if (!IsPingPong)
-                {
-                    Handles.DrawLine(transform.GetChild(i).position, transform.GetChild(0).position, 2f);
-                }
-            }
-        }
-    }
+    //     for (int i = 0; i < transform.childCount; i++)
+    //     {
+    //         Handles.Label((Vector2)transform.GetChild(i).position + TextOffset, i.ToString(), labelStyle);
+    //         if (i < transform.childCount-1)
+    //         {
+    //             Handles.DrawLine(transform.GetChild(i).position, transform.GetChild(i + 1).position, 2f);
+    //         }
+    //         else
+    //         {
+    //             if (!IsPingPong)
+    //             {
+    //                 Handles.DrawLine(transform.GetChild(i).position, transform.GetChild(0).position, 2f);
+    //             }
+    //         }
+    //     }
+    // }
 }
