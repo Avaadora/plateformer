@@ -119,13 +119,14 @@ public class Player : MonoBehaviour
     private void Move()
     {
         Vector2 targetVelocity = new Vector2(HorizontalInput * GameManager.Instance.getSpeed(), RbPlayer.velocity.y);
-        Mathf.Clamp(targetVelocity.x, 6f, 8f);
+        Mathf.Clamp(targetVelocity.x, 6.7f, 7.5f);
         RbPlayer.velocity = Vector2.SmoothDamp(RbPlayer.velocity, targetVelocity, ref targetVelocity, GameManager.Instance.getSmoothing());
     }
 
     private void Jump()
     {
-        RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, GameManager.Instance.getJumpForce());
+        Vector2 horizontalVelocity = new Vector2(RbPlayer.velocity.x, 0f);
+        RbPlayer.velocity = horizontalVelocity.normalized * Mathf.Abs(GameManager.Instance.getSpeed()) + Vector2.up * GameManager.Instance.getJumpForce();
         // GameManager.Instance.setIsGrounded(false);
     }
 

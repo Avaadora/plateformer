@@ -23,6 +23,12 @@ public class PickUpItem : MonoBehaviour
                 RecipeManager.Instance.CheckForDigRecipe(Item);
             }
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        Invoke(nameof(Respawn), 5f);
+    }
+
+    private void Respawn()
+    {
+        gameObject.SetActive(true);
     }
 }
