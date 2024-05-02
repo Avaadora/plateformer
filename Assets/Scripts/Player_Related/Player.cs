@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -118,6 +119,7 @@ public class Player : MonoBehaviour
     private void Move()
     {
         Vector2 targetVelocity = new Vector2(HorizontalInput * GameManager.Instance.getSpeed(), RbPlayer.velocity.y);
+        Mathf.Clamp(targetVelocity.x, 6f, 8f);
         RbPlayer.velocity = Vector2.SmoothDamp(RbPlayer.velocity, targetVelocity, ref targetVelocity, GameManager.Instance.getSmoothing());
     }
 
