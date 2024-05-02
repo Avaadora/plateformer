@@ -37,6 +37,15 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""VerticalMove"",
+                    ""type"": ""Button"",
+                    ""id"": ""39ba889f-be67-4917-80a0-6c3f24087a52"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""581cc88a-0848-4307-9b91-fdc8cd63da5b"",
@@ -132,6 +141,61 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""action"": ""Glide"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""4741a8da-0028-4d83-82d5-fe65dea81897"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMove"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""bd1e9705-4006-4042-ae8e-ef9f56462353"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""VerticalMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""19179a05-f5d0-4b5b-9b1d-296d0d189b71"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""VerticalMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""c74a3cc1-c78c-4d33-be48-ada7a5097928"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""VerticalMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""4a0fbbaf-04ba-45f1-8a48-1947aafa3e7b"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""VerticalMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -152,6 +216,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_HorizontalMove = m_Player.FindAction("HorizontalMove", throwIfNotFound: true);
+        m_Player_VerticalMove = m_Player.FindAction("VerticalMove", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Glide = m_Player.FindAction("Glide", throwIfNotFound: true);
     }
@@ -216,6 +281,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_HorizontalMove;
+    private readonly InputAction m_Player_VerticalMove;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Glide;
     public struct PlayerActions
@@ -223,6 +289,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         private @InputController m_Wrapper;
         public PlayerActions(@InputController wrapper) { m_Wrapper = wrapper; }
         public InputAction @HorizontalMove => m_Wrapper.m_Player_HorizontalMove;
+        public InputAction @VerticalMove => m_Wrapper.m_Player_VerticalMove;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Glide => m_Wrapper.m_Player_Glide;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -237,6 +304,9 @@ public partial class @InputController: IInputActionCollection2, IDisposable
             @HorizontalMove.started += instance.OnHorizontalMove;
             @HorizontalMove.performed += instance.OnHorizontalMove;
             @HorizontalMove.canceled += instance.OnHorizontalMove;
+            @VerticalMove.started += instance.OnVerticalMove;
+            @VerticalMove.performed += instance.OnVerticalMove;
+            @VerticalMove.canceled += instance.OnVerticalMove;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
@@ -250,6 +320,9 @@ public partial class @InputController: IInputActionCollection2, IDisposable
             @HorizontalMove.started -= instance.OnHorizontalMove;
             @HorizontalMove.performed -= instance.OnHorizontalMove;
             @HorizontalMove.canceled -= instance.OnHorizontalMove;
+            @VerticalMove.started -= instance.OnVerticalMove;
+            @VerticalMove.performed -= instance.OnVerticalMove;
+            @VerticalMove.canceled -= instance.OnVerticalMove;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
@@ -294,6 +367,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnHorizontalMove(InputAction.CallbackContext context);
+        void OnVerticalMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnGlide(InputAction.CallbackContext context);
     }

@@ -7,6 +7,17 @@ MonoImporter:
   - Cookie: {fileID: 11400000, guid: ba0914b1ed9411348ba14bd657372db7, type: 2}
   - ChocolateBar: {fileID: 11400000, guid: 7e7955874b706b14d906c069a08e5cbb, type: 2}
   - Watermelon: {fileID: 11400000, guid: b3a1dae672886d447a1b7e9b33fec8be, type: 2}
+  - Chicken: {fileID: 11400000, guid: daeb7625c79bacc4181d9fbede32e53d, type: 2}
+  - Pie: {fileID: 11400000, guid: 94a918f0d01d36d4d87f3093a72a3973, type: 2}
+  - Sushi: {fileID: 11400000, guid: 5a63723f75d526243af18d7d89604ced, type: 2}
+  - CookieSprite: {instanceID: 0}
+  - ChocolateBarSprite: {instanceID: 0}
+  - WatermelonSprite: {instanceID: 0}
+  - ChickenSprite: {instanceID: 0}
+  - PieSprite: {instanceID: 0}
+  - SushiSprite: {instanceID: 0}
+  - Check: {instanceID: 0}
+  - Wing: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
