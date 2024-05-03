@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     private float Smoothing = 0.3f; // Valeur de smoothing accélération au départ et ralentissement lors de l'arrêt du joueur
     private float JumpForce = 3.5f;
     private float GlideSpeed = 1f;
-    private float CoyoteTime = 0.3f;
+    private float CoyoteTime = 0.2f;
 
     private bool isJumping;
     private bool isGrounded;
