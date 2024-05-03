@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {
-    [SerializeField] private GameObject Player;
-    private Vector3 lastknownPosition;
+    private Vector3 respawnPosition;
 
     private void Start()
     {
-        lastknownPosition = Player.transform.position;
-        Debug.Log("START "+lastknownPosition);
+        // Sauvegarde la position de respawn initiale
+        respawnPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 
-    // Il faut destroy le GO pour le ré-intantier ça marche faut suivre le tuto
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (col.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            Destroy(Player);
-            Instantiate(Player, lastknownPosition, Quaternion.identity);
+            // Met à jour la position du joueur à la position de respawn
+            collision.transform.position = respawnPosition;
         }
-        Debug.Log("COLLISION "+Player.transform.position);
     }
 }

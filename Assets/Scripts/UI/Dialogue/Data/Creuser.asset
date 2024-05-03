@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue:
   - "Recette termin\xE9e avec succ\xE8s !\nVous pouvez creuser !"
-  - Maintenez CTRL pour creuser.
+  - Appuyer sur E pour creuser.

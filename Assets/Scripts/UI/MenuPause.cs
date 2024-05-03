@@ -5,23 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour
 {
-    private InputController MyInputActions;
+    private InputController InputActions;
 
     private bool isPaused;
+
     void Awake()
     {
-        MyInputActions = new InputController();
-        MyInputActions.UI.Enable();
+        InputActions = new InputController();
+        InputActions.UI.Enable();
+
+        InputActions.UI.Pause.performed += ctx => TogglePause();
 
         CloseWindow();
     }
-    
 
     public void Pause()
     {
-        Debug.Log(MyInputActions.UI.Pause.IsPressed());
-
-        if (MyInputActions.UI.Pause.IsPressed() && !isPaused)
+        if (InputActions.UI.Pause.IsPressed() && !isPaused)
         {
             gameObject.SetActive(true);
             isPaused = true;
@@ -41,6 +41,23 @@ public class MenuPause : MonoBehaviour
     public void CloseWindow()
     {
         gameObject.SetActive(false);
+    }
 
+    public void Resume()
+    {
+        gameObject.SetActive(false);
+        isPaused = false;
+    }
+
+    void TogglePause()
+    {
+        if (!isPaused)
+        {
+            Pause();
+        }
+        else
+        {
+            Resume();
+        }
     }
 }

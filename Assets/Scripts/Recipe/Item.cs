@@ -6,9 +6,13 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     [SerializeField] public int Index;
+
     [SerializeField] public string ItemName;
     [SerializeField] private string ItemDescription;
     [SerializeField] public string Tag;
+
     [SerializeField] public Sprite ItemSprite;
+    
+    [SerializeField] public bool isDiggable;
 
 }
