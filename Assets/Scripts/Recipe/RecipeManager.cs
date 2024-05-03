@@ -37,21 +37,18 @@ public class RecipeManager : MonoBehaviour
     }
 
     [Header("------------Recipe------------")]
-    [SerializeField] private Item[] GlideRecipe, DigRecipe; // Recette à valider
-    [SerializeField] private Image[] GlideImage, DigImage;
-    [SerializeField]
-    private Item Cookie, ChocolateBar, Watermelon,
-                                    Chicken, Pie, Sushi;
-    [SerializeField]
-    private Image CookieSprite, ChocolateBarSprite, WatermelonSprite,
-                                    ChickenSprite, PieSprite, SushiSprite,
-                                    Check, Wing, Shovel;
+    [SerializeField] private Item[] GlideRecipe, DigRecipe, FireRecipe; // Recette à valider
+    [SerializeField] private Item Cookie, ChocolateBar, Watermelon, Chicken, Pie, Sushi, Cherry, Pepper, DragonFruit;
 
-    private bool canGlide, isGliding, canDig, isDigging;
+    [SerializeField] private Image[] GlideImage, DigImage, FireImage;
+    [SerializeField] private Image CookieSprite, ChocolateBarSprite, WatermelonSprite, ChickenSprite, PieSprite, SushiSprite, CherrySprite, PepperSprite, DragonFruitSprite, Check, Wing, Shovel, Fire;
 
-    private int GlideIndex, DigIndex = 0;
+    private bool canGlide, isGliding, canDig, isDigging, canFire, isFiring;
 
-    public UnityEvent OnCanGlideChanged, OnCanDigChanged;
+
+    private int GlideIndex, DigIndex, FireIndex = 0;
+
+    public UnityEvent OnCanGlideChanged, OnCanDigChanged, OnCanFireChanged;
 
     void Start()
     {
@@ -66,17 +63,27 @@ public class RecipeManager : MonoBehaviour
         DigRecipe[0] = Chicken;
         DigRecipe[1] = Pie;
         DigRecipe[2] = Sushi;
-
-
+        // ----- Troisième recette -----
+        FireRecipe = new Item[3];
+        FireRecipe[0] = Cherry;
+        FireRecipe[1] = Pepper;
+        FireRecipe[2] = DragonFruit;
+        // Setup des Sprites
+        // ----- Première recette -----
         GlideImage = new Image[3];
         GlideImage[0] = CookieSprite;
         GlideImage[1] = ChocolateBarSprite;
         GlideImage[2] = WatermelonSprite;
-
+        // ----- Deuxième recette -----
         DigImage = new Image[3];
         DigImage[0] = ChickenSprite;
         DigImage[1] = PieSprite;
         DigImage[2] = SushiSprite;
+        // ----- Troisème recette -----
+        FireImage = new Image[3];
+        FireImage[0] = CherrySprite;
+        FireImage[1] = PepperSprite;
+        FireImage[2] = DragonFruitSprite;
     }
 
     public void CheckForGlideRecipe(Item ItemToPickUp)
@@ -117,9 +124,27 @@ public class RecipeManager : MonoBehaviour
         }
     }
 
+        public void CheckForFireRecipe(Item ItemToPickUp)
+    {
+        if (FireIndex < FireRecipe.Length && ItemToPickUp == FireRecipe[FireIndex])
+        {
+            Instantiate(Check, FireImage[FireIndex].transform);
+            FireIndex++;
+            if (DigIndex == FireRecipe.Length)
+            {
+                Instantiate(Check, Fire.transform);
+                canFire = true;
+                OnCanFireChanged.Invoke();
+            }
+        }
+        else
+        {
+            canFire = false;
+        }
+    }
+
     // Lier l'UI aux Item
-    public void UpdateRecipeUI(Sprite Cookie, Sprite ChocolateBar, Sprite Watermelon,
-                                Sprite Chicken, Sprite Pie, Sprite Sushi)
+    public void UpdateRecipeUI(Sprite Cookie, Sprite ChocolateBar, Sprite Watermelon, Sprite Chicken, Sprite Pie, Sprite Sushi, Sprite Cherry, Sprite Pepper, Sprite DragonFruit)
     {
         CookieSprite.sprite = Cookie;
         ChocolateBarSprite.sprite = ChocolateBar;
@@ -128,6 +153,10 @@ public class RecipeManager : MonoBehaviour
         ChickenSprite.sprite = Chicken;
         PieSprite.sprite = Pie;
         SushiSprite.sprite = Sushi;
+
+        CherrySprite.sprite = Cherry;
+        PepperSprite.sprite = Pepper;
+        DragonFruitSprite.sprite = DragonFruit;
     }
 
     public bool getCanGlide()
@@ -169,4 +198,25 @@ public class RecipeManager : MonoBehaviour
     {
         this.isDigging = isDigging;
     }
+
+    public bool getCanFire()
+    {
+        return canFire;
+    }
+
+    public void setCanFire(bool canFire)
+    {
+        this.canFire = canFire;
+    }
+
+    public bool getIsFiring()
+    {
+        return isFiring;
+    }
+
+    public void setIsFiring(bool isFiring)
+    {
+        this.isFiring = isFiring;
+    }
+
 }

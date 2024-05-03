@@ -43,6 +43,7 @@ public class SelfDestruct_Plateform : Plateform
         Rb.angularVelocity = 0;
         Rb.bodyType = RigidbodyType2D.Static;
         transform.position = OriginalPostion;
-        collider2D.enabled = true;       
+        collider2D.enabled = true;   
+        IsWaitinfForFall = false;    
     }
 }

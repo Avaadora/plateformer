@@ -148,8 +148,8 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        // Vector2 horizontalVelocity = new Vector2(RbPlayer.velocity.x, 0f);
-        // RbPlayer.velocity = horizontalVelocity.normalized * Mathf.Abs(GameManager.Instance.getSpeed()) + Vector2.up * GameManager.Instance.getJumpForce();
+        //Vector2 horizontalVelocity = new Vector2(RbPlayer.velocity.x, 0f);
+        //RbPlayer.velocity = horizontalVelocity.normalized * Mathf.Abs(GameManager.Instance.getSmoothing()) + Vector2.up * GameManager.Instance.getJumpForce();
 
         RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, GameManager.Instance.getJumpForce());
     }

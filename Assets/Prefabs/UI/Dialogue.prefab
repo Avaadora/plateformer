@@ -332,7 +332,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 8645096160506913094}
   LabelText: {fileID: 7183975308061950694}
-  dialogueObject: {fileID: 11400000, guid: bf702692f3b55704e9f5d5cfe66a101f, type: 2}
+  dialogueObject:
+  - {fileID: 11400000, guid: d4fd03705b62b544b879179d0c70e311, type: 2}
+  - {fileID: 11400000, guid: bf702692f3b55704e9f5d5cfe66a101f, type: 2}
+  - {fileID: 11400000, guid: 31b1a784b85d30a41a152e2bbe31a8c8, type: 2}
+  - {fileID: 11400000, guid: 1633cd48f01cf434c9ec8be7d999a6ef, type: 2}
 --- !u!114 &862340784525738561
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,6 +22,12 @@ public class PickUpItem : MonoBehaviour
             {
                 RecipeManager.Instance.CheckForDigRecipe(Item);
             }
+
+            // Vérifier si l'objet appartient à la recette de cracher du feu
+            if (Item.Tag.Equals("Diggable") && Item.isDiggable)
+            {
+                RecipeManager.Instance.CheckForFireRecipe(Item);
+            }
         }
         gameObject.SetActive(false);
         Invoke(nameof(Respawn), 5f);
