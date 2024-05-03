@@ -49,6 +49,11 @@ public class MenuPause : MonoBehaviour
         isPaused = false;
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     void TogglePause()
     {
         if (!isPaused)

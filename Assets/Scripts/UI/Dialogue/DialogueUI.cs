@@ -20,6 +20,7 @@ public class DialogueUI : MonoBehaviour
         RecipeManager.Instance.OnCanGlideChanged.AddListener(OnCanGlideChangedHandler);
         RecipeManager.Instance.OnCanDigChanged.AddListener(OnCanDigChangedHandler);
         RecipeManager.Instance.OnCanFireChanged.AddListener(OnCanFireChangedHandler);
+        RecipeManager.Instance.OnCanWallJumpChanged.AddListener(OnCanWallJumpChangedHandler);
     }
 
     public void OnEventTriggered()
@@ -92,6 +93,13 @@ public class DialogueUI : MonoBehaviour
         if (RecipeManager.Instance.getCanFire())
         {
             ShowDialogue(dialogueObject[2]);
+        }
+    }
+        private void OnCanWallJumpChangedHandler()
+    {
+        if (RecipeManager.Instance.getCanWallJump())
+        {
+            ShowDialogue(dialogueObject[4]);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class RecipeManager : MonoBehaviour
 {
@@ -34,24 +35,45 @@ public class RecipeManager : MonoBehaviour
         {
             _instance = null;
         }
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     [Header("------------Recipe------------")]
-    [SerializeField] private Item[] GlideRecipe, DigRecipe, FireRecipe; // Recette à valider
-    [SerializeField] private Item Cookie, ChocolateBar, Watermelon, Chicken, Pie, Sushi, Cherry, Pepper, DragonFruit;
+    [SerializeField] private Item[] GlideRecipe, DigRecipe, FireRecipe, WallJumpRecipe; // Recette à valider
+    [SerializeField] private Item   Cookie, ChocolateBar, Watermelon, 
+                                    Chicken, Pie, Sushi, 
+                                    Cherry, Pepper, DragonFruit, 
+                                    Apple, Radish, Pinapple;
 
-    [SerializeField] private Image[] GlideImage, DigImage, FireImage;
-    [SerializeField] private Image CookieSprite, ChocolateBarSprite, WatermelonSprite, ChickenSprite, PieSprite, SushiSprite, CherrySprite, PepperSprite, DragonFruitSprite, Check, Wing, Shovel, Fire;
+    [SerializeField] private Image[] GlideImage, DigImage, FireImage, WallJumpImage;
+    [SerializeField] private Image  CookieSprite, ChocolateBarSprite, WatermelonSprite, 
+                                    ChickenSprite, PieSprite, SushiSprite,
+                                    CherrySprite, PepperSprite, DragonFruitSprite, 
+                                    AppleSprite, RadishSprite, PinappleSprite,
+                                    Check, Wing, Shovel, Fire, Arrow;
 
-    private bool canGlide, isGliding, canDig, isDigging, canFire, isFiring;
+    private bool    canGlide, isGliding, 
+                    canDig, isDigging, 
+                    canFire, isFiring,
+                    canWallJump, isWallJumping;
 
+    private int GlideIndex, DigIndex, FireIndex, WallJumpIndex = 0;
 
-    private int GlideIndex, DigIndex, FireIndex = 0;
+    public UnityEvent OnCanGlideChanged, OnCanDigChanged, OnCanFireChanged, OnCanWallJumpChanged;
 
-    public UnityEvent OnCanGlideChanged, OnCanDigChanged, OnCanFireChanged;
+    [Header("------------Scene Management------------")]
+    [SerializeField] private GameObject tutorialObject;
+    [SerializeField] private GameObject levelObject;
 
     void Start()
     {
+        tutorialObject.SetActive(false);
+        levelObject.SetActive(false);
+
+        
+
+
         // Setup des recettes
         // ----- Première recette -----
         GlideRecipe = new Item[3];
@@ -68,6 +90,11 @@ public class RecipeManager : MonoBehaviour
         FireRecipe[0] = Cherry;
         FireRecipe[1] = Pepper;
         FireRecipe[2] = DragonFruit;
+        // ----- Quatrième recette -----
+        WallJumpRecipe = new Item[3];
+        WallJumpRecipe[0] = Apple;
+        WallJumpRecipe[1] = Radish;
+        WallJumpRecipe[2] = Pinapple;
         // Setup des Sprites
         // ----- Première recette -----
         GlideImage = new Image[3];
@@ -84,6 +111,35 @@ public class RecipeManager : MonoBehaviour
         FireImage[0] = CherrySprite;
         FireImage[1] = PepperSprite;
         FireImage[2] = DragonFruitSprite;
+        // ----- Quatrième recette -----
+        WallJumpImage = new Image[3];
+        WallJumpImage[0] = AppleSprite;
+        WallJumpImage[1] = RadishSprite;
+        WallJumpImage[2] = PinappleSprite;
+    }
+
+    private void FixedUpdate() {
+        OnSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        switch (scene.buildIndex)
+        {
+            case 1:
+                tutorialObject.SetActive(true);
+                levelObject.SetActive(false);
+                break;
+            case 2:
+                tutorialObject.SetActive(false);
+                levelObject.SetActive(true);
+                break;
+            default:
+                // Par défaut, désactive tous les enfants
+                tutorialObject.SetActive(false);
+                levelObject.SetActive(false);
+                break;
+        }
     }
 
     public void CheckForGlideRecipe(Item ItemToPickUp)
@@ -124,13 +180,13 @@ public class RecipeManager : MonoBehaviour
         }
     }
 
-        public void CheckForFireRecipe(Item ItemToPickUp)
+    public void CheckForFireRecipe(Item ItemToPickUp)
     {
-        if (FireIndex < FireRecipe.Length && ItemToPickUp == FireRecipe[FireIndex])
+        if (FireIndex < FireRecipe.Length && ItemToPickUp == FireRecipe[FireIndex] && canDig)
         {
             Instantiate(Check, FireImage[FireIndex].transform);
             FireIndex++;
-            if (DigIndex == FireRecipe.Length)
+            if (FireIndex == FireRecipe.Length)
             {
                 Instantiate(Check, Fire.transform);
                 canFire = true;
@@ -143,8 +199,30 @@ public class RecipeManager : MonoBehaviour
         }
     }
 
+    public void CheckForWallJumpRecipe(Item ItemToPickUp)
+    {
+        if (WallJumpIndex < WallJumpRecipe.Length && ItemToPickUp == WallJumpRecipe[WallJumpIndex])
+        {
+            Instantiate(Check, WallJumpImage[WallJumpIndex].transform);
+            WallJumpIndex++;
+            if (WallJumpIndex == WallJumpRecipe.Length)
+            {
+                Instantiate(Check, Arrow.transform);
+                canWallJump = true;
+                OnCanWallJumpChanged.Invoke();
+            }
+        }
+        else
+        {
+            canWallJump = false;
+        }
+    }
+
     // Lier l'UI aux Item
-    public void UpdateRecipeUI(Sprite Cookie, Sprite ChocolateBar, Sprite Watermelon, Sprite Chicken, Sprite Pie, Sprite Sushi, Sprite Cherry, Sprite Pepper, Sprite DragonFruit)
+    public void UpdateRecipeUI( Sprite Cookie, Sprite ChocolateBar, Sprite Watermelon, 
+                                Sprite Chicken, Sprite Pie, Sprite Sushi, 
+                                Sprite Cherry, Sprite Pepper, Sprite DragonFruit,
+                                Sprite Apple, Sprite Radish, Sprite Pinapple)
     {
         CookieSprite.sprite = Cookie;
         ChocolateBarSprite.sprite = ChocolateBar;
@@ -157,6 +235,10 @@ public class RecipeManager : MonoBehaviour
         CherrySprite.sprite = Cherry;
         PepperSprite.sprite = Pepper;
         DragonFruitSprite.sprite = DragonFruit;
+
+        AppleSprite.sprite = Apple;
+        RadishSprite.sprite = Radish;
+        PinappleSprite.sprite = Pinapple;
     }
 
     public bool getCanGlide()
@@ -217,6 +299,26 @@ public class RecipeManager : MonoBehaviour
     public void setIsFiring(bool isFiring)
     {
         this.isFiring = isFiring;
+    }
+
+    public bool getIsWallJumping()
+    {
+        return isWallJumping;
+    }
+
+    public void setIsWallJumping(bool isWallJumping)
+    {
+        this.isWallJumping = isWallJumping;
+    }
+
+    public bool getCanWallJump()
+    {
+        return canWallJump;
+    }
+
+    public void setCanWallJump(bool canWallJump)
+    {
+        this.canWallJump = canWallJump;
     }
 
 }

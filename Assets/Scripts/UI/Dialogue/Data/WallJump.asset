@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae87559c3ccd78c4ea6e198d621a9c0e, type: 3}
-  m_Name: CracherFeu
+  m_Name: WallJump
   m_EditorClassIdentifier: 
   Dialogue:
-  - "Recette termin\xE9e avec succ\xE8s !\nVous pouvez cracher du feu !"
-  - Appuyer sur F pour cracher du feu.
+  - Je me sens plus fort, et si j'essayais de grimper aux murs...

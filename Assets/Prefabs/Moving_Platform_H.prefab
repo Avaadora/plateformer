@@ -235,9 +235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d32aaccba048824a8ee0580e62c38ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  TextOffset: {x: 0, y: 0}
-  TextSize: 3
   IsPingPong: 0
-  Delay: 0
-  checkPointDelay: 0
+  Delay: 0.02
+  checkPointDelay: 0.03

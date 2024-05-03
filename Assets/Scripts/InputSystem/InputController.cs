@@ -62,6 +62,15 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dig"",
+                    ""type"": ""Button"",
+                    ""id"": ""a49d550c-7c61-4a00-a592-6fc5d7ed1218"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -196,6 +205,17 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""action"": ""VerticalMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4462a59b-f057-4dfb-a1e6-2f0d976ad63f"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dig"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -247,6 +267,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         m_Player_VerticalMove = m_Player.FindAction("VerticalMove", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Glide = m_Player.FindAction("Glide", throwIfNotFound: true);
+        m_Player_Dig = m_Player.FindAction("Dig", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
@@ -315,6 +336,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_VerticalMove;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Glide;
+    private readonly InputAction m_Player_Dig;
     public struct PlayerActions
     {
         private @InputController m_Wrapper;
@@ -323,6 +345,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         public InputAction @VerticalMove => m_Wrapper.m_Player_VerticalMove;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Glide => m_Wrapper.m_Player_Glide;
+        public InputAction @Dig => m_Wrapper.m_Player_Dig;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -344,6 +367,9 @@ public partial class @InputController: IInputActionCollection2, IDisposable
             @Glide.started += instance.OnGlide;
             @Glide.performed += instance.OnGlide;
             @Glide.canceled += instance.OnGlide;
+            @Dig.started += instance.OnDig;
+            @Dig.performed += instance.OnDig;
+            @Dig.canceled += instance.OnDig;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -360,6 +386,9 @@ public partial class @InputController: IInputActionCollection2, IDisposable
             @Glide.started -= instance.OnGlide;
             @Glide.performed -= instance.OnGlide;
             @Glide.canceled -= instance.OnGlide;
+            @Dig.started -= instance.OnDig;
+            @Dig.performed -= instance.OnDig;
+            @Dig.canceled -= instance.OnDig;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -447,6 +476,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         void OnVerticalMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnGlide(InputAction.CallbackContext context);
+        void OnDig(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

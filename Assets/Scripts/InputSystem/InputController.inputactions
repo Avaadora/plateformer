@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Dig",
+                    "type": "Button",
+                    "id": "a49d550c-7c61-4a00-a592-6fc5d7ed1218",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -174,6 +183,17 @@
                     "action": "VerticalMove",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "4462a59b-f057-4dfb-a1e6-2f0d976ad63f",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dig",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

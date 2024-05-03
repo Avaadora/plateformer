@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Glide
   - Dig
+  - Level
+  - Tuto
   layers:
   - Default
   - TransparentFX

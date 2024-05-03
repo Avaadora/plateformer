@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae87559c3ccd78c4ea6e198d621a9c0e, type: 3}
-  m_Name: CracherFeu
+  m_Script: {fileID: 11500000, guid: 141ef5dbd5433614ea6412a37c09af29, type: 3}
+  m_Name: Pinapple
   m_EditorClassIdentifier: 
-  Dialogue:
-  - "Recette termin\xE9e avec succ\xE8s !\nVous pouvez cracher du feu !"
-  - Appuyer sur F pour cracher du feu.
+  Index: 11
+  ItemName: pinapple
+  ItemDescription: Ananas
+  Tag: WallJump
+  ItemSprite: {fileID: 26215435, guid: 57409d6ec1fe7184d9ac8fbea8aeb225, type: 3}
+  isDiggable: 0

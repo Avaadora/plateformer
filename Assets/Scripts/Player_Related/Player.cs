@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         isTouchingWallLeft = (colLeft != null);
         Collider2D colRight = Physics2D.OverlapBox(WallCheckPositionRight, new Vector2(WallCheckWidth, WallCheckHeight), 0, WallLayerMask);
         isTouchingWallRight = (colRight != null);
-        
+
         // isGrounded = (col != null); // If statement plus court
         if (col != null)
         {
@@ -98,6 +98,17 @@ public class Player : MonoBehaviour
         else
         {
             RecipeManager.Instance.setIsGliding(false);
+        }
+
+        // WALL JUMP
+        if (isTouchingWallLeft && MyInputActions.Player.Jump.IsPressed())
+        {
+            WallJump(Vector2.right);
+        }
+
+        if (isTouchingWallRight && MyInputActions.Player.Jump.IsPressed())
+        {
+            WallJump(Vector2.left);
         }
 
 
@@ -157,6 +168,14 @@ public class Player : MonoBehaviour
     private void Glide()
     {
         RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, -GameManager.Instance.getGlideSpeed());
+    }
+
+    private void WallJump(Vector2 wallDirection)
+    {
+        Vector2 jumpDirection = Vector2.up + wallDirection;
+        // jumpDirection.Normalize();
+
+        RbPlayer.velocity = jumpDirection * GameManager.Instance.getJumpForce();
     }
 
     private void UpdateGroundCheckOffset()
