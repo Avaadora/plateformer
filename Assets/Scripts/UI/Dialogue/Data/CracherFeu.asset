@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CracherFeu
   m_EditorClassIdentifier: 
   Dialogue:
-  - "Recette termin\xE9e avec succ\xE8s !\nVous pouvez creuser !"
-  - Appuyer sur E pour creuser.
+  - "Recette termin\xE9e avec succ\xE8s !\nVous pouvez cracher du feu !"
+  - Appuyer sur F pour creuser.
