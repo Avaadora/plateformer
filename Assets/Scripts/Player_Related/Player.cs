@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private Vector2 GroundCheckPosition;
     private Vector2 WallCheckPositionLeft;
     private Vector2 WallCheckPositionRight;
+    private Vector2 zeroVelocity = Vector2.zero;
 
 
     private Rigidbody2D RbPlayer;
@@ -153,8 +154,7 @@ public class Player : MonoBehaviour
     private void Move()
     {
         Vector2 targetVelocity = new Vector2(HorizontalInput * GameManager.Instance.getSpeed(), RbPlayer.velocity.y);
-        Mathf.Clamp(targetVelocity.x, 6.7f, 7.5f);
-        RbPlayer.velocity = Vector2.SmoothDamp(RbPlayer.velocity, targetVelocity, ref targetVelocity, GameManager.Instance.getSmoothing());
+        RbPlayer.velocity = Vector2.SmoothDamp(RbPlayer.velocity, targetVelocity, ref zeroVelocity, GameManager.Instance.getSmoothing());
     }
 
     private void Jump()

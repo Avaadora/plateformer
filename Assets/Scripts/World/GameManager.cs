@@ -38,9 +38,9 @@ public class GameManager : MonoBehaviour
 
     [Header("------------Player------------")]
     /*-------------VARIABLES PLAYER-------------*/
-    private float Speed = 6.5f; // Vitesse du player
-    private float Smoothing = 0.6f; // Valeur de smoothing accélération au départ et ralentissement lors de l'arrêt du joueur
-    private float JumpForce = 3.5f;
+    private float Speed = 5.75f; // Vitesse du player
+    private float Smoothing = 0.4f; // Valeur de smoothing accélération au départ et ralentissement lors de l'arrêt du joueur
+    private float JumpForce = 3.75f;
     private float GlideSpeed = 1f;
     private float CoyoteTime = 0.2f;
 
