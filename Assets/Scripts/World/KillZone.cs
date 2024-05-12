@@ -19,14 +19,14 @@ public class KillZone : MonoBehaviour
             // Met à jour la position du joueur à la position de respawn
             collision.transform.position = respawnPosition;
         }
+        CheckPowerUpAndUI();
+    }
 
-        if (RecipeManager.Instance.getCanGlide())
+    private void CheckPowerUpAndUI()
+    {
+        if (!(RecipeManager.Instance.getCanGlide() || RecipeManager.Instance.getCanDig() || RecipeManager.Instance.getCanFire()))
         {
-            RecipeManager.Instance.setCanGlide(true);
-        }
-        else
-        {
-            RecipeManager.Instance.setCanGlide(false);
+            RecipeManager.Instance.ClearCheckmarks();
         }
     }
 }

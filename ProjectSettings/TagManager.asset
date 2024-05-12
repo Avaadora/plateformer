@@ -8,6 +8,7 @@ TagManager:
   - Dig
   - Level
   - Tuto
+  - Check
   layers:
   - Default
   - TransparentFX

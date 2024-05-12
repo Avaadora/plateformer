@@ -26,7 +26,7 @@ public class RecipeManager : MonoBehaviour
         else
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
     }
     void OnDestroy()
@@ -71,9 +71,6 @@ public class RecipeManager : MonoBehaviour
         tutorialObject.SetActive(false);
         levelObject.SetActive(false);
 
-        
-
-
         // Setup des recettes
         // ----- Première recette -----
         GlideRecipe = new Item[3];
@@ -116,6 +113,8 @@ public class RecipeManager : MonoBehaviour
         WallJumpImage[0] = AppleSprite;
         WallJumpImage[1] = RadishSprite;
         WallJumpImage[2] = PinappleSprite;
+
+        
     }
 
     private void FixedUpdate() {
@@ -239,6 +238,16 @@ public class RecipeManager : MonoBehaviour
         AppleSprite.sprite = Apple;
         RadishSprite.sprite = Radish;
         PinappleSprite.sprite = Pinapple;
+    }
+
+    public void ClearCheckmarks()
+    {
+        // Détruire tous les objets "Check" actuellement présents dans la scène
+        GameObject[] checkmarks = GameObject.FindGameObjectsWithTag("Check");
+        foreach (GameObject checkmark in checkmarks)
+        {
+            Destroy(checkmark);
+        }
     }
 
     public bool getCanGlide()

@@ -35,6 +35,12 @@ public class MenuPause : MonoBehaviour
 
     public void Restart()
     {
+        RecipeManager.Instance.ClearCheckmarks();
+        
+        RecipeManager.Instance.setCanDig(false);
+        RecipeManager.Instance.setCanGlide(false);
+        RecipeManager.Instance.setCanFire(false);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

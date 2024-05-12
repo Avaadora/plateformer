@@ -446,7 +446,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Home
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 505a5c7eb14a37d4a9b6fc76cd882f45, type: 2}
   m_sharedMaterial: {fileID: -8642474318288907945, guid: 505a5c7eb14a37d4a9b6fc76cd882f45, type: 2}
@@ -1154,7 +1154,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6576923561690899095}
         m_TargetAssemblyTypeName: MenuPause, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: Home
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

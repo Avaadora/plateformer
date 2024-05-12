@@ -123,6 +123,11 @@ public class Player : MonoBehaviour
             // En train de descendre (rechute) -> pour redescendre plus vite que le saut
             RbPlayer.gravityScale = GravityScale * FallGravityScaleMultiplier;
 
+            // Fix de la vélocité en y pour ne pas passer à travers les plateformes
+            // RbPlayer.velocity = new Vector2(0f, RbPlayer.velocity.y);
+
+
+
             if (RecipeManager.Instance.getIsGliding())
             {
                 RbPlayer.gravityScale = 0;
