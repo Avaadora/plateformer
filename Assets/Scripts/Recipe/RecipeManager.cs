@@ -58,7 +58,7 @@ public class RecipeManager : MonoBehaviour
                     canFire, isFiring,
                     canWallJump, isWallJumping;
 
-    private int GlideIndex, DigIndex, FireIndex, WallJumpIndex = 0;
+    static int GlideIndex, DigIndex, FireIndex, WallJumpIndex = 0;
 
     public UnityEvent OnCanGlideChanged, OnCanDigChanged, OnCanFireChanged, OnCanWallJumpChanged;
 
@@ -242,7 +242,6 @@ public class RecipeManager : MonoBehaviour
 
     public void ClearCheckmarks()
     {
-        // Détruire tous les objets "Check" actuellement présents dans la scène
         GameObject[] checkmarks = GameObject.FindGameObjectsWithTag("Check");
         foreach (GameObject checkmark in checkmarks)
         {

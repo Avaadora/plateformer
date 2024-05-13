@@ -18,6 +18,17 @@ public class PickUpItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.CompareTag("Player"));
+        if (collision.CompareTag("Player") && Item.isDiggable)
+        {
+            // Vérifier si l'objet appartient à la recette de cracher du feu
+            if (InputAction.Player.Dig.IsPressed())
+            {
+                RecipeManager.Instance.CheckForFireRecipe(Item);
+                gameObject.SetActive(false);
+            }
+            // gameObject.SetActive(false);
+        }
         if (collision.CompareTag("Player"))
         {
             // Vérifier si l'objet appartient à la recette de planer
@@ -41,28 +52,20 @@ public class PickUpItem : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
-        
-        if (!(RecipeManager.Instance.getCanGlide() || RecipeManager.Instance.getCanDig() || RecipeManager.Instance.getCanFire()))
-        {
-            Invoke(nameof(Respawn), 30f);
-        }
+        Invoke(nameof(Respawn), 5f);
+
+
+        // if (!(RecipeManager.Instance.getCanGlide() || RecipeManager.Instance.getCanDig() || RecipeManager.Instance.getCanFire()))
+        // {
+        //     Invoke(nameof(Respawn), 5f);
+        // }
+        // else
+        // {
+        //     gameObject.SetActive(false);
+        // }
     }
 
-    private void OnCollisionStay2D(Collision2D other)
-    {
-        Debug.Log(other.collider.CompareTag("Player"));
-        if (other.collider.CompareTag("Player"))
-        {
-            // Vérifier si l'objet appartient à la recette de cracher du feu
-            if (InputAction.Player.Dig.IsPressed() && Item.isDiggable)
-            {
-                RecipeManager.Instance.CheckForFireRecipe(Item);
-                gameObject.SetActive(false);
-            }
 
-        }
-        Invoke(nameof(Respawn), 10f);
-    }
 
     private void Respawn()
     {
