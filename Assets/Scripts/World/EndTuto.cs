@@ -9,7 +9,7 @@ public class EndTuto : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(2);
+            SceneController.Instance.LoadNextScene();
         }
     }
 }
