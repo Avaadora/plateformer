@@ -44,7 +44,7 @@ public class SceneController : MonoBehaviour
     IEnumerator LevelTransition()
     {
         SceneTransition.SetTrigger("End");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         SceneTransition.SetTrigger("Start");
     }
