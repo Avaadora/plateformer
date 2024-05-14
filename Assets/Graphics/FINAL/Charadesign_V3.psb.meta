@@ -110,8 +110,8 @@ ScriptedImporter:
     - name: Hanche
       guid: 05afe4062cb97b24480985183ec156c7
       position: {x: 265.20477, y: -120.1062, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9905881, w: 0.13687669}
-      length: 359.60492
+      rotation: {x: 0, y: 0, z: 0.99058807, w: 0.13687691}
+      length: 359.60483
       parentId: -1
       color:
         serializedVersion: 2
@@ -448,8 +448,8 @@ ScriptedImporter:
     - name: Hanche
       guid: 05afe4062cb97b24480985183ec156c7
       position: {x: 243.20477, y: -89.10617, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9905881, w: 0.13687669}
-      length: 359.60492
+      rotation: {x: 0, y: 0, z: 0.99058807, w: 0.13687691}
+      length: 359.60483
       parentId: -1
       color:
         serializedVersion: 2
@@ -873,27 +873,27 @@ ScriptedImporter:
     spriteBone:
     - name: "Pied_Gauche_Arri\xE8re"
       guid: fcf14d5a177e7804e9f7cccd290fadab
-      position: {x: 103.995804, y: -0.00012654586, z: 0}
-      rotation: {x: 0, y: 0, z: -0.4906921, w: 0.87133306}
-      length: 41.91638
+      position: {x: 103.99599, y: -0.00010243357, z: 0}
+      rotation: {x: 0, y: 0, z: -0.49069253, w: 0.8713329}
+      length: 41.916378
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4286578943
     - name: "Molet_Gauche_Arri\xE8re"
       guid: b62a3bea401920b4888d10cd88e3edf8
-      position: {x: 128.61142, y: 0.000006823225, z: 0}
-      rotation: {x: 0, y: 0, z: 0.2356163, w: 0.9718462}
-      length: 103.99593
+      position: {x: 128.6111, y: 0.00012461234, z: 0}
+      rotation: {x: 0, y: 0, z: 0.2356167, w: 0.9718461}
+      length: 103.99596
       parentId: 2
       color:
         serializedVersion: 2
         rgba: 4294901888
     - name: "Cuisse_Gauche_Arri\xE8re"
       guid: 922acccaeac3b79428cc5d0a471b8d11
-      position: {x: 23.83853, y: 37.889153, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7921797, w: 0.61028796}
-      length: 128.61134
+      position: {x: 23.838594, y: 37.889317, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7921797, w: 0.6102879}
+      length: 128.61116
       parentId: 3
       color:
         serializedVersion: 2
@@ -901,8 +901,8 @@ ScriptedImporter:
     - name: Hanche
       guid: 05afe4062cb97b24480985183ec156c7
       position: {x: 86.20477, y: 296.8938, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9905881, w: 0.13687669}
-      length: 359.60492
+      rotation: {x: 0, y: 0, z: 0.99058807, w: 0.13687691}
+      length: 359.60483
       parentId: -1
       color:
         serializedVersion: 2
@@ -1271,27 +1271,27 @@ ScriptedImporter:
     spriteBone:
     - name: Pied_Gauche_Devant
       guid: 3db3323f7963f364ab2d72f5f01d12f6
-      position: {x: 111.12265, y: -0.000052817762, z: 0}
-      rotation: {x: 0, y: 0, z: -0.32073858, w: 0.94716775}
-      length: 46.228516
+      position: {x: 181.42155, y: -0.00005956467, z: 0}
+      rotation: {x: 0, y: 0, z: -0.30359194, w: 0.9528022}
+      length: 46.228523
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4294901760
     - name: Molet_Gauche_Devant
       guid: 241803eed29a3c441b4122428fc6212b
-      position: {x: 93.54986, y: -0.000021251724, z: 0}
-      rotation: {x: 0, y: 0, z: 0.028342394, w: 0.99959826}
-      length: 111.12262
+      position: {x: 116.87538, y: -0.000057315166, z: 0}
+      rotation: {x: 0, y: 0, z: -0.27432176, w: 0.961638}
+      length: 181.4215
       parentId: 2
       color:
         serializedVersion: 2
         rgba: 4294967040
     - name: Genoux_Gauche_Devant
       guid: d1b215bc47178934b819b49879c6aba3
-      position: {x: 250.57063, y: 90.63416, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7422123, w: 0.6701649}
-      length: 93.54984
+      position: {x: 319.0071, y: 22.361008, z: 0}
+      rotation: {x: 0, y: 0, z: 0.9020721, w: 0.4315854}
+      length: 116.875465
       parentId: 3
       color:
         serializedVersion: 2
@@ -1299,8 +1299,8 @@ ScriptedImporter:
     - name: Hanche
       guid: 05afe4062cb97b24480985183ec156c7
       position: {x: 347.20477, y: 269.89383, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9905881, w: 0.13687669}
-      length: 359.60492
+      rotation: {x: 0, y: 0, z: 0.99058807, w: 0.13687691}
+      length: 359.60483
       parentId: -1
       color:
         serializedVersion: 2
@@ -1359,24 +1359,24 @@ ScriptedImporter:
         boneIndex3: 0
     - position: {x: 105.498, y: 150.737}
       boneWeight:
-        weight0: 0.76
-        weight1: 0.24000001
+        weight0: 0.58000004
+        weight1: 0.41999996
+        weight2: 0
+        weight3: 0
+        boneIndex0: 1
+        boneIndex1: 2
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 120.123, y: 190.343}
+      boneWeight:
+        weight0: 0.83
+        weight1: 0.17
         weight2: 0
         weight3: 0
         boneIndex0: 2
         boneIndex1: 1
         boneIndex2: 0
         boneIndex3: 0
-    - position: {x: 120.123, y: 190.343}
-      boneWeight:
-        weight0: 1
-        weight1: 0
-        weight2: 0
-        weight3: 0
-        boneIndex0: 2
-        boneIndex1: 3
-        boneIndex2: 3
-        boneIndex3: 3
     - position: {x: 127.562, y: 229.13}
       boneWeight:
         weight0: 1
@@ -1499,34 +1499,34 @@ ScriptedImporter:
         boneIndex3: 0
     - position: {x: 37.099, y: 187.93}
       boneWeight:
-        weight0: 1
-        weight1: 0
-        weight2: 0
-        weight3: 0
-        boneIndex0: 2
-        boneIndex1: 3
-        boneIndex2: 3
-        boneIndex3: 3
-    - position: {x: 33.371994, y: 146.237}
-      boneWeight:
-        weight0: 1
-        weight1: 0
-        weight2: 0
-        weight3: 0
-        boneIndex0: 2
-        boneIndex1: 3
-        boneIndex2: 3
-        boneIndex3: 3
-    - position: {x: 35.362, y: 104.75}
-      boneWeight:
-        weight0: 0.6501971
-        weight1: 0.34980297
+        weight0: 0.51
+        weight1: 0.49
         weight2: 0
         weight3: 0
         boneIndex0: 1
         boneIndex1: 2
-        boneIndex2: 3
-        boneIndex3: 3
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 33.371994, y: 146.237}
+      boneWeight:
+        weight0: 0.68
+        weight1: 0.32
+        weight2: 0
+        weight3: 0
+        boneIndex0: 1
+        boneIndex1: 2
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 35.362, y: 104.75}
+      boneWeight:
+        weight0: 0.8201971
+        weight1: 0.1798029
+        weight2: 0
+        weight3: 0
+        boneIndex0: 1
+        boneIndex1: 2
+        boneIndex2: 0
+        boneIndex3: 0
     - position: {x: 30.418, y: 64.704}
       boneWeight:
         weight0: 1
@@ -1801,18 +1801,18 @@ ScriptedImporter:
     spriteBone:
     - name: Oreilles
       guid: 2217beb15a32a4d46932dda3d8d5bc71
-      position: {x: 79.38784, y: -50.738327, z: 0}
-      rotation: {x: 0, y: 0, z: -0.82420063, w: 0.5662979}
-      length: 77.37165
+      position: {x: 79.38783, y: -50.738403, z: 0}
+      rotation: {x: 0, y: 0, z: -0.8242007, w: 0.56629795}
+      length: 77.37162
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4294967040
     - name: Head
       guid: dc90b8f51960f2648b4e8be4dc534ac1
-      position: {x: 44.0744, y: -69.58954, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9450709, w: 0.3268653}
-      length: 190.79529
+      position: {x: 44.074463, y: -69.58954, z: 0}
+      rotation: {x: 0, y: 0, z: 0.9450709, w: 0.32686526}
+      length: 190.79526
       parentId: -1
       color:
         serializedVersion: 2
@@ -2126,18 +2126,18 @@ ScriptedImporter:
     spriteBone:
     - name: Bouche
       guid: e7b5e6ad60feb5c46b4ad24d690ae71c
-      position: {x: 70.71978, y: 29.673069, z: 0}
+      position: {x: 70.71976, y: 29.67302, z: 0}
       rotation: {x: 0, y: 0, z: 0.51216197, w: 0.858889}
-      length: 123.825714
+      length: 123.8257
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4278255360
     - name: Head
       guid: dc90b8f51960f2648b4e8be4dc534ac1
-      position: {x: 201.0744, y: 42.41046, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9450709, w: 0.3268653}
-      length: 190.79529
+      position: {x: 201.07446, y: 42.41046, z: 0}
+      rotation: {x: 0, y: 0, z: 0.9450709, w: 0.32686526}
+      length: 190.79526
       parentId: -1
       color:
         serializedVersion: 2
@@ -2462,9 +2462,9 @@ ScriptedImporter:
     spriteBone:
     - name: Head
       guid: dc90b8f51960f2648b4e8be4dc534ac1
-      position: {x: 144.0744, y: -57.58954, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9450709, w: 0.3268653}
-      length: 190.79529
+      position: {x: 144.07446, y: -57.58954, z: 0}
+      rotation: {x: 0, y: 0, z: 0.9450709, w: 0.32686526}
+      length: 190.79526
       parentId: -1
       color:
         serializedVersion: 2
@@ -2767,17 +2767,17 @@ ScriptedImporter:
     spriteBone:
     - name: Bouche
       guid: e7b5e6ad60feb5c46b4ad24d690ae71c
-      position: {x: 70.71976, y: 29.67309, z: 0}
-      rotation: {x: 0, y: 0, z: 0.5121619, w: 0.8588889}
-      length: 123.82573
+      position: {x: 70.719795, y: 29.672998, z: 0}
+      rotation: {x: 0, y: 0, z: 0.51216185, w: 0.8588889}
+      length: 123.82572
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4278255360
     - name: Head
       guid: dc90b8f51960f2648b4e8be4dc534ac1
-      position: {x: 359.60498, y: -0.0002240999, z: 0}
-      rotation: {x: 0, y: 0, z: -0.19443068, w: 0.9809163}
+      position: {x: 359.60492, y: -0.0000005867587, z: 0}
+      rotation: {x: 0, y: 0, z: -0.19443044, w: 0.9809164}
       length: 190.79526
       parentId: 2
       color:
@@ -2786,17 +2786,17 @@ ScriptedImporter:
     - name: Hanche
       guid: 05afe4062cb97b24480985183ec156c7
       position: {x: 593.2048, y: -39.1062, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9905881, w: 0.13687669}
-      length: 359.60492
+      rotation: {x: 0, y: 0, z: 0.99058807, w: 0.13687691}
+      length: 359.60483
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4278190335
     - name: Oreilles
       guid: 2217beb15a32a4d46932dda3d8d5bc71
-      position: {x: 79.38764, y: -50.73818, z: 0}
-      rotation: {x: 0, y: 0, z: -0.8242007, w: 0.56629795}
-      length: 77.37163
+      position: {x: 79.38774, y: -50.738308, z: 0}
+      rotation: {x: 0, y: 0, z: -0.82420063, w: 0.5662979}
+      length: 77.37166
       parentId: 1
       color:
         serializedVersion: 2
@@ -3276,16 +3276,16 @@ ScriptedImporter:
     - name: Hanche
       guid: 05afe4062cb97b24480985183ec156c7
       position: {x: 499.20477, y: 88.89383, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9905881, w: 0.13687669}
-      length: 359.60492
+      rotation: {x: 0, y: 0, z: 0.99058807, w: 0.13687691}
+      length: 359.60483
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4278190335
     - name: Head
       guid: dc90b8f51960f2648b4e8be4dc534ac1
-      position: {x: 359.6049, y: -0.00011518976, z: 0}
-      rotation: {x: 0, y: 0, z: -0.19443068, w: 0.98091626}
+      position: {x: 359.6049, y: 0.000033362772, z: 0}
+      rotation: {x: 0, y: 0, z: -0.19443044, w: 0.9809164}
       length: 190.79526
       parentId: 0
       color:
@@ -3293,9 +3293,9 @@ ScriptedImporter:
         rgba: 4278255615
     - name: Queue_1
       guid: 895d7726e7949b74586635ceda7a8ff3
-      position: {x: -32.004, y: -16.809864, z: 0}
-      rotation: {x: 0, y: 0, z: -0.9979675, w: 0.063725136}
-      length: 116.99723
+      position: {x: -32.003952, y: -16.809875, z: 0}
+      rotation: {x: 0, y: 0, z: -0.9983456, w: 0.05749935}
+      length: 94.42962
       parentId: 0
       color:
         serializedVersion: 2
@@ -3840,8 +3840,8 @@ ScriptedImporter:
     spriteBone:
     - name: "Pied_Droit_Arri\xE8re"
       guid: 729df9ae6f3ffa34fa4e12c36dcb7ede
-      position: {x: 84.358185, y: 0.000049931143, z: 0}
-      rotation: {x: 0, y: 0, z: -0.54019475, w: 0.84154004}
+      position: {x: 84.3582, y: 0.00007896113, z: 0}
+      rotation: {x: 0, y: 0, z: -0.5401954, w: 0.8415397}
       length: 41.84756
       parentId: 1
       color:
@@ -3849,9 +3849,9 @@ ScriptedImporter:
         rgba: 4286643968
     - name: "Molet_Droit_Arri\xE8re"
       guid: 94a06601726eed14ea0791bca025dcbb
-      position: {x: 118.46513, y: 0.00002275878, z: 0}
-      rotation: {x: 0, y: 0, z: 0.26975083, w: 0.9629302}
-      length: 84.358025
+      position: {x: 118.46521, y: 0.000021691165, z: 0}
+      rotation: {x: 0, y: 0, z: 0.26975125, w: 0.96293}
+      length: 84.358055
       parentId: 2
       color:
         serializedVersion: 2
@@ -3859,8 +3859,8 @@ ScriptedImporter:
     - name: "Cuisse_Droite_Arri\xE8re"
       guid: f8479aca880b80241aadd29c9b706525
       position: {x: 45.122864, y: 234.88867, z: 0}
-      rotation: {x: 0, y: 0, z: 0.74145234, w: -0.67100555}
-      length: 118.46525
+      rotation: {x: 0, y: 0, z: 0.7414525, w: -0.67100537}
+      length: 118.465294
       parentId: -1
       color:
         serializedVersion: 2
@@ -4207,27 +4207,27 @@ ScriptedImporter:
     spriteBone:
     - name: Genoux_Droit_Avant
       guid: bff88627c47a5a44db00ab33863a7675
-      position: {x: 53.95398, y: 214.45898, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7538689, w: -0.657025}
-      length: 94.112946
+      position: {x: -4.9766846, y: 313.9555, z: 0}
+      rotation: {x: 0, y: 0, z: 0.5274097, w: -0.8496111}
+      length: 122.818535
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4294901888
     - name: Molet_Droit_Avant
       guid: fa586c43f5863604d8a1f17497d4ba25
-      position: {x: 94.112816, y: 0.000029649214, z: 0}
-      rotation: {x: 0, y: 0, z: 0.10503424, w: 0.9944687}
-      length: 73.066475
+      position: {x: 122.81857, y: 0.000071619244, z: 0}
+      rotation: {x: 0, y: 0, z: -0.2374043, w: 0.97141093}
+      length: 155.55885
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4286578943
     - name: Pied_Droit_Avant
       guid: 929ce43ec20ff6c4b8bfe1c8ff0e4c64
-      position: {x: 73.06651, y: 0.000036620615, z: 0}
-      rotation: {x: 0, y: 0, z: -0.34867108, w: 0.9372452}
-      length: 46.722843
+      position: {x: 155.55879, y: -0.00011489514, z: 0}
+      rotation: {x: 0, y: 0, z: -0.3046907, w: 0.95245135}
+      length: 46.722847
       parentId: 1
       color:
         serializedVersion: 2
@@ -4310,7 +4310,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 0
+        boneIndex0: 1
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -4320,17 +4320,17 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 0
+        boneIndex0: 1
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
     - position: {x: 77.005005, y: 158.334}
       boneWeight:
-        weight0: 1
-        weight1: 0
+        weight0: 0.68
+        weight1: 0.32
         weight2: 0
         weight3: 0
-        boneIndex0: 0
+        boneIndex0: 1
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -4376,12 +4376,12 @@ ScriptedImporter:
         boneIndex3: 0
     - position: {x: 10.880997, y: 210.907}
       boneWeight:
-        weight0: 1
-        weight1: 0
+        weight0: 0.83
+        weight1: 0.17000002
         weight2: 0
         weight3: 0
         boneIndex0: 0
-        boneIndex1: 0
+        boneIndex1: 1
         boneIndex2: 0
         boneIndex3: 0
     - position: {x: 4.8479996, y: 179.433}
@@ -4390,7 +4390,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 0
+        boneIndex0: 1
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -4400,7 +4400,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 0
+        boneIndex0: 1
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -4410,14 +4410,14 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 0
+        boneIndex0: 1
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
     - position: {x: 18.82, y: 94.453}
       boneWeight:
-        weight0: 0.8746053
-        weight1: 0.1253947
+        weight0: 1
+        weight1: 0
         weight2: 0
         weight3: 0
         boneIndex0: 1
@@ -4645,7 +4645,7 @@ ScriptedImporter:
         boneIndex2: 0
         boneIndex3: 0
     spritePhysicsOutline: []
-    indices: 000000001500000001000000000000001600000015000000010000001500000002000000020000001400000003000000020000001500000014000000030000001400000004000000040000001400000005000000090000000f0000000a00000009000000100000000f0000000600000012000000070000000600000013000000120000000700000011000000080000000700000012000000110000000800000010000000090000000800000011000000100000000500000013000000060000000500000014000000130000000a0000000e0000000b0000001e000000270000001f0000000b0000000e0000000c0000000c0000000e0000000d000000170000001d00000018000000180000001b00000019000000180000001c0000001b000000180000001d0000001c0000002100000025000000240000000a0000000f0000000e0000001e00000028000000270000001f00000026000000200000001f0000002700000026000000200000002500000021000000200000002600000025000000210000002400000022000000190000001b0000001a000000220000002400000023000000
+    indices: 000000001500000001000000000000001600000015000000010000001500000002000000020000001400000003000000020000001500000014000000030000001400000004000000040000001400000005000000050000001300000006000000050000001400000013000000060000001200000007000000060000001300000012000000070000001100000008000000070000001200000011000000080000001000000009000000080000001100000010000000090000000f0000000a00000009000000100000000f0000000a0000000e0000000b0000000a0000000f0000000e0000000b0000000e0000000c0000000c0000000e0000000d000000170000001d00000018000000180000001b00000019000000180000001c0000001b000000180000001d0000001c000000190000001b0000001a0000001e000000270000001f0000001e00000028000000270000001f00000026000000200000001f0000002700000026000000200000002500000021000000200000002600000025000000210000002400000022000000210000002500000024000000220000002400000023000000
     edges:
     - {x: 0, y: 1}
     - {x: 0, y: 22}
@@ -4706,36 +4706,36 @@ ScriptedImporter:
     spriteBone:
     - name: Queue_1
       guid: 895d7726e7949b74586635ceda7a8ff3
-      position: {x: -32.00394, y: -16.809994, z: 0}
-      rotation: {x: 0, y: 0, z: -0.99796754, w: 0.06372514}
-      length: 116.99723
+      position: {x: -32.003963, y: -16.809902, z: 0}
+      rotation: {x: 0, y: 0, z: -0.99834555, w: 0.057499345}
+      length: 94.42962
       parentId: 4
       color:
         serializedVersion: 2
         rgba: 4294901760
     - name: Queue_2
       guid: 4965221047d2a4944891173fcb9af51b
-      position: {x: 116.99721, y: -0.000039687333, z: 0}
-      rotation: {x: 0, y: 0, z: 0.43291894, w: 0.9014329}
-      length: 81.89261
+      position: {x: 94.42962, y: 0.00003329757, z: 0}
+      rotation: {x: 0, y: 0, z: 0.32358772, w: 0.94619817}
+      length: 90.02584
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4294902015
     - name: Queue_3
       guid: 0c1bf7b992f085f49ad294a6fbf5f766
-      position: {x: 81.89264, y: -0.000053769316, z: 0}
-      rotation: {x: 0, y: 0, z: 0.41258478, w: 0.91091925}
-      length: 76.114586
+      position: {x: 90.025826, y: -0.00003832377, z: 0}
+      rotation: {x: 0, y: 0, z: 0.50371754, w: 0.8638684}
+      length: 86.5556
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4278223103
-    - name: bone_8
+    - name: Queue_4
       guid: e961ebe82a91d1543afd637d1daf14f9
-      position: {x: 76.11453, y: 0.000092445545, z: 0}
-      rotation: {x: 0, y: 0, z: -0.4207071, w: 0.9071966}
-      length: 69.05884
+      position: {x: 86.55574, y: -0.00000088317904, z: 0}
+      rotation: {x: 0, y: 0, z: -0.3326569, w: 0.94304794}
+      length: 46.695534
       parentId: 2
       color:
         serializedVersion: 2
@@ -4743,8 +4743,8 @@ ScriptedImporter:
     - name: Hanche
       guid: 05afe4062cb97b24480985183ec156c7
       position: {x: -23.795227, y: 53.8938, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9905881, w: 0.13687669}
-      length: 359.60492
+      rotation: {x: 0, y: 0, z: 0.99058807, w: 0.13687691}
+      length: 359.60483
       parentId: -1
       color:
         serializedVersion: 2
@@ -5180,16 +5180,16 @@ ScriptedImporter:
     - name: Hanche
       guid: 05afe4062cb97b24480985183ec156c7
       position: {x: 593.2048, y: 317.89383, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9905881, w: 0.13687669}
-      length: 359.60492
+      rotation: {x: 0, y: 0, z: 0.99058807, w: 0.13687691}
+      length: 359.60486
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4278190335
     - name: Head
       guid: dc90b8f51960f2648b4e8be4dc534ac1
-      position: {x: 359.60492, y: -0.00009880787, z: 0}
-      rotation: {x: 0, y: 0, z: -0.19443071, w: 0.9809163}
+      position: {x: 359.6049, y: 0.000029071238, z: 0}
+      rotation: {x: 0, y: 0, z: -0.19443044, w: 0.9809164}
       length: 190.79524
       parentId: 0
       color:
@@ -5216,35 +5216,35 @@ ScriptedImporter:
     - name: Queue_1
       guid: 895d7726e7949b74586635ceda7a8ff3
       position: {x: -32.00398, y: -16.809864, z: 0}
-      rotation: {x: 0, y: -0, z: -0.99796754, w: 0.063725136}
-      length: 116.99721
+      rotation: {x: 0, y: -0, z: -0.99834555, w: 0.057499345}
+      length: 94.42964
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4294901760
     - name: Queue_2
       guid: 4965221047d2a4944891173fcb9af51b
-      position: {x: 116.9972, y: -0.00001915169, z: 0}
-      rotation: {x: 0, y: 0, z: 0.43291897, w: 0.9014329}
-      length: 81.89258
+      position: {x: 94.429665, y: 0.00002593752, z: 0}
+      rotation: {x: 0, y: 0, z: 0.32358772, w: 0.9461982}
+      length: 90.02587
       parentId: 4
       color:
         serializedVersion: 2
         rgba: 4294902015
     - name: Queue_3
       guid: 0c1bf7b992f085f49ad294a6fbf5f766
-      position: {x: 81.89258, y: -0.000013872519, z: 0}
-      rotation: {x: 0, y: 0, z: 0.41258478, w: 0.91091925}
-      length: 76.11457
+      position: {x: 90.025894, y: -0.000013711733, z: 0}
+      rotation: {x: 0, y: 0, z: 0.50371754, w: 0.8638684}
+      length: 86.55562
       parentId: 5
       color:
         serializedVersion: 2
         rgba: 4278223103
-    - name: bone_8
+    - name: Queue_4
       guid: e961ebe82a91d1543afd637d1daf14f9
-      position: {x: 76.11455, y: 0.000022237122, z: 0}
-      rotation: {x: 0, y: 0, z: -0.4207071, w: 0.9071966}
-      length: 69.058815
+      position: {x: 86.55565, y: 0.000020885745, z: 0}
+      rotation: {x: 0, y: 0, z: -0.3326569, w: 0.94304794}
+      length: 46.695545
       parentId: 6
       color:
         serializedVersion: 2
@@ -5253,24 +5253,24 @@ ScriptedImporter:
       guid: 922acccaeac3b79428cc5d0a471b8d11
       position: {x: 23.838501, y: 37.889347, z: 0}
       rotation: {x: 0, y: -0, z: 0.7921797, w: 0.6102879}
-      length: 128.61137
+      length: 128.61118
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4286643968
     - name: "Molet_Gauche_Arri\xE8re"
       guid: b62a3bea401920b4888d10cd88e3edf8
-      position: {x: 128.61137, y: -0.00003090104, z: 0}
-      rotation: {x: 0, y: 0, z: 0.23561628, w: 0.97184616}
-      length: 103.99594
+      position: {x: 128.61116, y: -0.00004759537, z: 0}
+      rotation: {x: 0, y: 0, z: 0.2356167, w: 0.9718461}
+      length: 103.995964
       parentId: 8
       color:
         serializedVersion: 2
         rgba: 4294901888
     - name: "Pied_Gauche_Arri\xE8re"
       guid: fcf14d5a177e7804e9f7cccd290fadab
-      position: {x: 103.995926, y: 0.000015193868, z: 0}
-      rotation: {x: 0, y: 0, z: -0.49069214, w: 0.87133306}
+      position: {x: 103.995964, y: 0.000012556268, z: 0}
+      rotation: {x: 0, y: 0, z: -0.49069253, w: 0.8713329}
       length: 41.91638
       parentId: 9
       color:
@@ -5278,26 +5278,26 @@ ScriptedImporter:
         rgba: 4286578943
     - name: Genoux_Gauche_Devant
       guid: d1b215bc47178934b819b49879c6aba3
-      position: {x: 250.57066, y: 90.63419, z: 0}
-      rotation: {x: 0, y: -0, z: 0.7422123, w: 0.6701649}
-      length: 93.54985
+      position: {x: 319.0072, y: 22.36096, z: 0}
+      rotation: {x: 0, y: -0, z: 0.9020721, w: 0.4315854}
+      length: 116.87546
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4278255360
     - name: Molet_Gauche_Devant
       guid: 241803eed29a3c441b4122428fc6212b
-      position: {x: 93.549866, y: -0.00002181113, z: 0}
-      rotation: {x: 0, y: 0, z: 0.028342407, w: 0.99959826}
-      length: 111.12263
+      position: {x: 116.87546, y: 0.0000026471062, z: 0}
+      rotation: {x: 0, y: 0, z: -0.27432168, w: 0.961638}
+      length: 181.42151
       parentId: 11
       color:
         serializedVersion: 2
         rgba: 4294967040
     - name: Pied_Gauche_Devant
       guid: 3db3323f7963f364ab2d72f5f01d12f6
-      position: {x: 111.12265, y: -0.00005106287, z: 0}
-      rotation: {x: 0, y: 0, z: -0.32073858, w: 0.94716775}
+      position: {x: 181.42152, y: -0.000032118867, z: 0}
+      rotation: {x: 0, y: 0, z: -0.30359197, w: 0.9528022}
       length: 46.228523
       parentId: 12
       color:
@@ -5307,24 +5307,24 @@ ScriptedImporter:
       guid: f8479aca880b80241aadd29c9b706525
       position: {x: 50.65644, y: 45.44485, z: 0}
       rotation: {x: 0, y: -0, z: 0.76617765, w: 0.64262885}
-      length: 118.465225
+      length: 118.46529
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4294902015
     - name: "Molet_Droit_Arri\xE8re"
       guid: 94a06601726eed14ea0791bca025dcbb
-      position: {x: 118.46525, y: -0.0000020636492, z: 0}
-      rotation: {x: 0, y: 0, z: 0.26975083, w: 0.9629302}
-      length: 84.35801
+      position: {x: 118.46527, y: 0.000007184539, z: 0}
+      rotation: {x: 0, y: 0, z: 0.26975128, w: 0.96293}
+      length: 84.35807
       parentId: 14
       color:
         serializedVersion: 2
         rgba: 4278255488
     - name: "Pied_Droit_Arri\xE8re"
       guid: 729df9ae6f3ffa34fa4e12c36dcb7ede
-      position: {x: 84.35802, y: 0.00001120135, z: 0}
-      rotation: {x: 0, y: 0, z: -0.5401947, w: 0.84154004}
+      position: {x: 84.35811, y: 0.000035168374, z: 0}
+      rotation: {x: 0, y: 0, z: -0.5401954, w: 0.8415397}
       length: 41.847557
       parentId: 15
       color:
@@ -5332,31 +5332,40 @@ ScriptedImporter:
         rgba: 4286643968
     - name: Genoux_Droit_Avant
       guid: bff88627c47a5a44db00ab33863a7675
-      position: {x: 195.37987, y: 92.898254, z: 0}
-      rotation: {x: 0, y: -0, z: 0.75402814, w: 0.6568421}
-      length: 94.112946
+      position: {x: 279.08356, y: 13.110718, z: 0}
+      rotation: {x: 0, y: -0, z: 0.9138048, w: 0.4061536}
+      length: 122.81854
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4294901888
     - name: Molet_Droit_Avant
       guid: fa586c43f5863604d8a1f17497d4ba25
-      position: {x: 94.11292, y: -0.0000013811905, z: 0}
-      rotation: {x: 0, y: 0, z: 0.10503425, w: 0.9944686}
-      length: 73.06647
+      position: {x: 122.81853, y: 0.00003763698, z: 0}
+      rotation: {x: 0, y: 0, z: -0.23740426, w: 0.97141093}
+      length: 155.55882
       parentId: 17
       color:
         serializedVersion: 2
         rgba: 4286578943
     - name: Pied_Droit_Avant
       guid: 929ce43ec20ff6c4b8bfe1c8ff0e4c64
-      position: {x: 73.06645, y: 0.00000011059956, z: 0}
-      rotation: {x: 0, y: 0, z: -0.34867108, w: 0.9372452}
+      position: {x: 155.55879, y: -0.000014424786, z: 0}
+      rotation: {x: 0, y: 0, z: -0.30469072, w: 0.95245135}
       length: 46.722847
       parentId: 18
       color:
         serializedVersion: 2
         rgba: 4278223103
+    - name: Queue_5
+      guid: 74276717ace886d499aa8c2214d40250
+      position: {x: 46.69557, y: -0.0000003541154, z: 0}
+      rotation: {x: 0, y: 0, z: -0.23379649, w: 0.97228557}
+      length: 50.295273
+      parentId: 7
+      color:
+        serializedVersion: 2
+        rgba: 4294934528
     parts:
     - spritePosition:
         x: 328
