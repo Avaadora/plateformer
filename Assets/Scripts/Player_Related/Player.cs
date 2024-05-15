@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private bool isTouchingWallLeft;
     [SerializeField] private bool isTouchingWallRight;
+    private bool isFacingRight;
 
     [SerializeField] private LayerMask JumpLayerMask;
     [SerializeField] private LayerMask WallLayerMask;
@@ -77,18 +78,10 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         // DÉPLACEMENT
-        if (!(HorizontalInput > 0 && isTouchingWallRight))
+        if (!(HorizontalInput > 0 && isTouchingWallRight) || (HorizontalInput < 0 && isTouchingWallLeft))
         {
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            Flip();
             Move();
-        }
-        else
-        {
-            if (!(HorizontalInput < 0 && isTouchingWallLeft))
-            {
-                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-                Move();
-            }
         }
 
         // SAUTER
@@ -211,6 +204,17 @@ public class Player : MonoBehaviour
         WallCheckPositionLeft = new Vector2(transform.position.x - largeur / 2, transform.position.y);
         WallCheckPositionRight = new Vector2(transform.position.x + largeur / 2, transform.position.y);
     }
+
+    void Flip()
+{
+    if (isFacingRight && HorizontalInput < 0f || !isFacingRight && HorizontalInput > 0f)
+    {
+        Vector3 localScale = transform.localScale;
+        isFacingRight = !isFacingRight;
+        localScale.x *= -1f;
+        transform.localScale = localScale;
+    }
+}
 
     private void StartJump()
     {
