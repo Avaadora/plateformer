@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    public Animator animator;
     [SerializeField] private float FallGravityScaleMultiplier = 1f;
     private float WallCheckHeight = 0.1f;
     private float WallCheckWidth = 0.5f;
@@ -52,6 +52,8 @@ public class Player : MonoBehaviour
 
         HorizontalInput = MyInputActions.Player.HorizontalMove.ReadValue<float>();
 
+        animator.SetFloat("Speed", Mathf.Abs(HorizontalInput));
+
         Collider2D col = Physics2D.OverlapBox(GroundCheckPosition, new Vector2(GroundCheckWidth, GroundCheckHeight), 0, JumpLayerMask); //Overlap -> boîte fictive qui permets de checks si le player est en collision avec le sol ou pas pour le faire sauter
         Collider2D colLeft = Physics2D.OverlapBox(WallCheckPositionLeft, new Vector2(WallCheckWidth, WallCheckHeight), 0, WallLayerMask);
         isTouchingWallLeft = (colLeft != null);
@@ -75,9 +77,18 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         // DÉPLACEMENT
-        if (!((HorizontalInput > 0 && isTouchingWallRight) || (HorizontalInput < 0 && isTouchingWallLeft)))
+        if (!(HorizontalInput > 0 && isTouchingWallRight))
         {
+            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
             Move();
+        }
+        else
+        {
+            if (!(HorizontalInput < 0 && isTouchingWallLeft))
+            {
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                Move();
+            }
         }
 
         // SAUTER
@@ -185,16 +196,16 @@ public class Player : MonoBehaviour
 
     private void UpdateGroundCheckOffset()
     {
-        SpriteRenderer spritePlayer = GetComponent<SpriteRenderer>(); // Récupération du sprite du joueur
-        float height = spritePlayer.bounds.size.y; // Récupération de la hauteur du sprite du joueur
+        // SpriteRenderer spritePlayer = GetComponent<SpriteRenderer>(); // Récupération du sprite du joueur
+        float height = RbPlayer.transform.localScale.y; // Récupération de la hauteur du sprite du joueur
         GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - height / 2f);
     }
 
     private void UpdateCheckPosition()
     {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        float largeur = spriteRenderer.bounds.size.x;
-        float hauteur = spriteRenderer.bounds.size.y;
+        // SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        float largeur = RbPlayer.transform.localScale.x;
+        float hauteur = RbPlayer.transform.localScale.y;
 
         GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - hauteur / 2);
         WallCheckPositionLeft = new Vector2(transform.position.x - largeur / 2, transform.position.y);
