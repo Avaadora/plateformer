@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     public Animator animator;
     [SerializeField] private float FallGravityScaleMultiplier = 1f;
     private float WallCheckHeight = 0.1f;
-    private float WallCheckWidth = 0.5f;
-    private float GroundCheckWidth = 0.9f;
+    private float WallCheckWidth = 1f;
+    private float GroundCheckWidth = 1f;
     private float GroundCheckHeight = 0.1f;
     private float HorizontalInput, GravityScale;
 
@@ -130,8 +130,6 @@ public class Player : MonoBehaviour
             // Fix de la vélocité en y pour ne pas passer à travers les plateformes
             // RbPlayer.velocity = new Vector2(0f, RbPlayer.velocity.y);
 
-
-
             if (RecipeManager.Instance.getIsGliding())
             {
                 RbPlayer.gravityScale = 0;
@@ -191,7 +189,7 @@ public class Player : MonoBehaviour
     {
         // SpriteRenderer spritePlayer = GetComponent<SpriteRenderer>(); // Récupération du sprite du joueur
         float height = RbPlayer.transform.localScale.y; // Récupération de la hauteur du sprite du joueur
-        GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - height / 2f);
+        GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - height / 3f);
     }
 
     private void UpdateCheckPosition()
@@ -206,15 +204,15 @@ public class Player : MonoBehaviour
     }
 
     void Flip()
-{
-    if (isFacingRight && HorizontalInput < 0f || !isFacingRight && HorizontalInput > 0f)
     {
-        Vector3 localScale = transform.localScale;
-        isFacingRight = !isFacingRight;
-        localScale.x *= -1f;
-        transform.localScale = localScale;
+        if (isFacingRight && HorizontalInput < 0f || !isFacingRight && HorizontalInput > 0f)
+        {
+            Vector3 localScale = transform.localScale;
+            isFacingRight = !isFacingRight;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
-}
 
     private void StartJump()
     {
