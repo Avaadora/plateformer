@@ -34,7 +34,7 @@ public class SceneController : MonoBehaviour
             _instance = null;
         }
     }
-
+    [Header("------------SceneController------------")]
     [SerializeField] private Animator SceneTransition;
     public void LoadNextScene()
     {
@@ -48,4 +48,6 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         SceneTransition.SetTrigger("Start");
     }
+
+    
 }
