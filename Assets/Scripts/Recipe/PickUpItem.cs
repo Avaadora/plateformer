@@ -8,6 +8,8 @@ public class PickUpItem : MonoBehaviour
 {
     [SerializeField] private Item Item;
 
+    [SerializeField] private Animator animator;
+
     private InputController InputAction;
 
     void Awake()
@@ -36,6 +38,7 @@ public class PickUpItem : MonoBehaviour
             {
                 RecipeManager.Instance.CheckForGlideRecipe(Item);
                 gameObject.SetActive(false);
+                animator.SetTrigger("IsPickedUp");
             }
 
             // Vérifier si l'objet appartient à la recette de creuser
