@@ -7,14 +7,15 @@ public class Player : MonoBehaviour
     public Animator animator;
     [SerializeField] private float FallGravityScaleMultiplier = 1f;
     private float WallCheckHeight = 0.1f;
-    private float WallCheckWidth = 0.5f;
-    private float GroundCheckWidth = 0.9f;
+    private float WallCheckWidth = 1f;
+    private float GroundCheckWidth = 1f;
     private float GroundCheckHeight = 0.1f;
     private float HorizontalInput, GravityScale;
 
 
     [SerializeField] private bool isTouchingWallLeft;
     [SerializeField] private bool isTouchingWallRight;
+    private bool isFacingRight;
 
     [SerializeField] private LayerMask JumpLayerMask;
     [SerializeField] private LayerMask WallLayerMask;
@@ -77,8 +78,9 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         // DÉPLACEMENT
-        if (!((HorizontalInput > 0 && isTouchingWallRight) || (HorizontalInput < 0 && isTouchingWallLeft)))
+        if (!(HorizontalInput > 0 && isTouchingWallRight) || (HorizontalInput < 0 && isTouchingWallLeft))
         {
+            Flip();
             Move();
         }
 
@@ -127,8 +129,6 @@ public class Player : MonoBehaviour
 
             // Fix de la vélocité en y pour ne pas passer à travers les plateformes
             // RbPlayer.velocity = new Vector2(0f, RbPlayer.velocity.y);
-
-
 
             if (RecipeManager.Instance.getIsGliding())
             {
@@ -189,7 +189,7 @@ public class Player : MonoBehaviour
     {
         // SpriteRenderer spritePlayer = GetComponent<SpriteRenderer>(); // Récupération du sprite du joueur
         float height = RbPlayer.transform.localScale.y; // Récupération de la hauteur du sprite du joueur
-        GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - height / 2f);
+        GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - height / 3f);
     }
 
     private void UpdateCheckPosition()
@@ -201,6 +201,17 @@ public class Player : MonoBehaviour
         GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - hauteur / 2);
         WallCheckPositionLeft = new Vector2(transform.position.x - largeur / 2, transform.position.y);
         WallCheckPositionRight = new Vector2(transform.position.x + largeur / 2, transform.position.y);
+    }
+
+    void Flip()
+    {
+        if (isFacingRight && HorizontalInput < 0f || !isFacingRight && HorizontalInput > 0f)
+        {
+            Vector3 localScale = transform.localScale;
+            isFacingRight = !isFacingRight;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 
     private void StartJump()
