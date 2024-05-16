@@ -9,6 +9,7 @@ TagManager:
   - Level
   - Tuto
   - Check
+  - Audio
   layers:
   - Default
   - TransparentFX

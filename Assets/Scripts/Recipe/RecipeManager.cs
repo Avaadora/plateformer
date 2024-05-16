@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class RecipeManager : MonoBehaviour
 {
+    private AudioManager audioManager;
+
     [Header("------------Singleton------------")]
     private static RecipeManager _instance;
     public static RecipeManager Instance
@@ -27,7 +29,7 @@ public class RecipeManager : MonoBehaviour
         {
             _instance = this;
             // DontDestroyOnLoad(gameObject);
-        }
+        }        
     }
     void OnDestroy()
     {
@@ -56,7 +58,8 @@ public class RecipeManager : MonoBehaviour
     private bool    canGlide, isGliding, 
                     canDig, isDigging, 
                     canFire, isFiring,
-                    canWallJump, isWallJumping;
+                    canWallJump, isWallJumping,
+                    isInOrder;
 
     static int GlideIndex, DigIndex, FireIndex, WallJumpIndex = 0;
 
@@ -66,8 +69,12 @@ public class RecipeManager : MonoBehaviour
     [SerializeField] private GameObject tutorialObject;
     [SerializeField] private GameObject levelObject;
 
+    
+
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        
         tutorialObject.SetActive(false);
         levelObject.SetActive(false);
 
@@ -113,7 +120,6 @@ public class RecipeManager : MonoBehaviour
         WallJumpImage[0] = AppleSprite;
         WallJumpImage[1] = RadishSprite;
         WallJumpImage[2] = PinappleSprite;
-
         
     }
 
@@ -145,8 +151,8 @@ public class RecipeManager : MonoBehaviour
     {
         if (GlideIndex < GlideRecipe.Length && ItemToPickUp == GlideRecipe[GlideIndex])
         {
-            Instantiate(Check, GlideImage[GlideIndex].transform);
             GlideIndex++;
+            isInOrder = true;
             if (GlideIndex == GlideRecipe.Length)
             {
                 Instantiate(Check, Wing.transform);
@@ -157,6 +163,7 @@ public class RecipeManager : MonoBehaviour
         else
         {
             canGlide = false;
+            isInOrder = false;
         }
     }
 
@@ -164,7 +171,7 @@ public class RecipeManager : MonoBehaviour
     {
         if (DigIndex < DigRecipe.Length && ItemToPickUp == DigRecipe[DigIndex])
         {
-            Instantiate(Check, DigImage[DigIndex].transform);
+            isInOrder = true;
             DigIndex++;
             if (DigIndex == DigRecipe.Length)
             {
@@ -175,7 +182,7 @@ public class RecipeManager : MonoBehaviour
         }
         else
         {
-            canDig = false;
+            isInOrder = false;
         }
     }
 
@@ -183,7 +190,7 @@ public class RecipeManager : MonoBehaviour
     {
         if (FireIndex < FireRecipe.Length && ItemToPickUp == FireRecipe[FireIndex] && canDig)
         {
-            Instantiate(Check, FireImage[FireIndex].transform);
+            isInOrder = true;
             FireIndex++;
             if (FireIndex == FireRecipe.Length)
             {
@@ -195,6 +202,7 @@ public class RecipeManager : MonoBehaviour
         else
         {
             canFire = false;
+            isInOrder = false;
         }
     }
 
@@ -202,18 +210,21 @@ public class RecipeManager : MonoBehaviour
     {
         if (WallJumpIndex < WallJumpRecipe.Length && ItemToPickUp == WallJumpRecipe[WallJumpIndex])
         {
-            Instantiate(Check, WallJumpImage[WallJumpIndex].transform);
             WallJumpIndex++;
+            isInOrder = true;
             if (WallJumpIndex == WallJumpRecipe.Length)
             {
                 Instantiate(Check, Arrow.transform);
                 canWallJump = true;
                 OnCanWallJumpChanged.Invoke();
+                
+                StartCoroutine(RecipeCompleted(0.5f));
             }
         }
         else
         {
             canWallJump = false;
+            isInOrder = false;
         }
     }
 
@@ -247,6 +258,12 @@ public class RecipeManager : MonoBehaviour
         {
             Destroy(checkmark);
         }
+    }
+
+    IEnumerator RecipeCompleted(float time)
+    {
+        yield return new WaitForSeconds(time);
+        AudioManager._Instance.PlaySFX(audioManager.RecipeCompleted);
     }
 
     public bool getCanGlide()
@@ -327,6 +344,16 @@ public class RecipeManager : MonoBehaviour
     public void setCanWallJump(bool canWallJump)
     {
         this.canWallJump = canWallJump;
+    }
+
+    public bool getIsInOrder()
+    {
+        return this.isInOrder;
+    }
+
+    public void setIsInOrder(bool isInOrder)
+    {
+        this.isInOrder = isInOrder;
     }
 
 }
