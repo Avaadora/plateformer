@@ -77,18 +77,9 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         // DÉPLACEMENT
-        if (!(HorizontalInput > 0 && isTouchingWallRight))
+        if (!((HorizontalInput > 0 && isTouchingWallRight) || (HorizontalInput < 0 && isTouchingWallLeft)))
         {
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
             Move();
-        }
-        else
-        {
-            if (!(HorizontalInput < 0 && isTouchingWallLeft))
-            {
-                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-                Move();
-            }
         }
 
         // SAUTER
