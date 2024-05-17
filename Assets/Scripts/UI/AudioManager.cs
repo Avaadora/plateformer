@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource MainTheme, SFXSound;
 
     [Header("------------Audio Clip------------")]
-    public AudioClip Background, RecipeCompleted, Walk, PickUp1, PickUp2, PickUp3, UiButton;
+    public AudioClip Background, RecipeCompleted, Walk, PickUp1, PickUp2, PickUp3, UiButton, Dig, Glide, Spawn;
 
     public static AudioManager _Instance;
 
