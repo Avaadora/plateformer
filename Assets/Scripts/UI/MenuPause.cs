@@ -9,6 +9,8 @@ public class MenuPause : MonoBehaviour
 
     private bool isPaused;
 
+    private AudioManager audioManager;
+
     void Awake()
     {
         InputActions = new InputController();
@@ -17,6 +19,8 @@ public class MenuPause : MonoBehaviour
         InputActions.UI.Pause.performed += ctx => TogglePause();
 
         CloseWindow();
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     public void Pause()
@@ -35,13 +39,9 @@ public class MenuPause : MonoBehaviour
 
     public void Restart()
     {
-        RecipeManager.Instance.ClearCheckmarks();
-        
-        RecipeManager.Instance.setCanDig(false);
-        RecipeManager.Instance.setCanGlide(false);
-        RecipeManager.Instance.setCanFire(false);
-
+        RecipeManager.Instance.RestartGameRecipe();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManager._Instance.PlaySFX(audioManager.UiButton);
     }
 
     public void CloseWindow()
@@ -53,11 +53,13 @@ public class MenuPause : MonoBehaviour
     {
         gameObject.SetActive(false);
         isPaused = false;
+        AudioManager._Instance.PlaySFX(audioManager.UiButton);
     }
 
     public void QuitGame()
     {
         Application.Quit();
+        AudioManager._Instance.PlaySFX(audioManager.UiButton);
     }
 
     void TogglePause()

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class RecipeManager : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class RecipeManager : MonoBehaviour
         {
             _instance = this;
             // DontDestroyOnLoad(gameObject);
-        }        
+        }
     }
     void OnDestroy()
     {
@@ -43,20 +44,22 @@ public class RecipeManager : MonoBehaviour
 
     [Header("------------Recipe------------")]
     [SerializeField] private Item[] GlideRecipe, DigRecipe, FireRecipe, WallJumpRecipe; // Recette à valider
-    [SerializeField] private Item   Cookie, ChocolateBar, Watermelon, 
-                                    Chicken, Pie, Sushi, 
-                                    Cherry, Pepper, DragonFruit, 
+    [SerializeField]
+    private Item Cookie, ChocolateBar, Watermelon,
+                                    Chicken, Pie, Sushi,
+                                    Cherry, Pepper, DragonFruit,
                                     Apple, Radish, Pinapple;
 
     [SerializeField] private Image[] GlideImage, DigImage, FireImage, WallJumpImage;
-    [SerializeField] private Image  CookieSprite, ChocolateBarSprite, WatermelonSprite, 
+    [SerializeField]
+    private Image CookieSprite, ChocolateBarSprite, WatermelonSprite,
                                     ChickenSprite, PieSprite, SushiSprite,
-                                    CherrySprite, PepperSprite, DragonFruitSprite, 
+                                    CherrySprite, PepperSprite, DragonFruitSprite,
                                     AppleSprite, RadishSprite, PinappleSprite,
                                     Check, Wing, Shovel, Fire, Arrow;
 
-    private bool    canGlide, isGliding, 
-                    canDig, isDigging, 
+    private bool canGlide, isGliding,
+                    canDig, isDigging,
                     canFire, isFiring,
                     canWallJump, isWallJumping,
                     isInOrder;
@@ -69,12 +72,12 @@ public class RecipeManager : MonoBehaviour
     [SerializeField] private GameObject tutorialObject;
     [SerializeField] private GameObject levelObject;
 
-    
+
 
     void Start()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-        
+
         tutorialObject.SetActive(false);
         levelObject.SetActive(false);
 
@@ -99,6 +102,7 @@ public class RecipeManager : MonoBehaviour
         WallJumpRecipe[0] = Apple;
         WallJumpRecipe[1] = Radish;
         WallJumpRecipe[2] = Pinapple;
+
         // Setup des Sprites
         // ----- Première recette -----
         GlideImage = new Image[3];
@@ -120,10 +124,11 @@ public class RecipeManager : MonoBehaviour
         WallJumpImage[0] = AppleSprite;
         WallJumpImage[1] = RadishSprite;
         WallJumpImage[2] = PinappleSprite;
-        
+
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         OnSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
     }
 
@@ -146,6 +151,34 @@ public class RecipeManager : MonoBehaviour
                 break;
         }
     }
+
+    public void RestartGameRecipe()
+    {
+        if (GlideIndex >= 2)
+        {
+            GlideIndex = 0;
+            canGlide = false;
+        }
+
+        if (DigIndex >= 2)
+        {
+            DigIndex = 0;
+            canDig = false;
+        }
+
+        if (FireIndex >= 2)
+        {
+            FireIndex = 0;
+            canFire = false;
+        }
+
+        if (WallJumpIndex >= 2)
+        {
+            WallJumpIndex = 0;
+            canWallJump = false;
+        }
+    }
+
 
     public void CheckForGlideRecipe(Item ItemToPickUp)
     {
@@ -217,7 +250,7 @@ public class RecipeManager : MonoBehaviour
                 Instantiate(Check, Arrow.transform);
                 canWallJump = true;
                 OnCanWallJumpChanged.Invoke();
-                
+
                 StartCoroutine(RecipeCompleted(0.5f));
             }
         }
@@ -229,8 +262,8 @@ public class RecipeManager : MonoBehaviour
     }
 
     // Lier l'UI aux Item
-    public void UpdateRecipeUI( Sprite Cookie, Sprite ChocolateBar, Sprite Watermelon, 
-                                Sprite Chicken, Sprite Pie, Sprite Sushi, 
+    public void UpdateRecipeUI(Sprite Cookie, Sprite ChocolateBar, Sprite Watermelon,
+                                Sprite Chicken, Sprite Pie, Sprite Sushi,
                                 Sprite Cherry, Sprite Pepper, Sprite DragonFruit,
                                 Sprite Apple, Sprite Radish, Sprite Pinapple)
     {
@@ -257,6 +290,17 @@ public class RecipeManager : MonoBehaviour
         foreach (GameObject checkmark in checkmarks)
         {
             Destroy(checkmark);
+        }
+    }
+
+    public void ClearUI()
+    {
+        for (int i = 0; i < WallJumpImage.Length; i++)
+        {
+            if (WallJumpImage[i].color != Color.black)
+            {
+                WallJumpImage[i].color = Color.black;
+            }
         }
     }
 

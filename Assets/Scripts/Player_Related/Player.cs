@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float FallGravityScaleMultiplier = 1f;
     private float WallCheckHeight = 0.1f;
     private float WallCheckWidth = 1f;
-    private float GroundCheckWidth = 1f;
+    private float GroundCheckWidth = 0.5f;
     private float GroundCheckHeight = 0.1f;
     private float HorizontalInput, GravityScale;
 
@@ -198,9 +198,9 @@ public class Player : MonoBehaviour
         float largeur = RbPlayer.transform.localScale.x;
         float hauteur = RbPlayer.transform.localScale.y;
 
-        GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - hauteur / 2);
-        WallCheckPositionLeft = new Vector2(transform.position.x - largeur / 2, transform.position.y);
-        WallCheckPositionRight = new Vector2(transform.position.x + largeur / 2, transform.position.y);
+        GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - hauteur / 2f);
+        WallCheckPositionLeft = new Vector2(transform.position.x - largeur / 2f, transform.position.y);
+        WallCheckPositionRight = new Vector2(transform.position.x + largeur / 2f, transform.position.y);
     }
 
     void Flip()

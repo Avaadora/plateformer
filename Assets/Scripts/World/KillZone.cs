@@ -26,9 +26,10 @@ public class KillZone : MonoBehaviour
 
     private void CheckPowerUpAndUI()
     {
-        if (!(RecipeManager.Instance.getCanGlide() || RecipeManager.Instance.getCanDig() || RecipeManager.Instance.getCanFire()))
+        if (!(RecipeManager.Instance.getCanGlide() || RecipeManager.Instance.getCanDig() || RecipeManager.Instance.getCanFire() || RecipeManager.Instance.getCanWallJump()))
         {
             RecipeManager.Instance.ClearCheckmarks();
+            RecipeManager.Instance.ClearUI();
         }
     }
 
