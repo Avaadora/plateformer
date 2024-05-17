@@ -28,8 +28,8 @@ public class KillZone : MonoBehaviour
     {
         if (!(RecipeManager.Instance.getCanGlide() || RecipeManager.Instance.getCanDig() || RecipeManager.Instance.getCanFire() || RecipeManager.Instance.getCanWallJump()))
         {
-            RecipeManager.Instance.ClearCheckmarks();
             RecipeManager.Instance.ClearUI();
+            RecipeManager.Instance.ClearCheckmarks();
         }
     }
 

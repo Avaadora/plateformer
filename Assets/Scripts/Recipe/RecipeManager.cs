@@ -295,12 +295,10 @@ public class RecipeManager : MonoBehaviour
 
     public void ClearUI()
     {
-        for (int i = 0; i < WallJumpImage.Length; i++)
+        foreach (Image item in WallJumpImage)
         {
-            if (WallJumpImage[i].color != Color.black)
-            {
-                WallJumpImage[i].color = Color.black;
-            }
+            Debug.Log(item.name);
+            item.color = new Color(0,0,0);
         }
     }
 
