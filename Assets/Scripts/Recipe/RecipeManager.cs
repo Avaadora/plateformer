@@ -191,6 +191,8 @@ public class RecipeManager : MonoBehaviour
                 Instantiate(Check, Wing.transform);
                 canGlide = true;
                 OnCanGlideChanged.Invoke();
+
+                StartCoroutine(RecipeCompleted(0.5f));
             }
         }
         else
@@ -211,6 +213,8 @@ public class RecipeManager : MonoBehaviour
                 Instantiate(Check, Shovel.transform);
                 canDig = true;
                 OnCanDigChanged.Invoke();
+
+                StartCoroutine(RecipeCompleted(0.5f));
             }
         }
         else
@@ -230,6 +234,8 @@ public class RecipeManager : MonoBehaviour
                 Instantiate(Check, Fire.transform);
                 canFire = true;
                 OnCanFireChanged.Invoke();
+
+                StartCoroutine(RecipeCompleted(0.5f));
             }
         }
         else

@@ -12,43 +12,18 @@ public class DialogueUI : MonoBehaviour
     private TypeWritterEffect typeWritterEffect;
     private bool hasShownDialogue;
 
-    private void Start()
+    private void Awake()
     {
         typeWritterEffect = GetComponent<TypeWritterEffect>();
         CloseDialogueBox();
+
+        GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
+        GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
 
         RecipeManager.Instance.OnCanGlideChanged.AddListener(OnCanGlideChangedHandler);
         RecipeManager.Instance.OnCanDigChanged.AddListener(OnCanDigChangedHandler);
         RecipeManager.Instance.OnCanFireChanged.AddListener(OnCanFireChangedHandler);
         RecipeManager.Instance.OnCanWallJumpChanged.AddListener(OnCanWallJumpChangedHandler);
-    }
-
-    public void OnEventTriggered()
-    {
-        if (RecipeManager.Instance.getCanGlide() && !hasShownDialogue)
-        {
-            ShowDialogue(dialogueObject[0]);
-            hasShownDialogue = true;
-        }
-        else
-        {
-            if (RecipeManager.Instance.getCanDig() && !hasShownDialogue)
-            {
-                ShowDialogue(dialogueObject[1]);
-                hasShownDialogue = true;
-
-            }
-            else
-            {
-                if (RecipeManager.Instance.getCanFire() && !hasShownDialogue)
-                {
-                    ShowDialogue(dialogueObject[2]);
-                    hasShownDialogue = true;
-
-                }
-
-            }
-        }
     }
 
     public void ShowDialogue(DialogueObject ShowdialogueObject)
@@ -62,7 +37,7 @@ public class DialogueUI : MonoBehaviour
         foreach (string dialogue in StepDialogueObject.getDialogue())
         {
             yield return typeWritterEffect.Run(dialogue, LabelText);
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1.5f);
         }
         CloseDialogueBox();
     }
@@ -75,31 +50,53 @@ public class DialogueUI : MonoBehaviour
 
     private void OnCanGlideChangedHandler()
     {
-        if (RecipeManager.Instance.getCanGlide())
+        if (RecipeManager.Instance.getCanGlide() && !hasShownDialogue)
         {
             ShowDialogue(dialogueObject[0]);
+            hasShownDialogue = true;
         }
     }
     private void OnCanDigChangedHandler()
     {
-        if (RecipeManager.Instance.getCanDig())
+        if (RecipeManager.Instance.getCanDig() && !hasShownDialogue)
         {
             ShowDialogue(dialogueObject[1]);
+            hasShownDialogue = true;
         }
     }
 
     private void OnCanFireChangedHandler()
     {
-        if (RecipeManager.Instance.getCanFire())
+        if (RecipeManager.Instance.getCanFire() && !hasShownDialogue)
         {
             ShowDialogue(dialogueObject[2]);
+            hasShownDialogue = true;
+            
         }
     }
-        private void OnCanWallJumpChangedHandler()
+    private void OnCanWallJumpChangedHandler()
     {
-        if (RecipeManager.Instance.getCanWallJump())
+        if (RecipeManager.Instance.getCanWallJump() && !hasShownDialogue)
         {
             ShowDialogue(dialogueObject[4]);
+            hasShownDialogue = true;
+        }
+    }
+
+    private void OnCanSceneChangedHandler()
+    {
+        if (GameManager.Instance.getIsTutoScene() && !hasShownDialogue)
+        {
+            ShowDialogue(dialogueObject[3]);
+            hasShownDialogue = true;
+        }
+        else
+        {
+            if (GameManager.Instance.getIsLevelScene() && !hasShownDialogue)
+            {
+                ShowDialogue(dialogueObject[5]);
+                hasShownDialogue = true;
+            }
         }
     }
 }

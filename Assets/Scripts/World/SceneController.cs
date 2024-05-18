@@ -49,5 +49,4 @@ public class SceneController : MonoBehaviour
         SceneTransition.SetTrigger("Start");
     }
 
-    
 }

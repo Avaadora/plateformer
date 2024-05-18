@@ -1,0 +1,12 @@
+CORRECTIONS
+    - UI des recettes dans le Main Menu
+    - Vélocité du player
+    - Le restart du menu pause restart bien la scène avec les pouvoirs et l'UI
+    - La chute ne permet plus de traverser les plateformes
+    - La killzone ne cancel plus les pouvoirs en place
+
+AJOUT
+    - Transitions entre les scènes
+    - Condition de fin de niveau (avoir les 3 recettes de complètes)
+    - SFX (début)
+    - Gestion des sons et de la musique

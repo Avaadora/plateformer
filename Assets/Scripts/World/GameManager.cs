@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -46,7 +48,6 @@ public class GameManager : MonoBehaviour
 
     private bool isJumping;
     private bool isGrounded;
-
 
     /*-------------GETTERS & SETTERS PLAYER-------------*/
     public bool getIsJumping()
@@ -118,4 +119,49 @@ public class GameManager : MonoBehaviour
         this.GlideSpeed = GlideSpeed;
     }
 
+
+    [Header("------------Scene------------")]
+    public UnityEvent OnSceneTuto, OnSceneLevel;
+    private bool isTutoScene, isLevelScene;
+    private Scene scene;
+
+    public void DialogueSceneTuto()
+    {
+        if (scene.buildIndex == 1)
+        {
+            isTutoScene = true;
+            isLevelScene = false;
+            OnSceneTuto.Invoke();
+        }
+    }
+
+    public void DialogueSceneLevel()
+    {
+        if (scene.buildIndex == 2)
+        {
+            isTutoScene = false;
+            isLevelScene = true;
+            OnSceneLevel.Invoke();
+        }
+    }
+
+    public bool getIsTutoScene()
+    {
+        return isTutoScene;
+    }
+
+    public void setIsTutoScene(bool isTutoScene)
+    {
+        this.isTutoScene = isTutoScene;
+    }
+
+    public bool getIsLevelScene()
+    {
+        return isLevelScene;
+    }
+
+    public void setIsLevelScene(bool isLevelScene)
+    {
+        this.isLevelScene = isLevelScene;
+    }
 }
