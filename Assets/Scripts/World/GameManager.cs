@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("Second instance of GameManager created. Automatic self - destruct triggered.");
             Destroy(gameObject);
         }
+
     }
     private void OnDestroy()
     {
@@ -46,9 +47,7 @@ public class GameManager : MonoBehaviour
     private float GlideSpeed = 1.25f;
     private float CoyoteTime = 0.2f;
 
-    private bool isJumping;
-    private bool isGrounded;
-
+    private bool isJumping, isGrounded;
     /*-------------GETTERS & SETTERS PLAYER-------------*/
     public bool getIsJumping()
     {
@@ -122,46 +121,30 @@ public class GameManager : MonoBehaviour
 
     [Header("------------Scene------------")]
     public UnityEvent OnSceneTuto, OnSceneLevel;
-    private bool isTutoScene, isLevelScene;
-    private Scene scene;
 
-    public void DialogueSceneTuto()
+    public void DialogueScene()
     {
-        if (scene.buildIndex == 1)
+        Debug.Log(OnSceneTuto);
+        if (SceneManager.GetActiveScene().buildIndex == 1 && OnSceneTuto != null)
         {
-            isTutoScene = true;
-            isLevelScene = false;
             OnSceneTuto.Invoke();
         }
-    }
-
-    public void DialogueSceneLevel()
-    {
-        if (scene.buildIndex == 2)
+        else
         {
-            isTutoScene = false;
-            isLevelScene = true;
-            OnSceneLevel.Invoke();
+            if (SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                OnSceneLevel.Invoke();
+            }
         }
     }
 
     public bool getIsTutoScene()
     {
-        return isTutoScene;
-    }
-
-    public void setIsTutoScene(bool isTutoScene)
-    {
-        this.isTutoScene = isTutoScene;
+        return SceneManager.GetActiveScene().buildIndex == 1;
     }
 
     public bool getIsLevelScene()
     {
-        return isLevelScene;
-    }
-
-    public void setIsLevelScene(bool isLevelScene)
-    {
-        this.isLevelScene = isLevelScene;
+        return SceneManager.GetActiveScene().buildIndex == 2;
     }
 }

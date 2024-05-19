@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -12,18 +13,42 @@ public class DialogueUI : MonoBehaviour
     private TypeWritterEffect typeWritterEffect;
     private bool hasShownDialogue;
 
-    private void Awake()
+    private void Start()
     {
         typeWritterEffect = GetComponent<TypeWritterEffect>();
         CloseDialogueBox();
-
-        GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
-        GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
 
         RecipeManager.Instance.OnCanGlideChanged.AddListener(OnCanGlideChangedHandler);
         RecipeManager.Instance.OnCanDigChanged.AddListener(OnCanDigChangedHandler);
         RecipeManager.Instance.OnCanFireChanged.AddListener(OnCanFireChangedHandler);
         RecipeManager.Instance.OnCanWallJumpChanged.AddListener(OnCanWallJumpChangedHandler);
+
+        // GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
+        // GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
+        StartCoroutine(WaitForGameManagerInitialization());
+    }
+    private IEnumerator WaitForGameManagerInitialization()
+    {
+        while (GameManager.Instance == null || GameManager.Instance.OnSceneTuto == null || GameManager.Instance.OnSceneLevel == null)
+        {
+            yield return null;
+        }
+
+        GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
+        Debug.Log("Added listener to OnSceneTuto.");
+
+        GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
+        Debug.Log("Added listener to OnSceneLevel.");
+    }
+
+    public void OnEventTriggered()
+    {
+        OnCanGlideChangedHandler();
+        OnCanDigChangedHandler();
+        OnCanFireChangedHandler();
+        OnCanWallJumpChangedHandler();
+
+        OnCanSceneChangedHandler();
     }
 
     public void ShowDialogue(DialogueObject ShowdialogueObject)
@@ -71,7 +96,6 @@ public class DialogueUI : MonoBehaviour
         {
             ShowDialogue(dialogueObject[2]);
             hasShownDialogue = true;
-            
         }
     }
     private void OnCanWallJumpChangedHandler()

@@ -143,6 +143,19 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Tuto"))
+        {
+            GameManager.Instance.DialogueScene();
+        }
+
+        if (other.CompareTag("Dig"))
+        {
+            GameManager.Instance.DialogueScene();
+        }
+    }
+
     // Permet de temporiser un certain temps (CoyoteTime), sur le saut hors d'une plate-forme 
     private IEnumerator UpdateisGroundedState(bool isGroundedState)
     {

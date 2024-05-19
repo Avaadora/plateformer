@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PickUpItem : MonoBehaviour
 {
@@ -13,27 +14,32 @@ public class PickUpItem : MonoBehaviour
     private InputController InputAction;
     private AudioManager audioManager;
 
+    UnityEvent ButtonEPressed;
+
     void Awake()
     {
         InputAction = new InputController();
         InputAction.Player.Enable();
 
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
+        if (ButtonEPressed == null)
+            ButtonEPressed = new UnityEvent();
+
+        ButtonEPressed.AddListener(EPressed);
     }
+
+    void Update()
+    {
+        if (Input.anyKeyDown && ButtonEPressed != null)
+        {
+            ButtonEPressed.Invoke();
+        }
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Debug.Log(collision.CompareTag("Player"));
-        // if (collision.CompareTag("Player") && Item.isDiggable)
-        // {
-        //     // Vérifier si l'objet appartient à la recette de cracher du feu
-        //     if (InputAction.Player.Dig.IsPressed())
-        //     {
-        //         RecipeManager.Instance.CheckForFireRecipe(Item);
-        //         gameObject.SetActive(false);
-        //     }
-        //     // gameObject.SetActive(false);
-        // }
         if (collision.CompareTag("Player"))
         {
             // Vérifier si l'objet appartient à la recette de planer
@@ -68,6 +74,8 @@ public class PickUpItem : MonoBehaviour
         Invoke(nameof(Respawn), 5f);
 
 
+
+
         // if (!(RecipeManager.Instance.getCanGlide() || RecipeManager.Instance.getCanDig() || RecipeManager.Instance.getCanFire()))
         // {
         //     Invoke(nameof(Respawn), 5f);
@@ -78,10 +86,28 @@ public class PickUpItem : MonoBehaviour
         // }
     }
 
+    private void OnCollisionStay2D(Collision2D other)
+    {
 
+        if (InputAction.Player.Dig.IsPressed())
+        {
+            if (other.collider.CompareTag("Player") && Item.isDiggable)
+            {
+                // Vérifier si l'objet appartient à la recette de cracher du feu
+                RecipeManager.Instance.CheckForFireRecipe(Item);
+                gameObject.SetActive(false);
+                // gameObject.SetActive(false);
+            }
+        }
+    }
 
     private void Respawn()
     {
         gameObject.SetActive(true);
+    }
+
+    private void EPressed()
+    {
+        Debug.Log("E is pressed");
     }
 }

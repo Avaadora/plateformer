@@ -212,7 +212,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""Dig"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
