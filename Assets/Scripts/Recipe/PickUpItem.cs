@@ -23,20 +23,7 @@ public class PickUpItem : MonoBehaviour
 
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
 
-        if (ButtonEPressed == null)
-            ButtonEPressed = new UnityEvent();
-
-        ButtonEPressed.AddListener(EPressed);
     }
-
-    void Update()
-    {
-        if (Input.anyKeyDown && ButtonEPressed != null)
-        {
-            ButtonEPressed.Invoke();
-        }
-    }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -73,9 +60,6 @@ public class PickUpItem : MonoBehaviour
         }
         Invoke(nameof(Respawn), 5f);
 
-
-
-
         // if (!(RecipeManager.Instance.getCanGlide() || RecipeManager.Instance.getCanDig() || RecipeManager.Instance.getCanFire()))
         // {
         //     Invoke(nameof(Respawn), 5f);
@@ -86,28 +70,30 @@ public class PickUpItem : MonoBehaviour
         // }
     }
 
-    private void OnCollisionStay2D(Collision2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-
-        if (InputAction.Player.Dig.IsPressed())
+        if (other.CompareTag("Player") && InputAction.Player.Dig.triggered)
         {
-            if (other.collider.CompareTag("Player") && Item.isDiggable)
+            if (Item.isDiggable)
             {
                 // Vérifier si l'objet appartient à la recette de cracher du feu
                 RecipeManager.Instance.CheckForFireRecipe(Item);
                 gameObject.SetActive(false);
-                // gameObject.SetActive(false);
+                AudioManager._Instance.PlaySFX(audioManager.PickUp1);
             }
+            if (RecipeManager.Instance.getIsInOrder())
+            {
+                animator.SetTrigger("IsPickedUp");
+            }
+
         }
+
+        Invoke(nameof(Respawn), 5f);
     }
+
 
     private void Respawn()
     {
         gameObject.SetActive(true);
-    }
-
-    private void EPressed()
-    {
-        Debug.Log("E is pressed");
     }
 }

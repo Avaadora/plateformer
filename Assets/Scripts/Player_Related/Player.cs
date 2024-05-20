@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     public Animator animator;
     [SerializeField] private float FallGravityScaleMultiplier = 1f;
     private float WallCheckHeight = 0.1f;
-    private float WallCheckWidth = 1f;
-    private float GroundCheckWidth = 0.5f;
+    private float WallCheckWidth = 0.5f;
+    private float GroundCheckWidth = 0.2f;
     private float GroundCheckHeight = 0.1f;
     private float HorizontalInput, GravityScale;
 
@@ -143,18 +143,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Tuto"))
-        {
-            GameManager.Instance.DialogueScene();
-        }
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("Tuto"))
+    //     {
+    //         GameManager.Instance.DialogueScene();
+    //     }
 
-        if (other.CompareTag("Dig"))
-        {
-            GameManager.Instance.DialogueScene();
-        }
-    }
+    //     if (other.CompareTag("Dig"))
+    //     {
+    //         GameManager.Instance.DialogueScene();
+    //     }
+    // }
 
     // Permet de temporiser un certain temps (CoyoteTime), sur le saut hors d'une plate-forme 
     private IEnumerator UpdateisGroundedState(bool isGroundedState)
@@ -200,18 +200,18 @@ public class Player : MonoBehaviour
 
     private void UpdateGroundCheckOffset()
     {
-        // SpriteRenderer spritePlayer = GetComponent<SpriteRenderer>(); // Récupération du sprite du joueur
-        float height = RbPlayer.transform.localScale.y; // Récupération de la hauteur du sprite du joueur
-        GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - height / 3f);
+        SpriteRenderer spritePlayer = GetComponent<SpriteRenderer>(); // Récupération du sprite du joueur
+        float height = spritePlayer.bounds.size.y; // Récupération de la hauteur du sprite du joueur
+        GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - height / 4f);
     }
 
     private void UpdateCheckPosition()
     {
-        // SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        float largeur = RbPlayer.transform.localScale.x;
-        float hauteur = RbPlayer.transform.localScale.y;
+        SpriteRenderer spritePlayer = GetComponent<SpriteRenderer>();
+        float largeur = spritePlayer.bounds.size.x;
+        float hauteur = spritePlayer.bounds.size.y;
 
-        GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - hauteur / 2f);
+        GroundCheckPosition = new Vector2(transform.position.x, transform.position.y - hauteur / 4f);
         WallCheckPositionLeft = new Vector2(transform.position.x - largeur / 2f, transform.position.y);
         WallCheckPositionRight = new Vector2(transform.position.x + largeur / 2f, transform.position.y);
     }

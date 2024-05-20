@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
             return _Instance;
         }
     }
+
     private void Awake()
     {
         if (_Instance != null)
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
     private void OnDestroy()
     {
         if (_Instance == this)
@@ -37,7 +39,36 @@ public class GameManager : MonoBehaviour
             _Instance = null;
         }
     }
+
     void OnEnable() => DontDestroyOnLoad(gameObject);
+
+    [Header("------------Scene------------")]
+    public UnityEvent OnSceneTuto, OnSceneLevel;
+
+    // public void DialogueScene()
+    // {
+    //     if (SceneManager.GetActiveScene().buildIndex == 1 && OnSceneTuto != null)
+    //     {
+    //         OnSceneTuto.Invoke();
+    //     }
+    //     else
+    //     {
+    //         if (SceneManager.GetActiveScene().buildIndex == 2)
+    //         {
+    //             OnSceneLevel.Invoke();
+    //         }
+    //     }
+    // }
+
+    public bool getIsTutoScene()
+    {
+        return SceneManager.GetActiveScene().buildIndex == 1;
+    }
+
+    public bool getIsLevelScene()
+    {
+        return SceneManager.GetActiveScene().buildIndex == 2;
+    }
 
     [Header("------------Player------------")]
     /*-------------VARIABLES PLAYER-------------*/
@@ -116,35 +147,5 @@ public class GameManager : MonoBehaviour
     public void setGlideSpeed(float GlideSpeed)
     {
         this.GlideSpeed = GlideSpeed;
-    }
-
-
-    [Header("------------Scene------------")]
-    public UnityEvent OnSceneTuto, OnSceneLevel;
-
-    public void DialogueScene()
-    {
-        Debug.Log(OnSceneTuto);
-        if (SceneManager.GetActiveScene().buildIndex == 1 && OnSceneTuto != null)
-        {
-            OnSceneTuto.Invoke();
-        }
-        else
-        {
-            if (SceneManager.GetActiveScene().buildIndex == 2)
-            {
-                OnSceneLevel.Invoke();
-            }
-        }
-    }
-
-    public bool getIsTutoScene()
-    {
-        return SceneManager.GetActiveScene().buildIndex == 1;
-    }
-
-    public bool getIsLevelScene()
-    {
-        return SceneManager.GetActiveScene().buildIndex == 2;
     }
 }

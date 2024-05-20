@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.EventSystems;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -25,21 +24,18 @@ public class DialogueUI : MonoBehaviour
 
         // GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
         // GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
-        StartCoroutine(WaitForGameManagerInitialization());
+        // StartCoroutine(WaitForGameManagerInitialization());
     }
-    private IEnumerator WaitForGameManagerInitialization()
-    {
-        while (GameManager.Instance == null || GameManager.Instance.OnSceneTuto == null || GameManager.Instance.OnSceneLevel == null)
-        {
-            yield return null;
-        }
+    // private IEnumerator WaitForGameManagerInitialization()
+    // {
+    //     while (GameManager.Instance == null || GameManager.Instance.OnSceneTuto == null || GameManager.Instance.OnSceneLevel == null)
+    //     {
+    //         yield return null;
+    //     }
 
-        GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
-        Debug.Log("Added listener to OnSceneTuto.");
-
-        GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
-        Debug.Log("Added listener to OnSceneLevel.");
-    }
+    //     GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
+    //     GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
+    // }
 
     public void OnEventTriggered()
     {
@@ -48,7 +44,7 @@ public class DialogueUI : MonoBehaviour
         OnCanFireChangedHandler();
         OnCanWallJumpChangedHandler();
 
-        OnCanSceneChangedHandler();
+        // OnCanSceneChangedHandler();
     }
 
     public void ShowDialogue(DialogueObject ShowdialogueObject)
@@ -107,20 +103,20 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    private void OnCanSceneChangedHandler()
-    {
-        if (GameManager.Instance.getIsTutoScene() && !hasShownDialogue)
-        {
-            ShowDialogue(dialogueObject[3]);
-            hasShownDialogue = true;
-        }
-        else
-        {
-            if (GameManager.Instance.getIsLevelScene() && !hasShownDialogue)
-            {
-                ShowDialogue(dialogueObject[5]);
-                hasShownDialogue = true;
-            }
-        }
-    }
+    // private void OnCanSceneChangedHandler()
+    // {
+    //     if (GameManager.Instance.getIsTutoScene() && !hasShownDialogue)
+    //     {
+    //         ShowDialogue(dialogueObject[3]);
+    //         hasShownDialogue = true;
+    //     }
+    //     else
+    //     {
+    //         if (GameManager.Instance.getIsLevelScene() && !hasShownDialogue)
+    //         {
+    //             ShowDialogue(dialogueObject[5]);
+    //             hasShownDialogue = true;
+    //         }
+    //     }
+    // }
 }

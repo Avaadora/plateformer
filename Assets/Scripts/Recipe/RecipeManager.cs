@@ -206,8 +206,8 @@ public class RecipeManager : MonoBehaviour
     {
         if (DigIndex < DigRecipe.Length && ItemToPickUp == DigRecipe[DigIndex])
         {
-            isInOrder = true;
             DigIndex++;
+            isInOrder = true;
             if (DigIndex == DigRecipe.Length)
             {
                 Instantiate(Check, Shovel.transform);
@@ -227,8 +227,8 @@ public class RecipeManager : MonoBehaviour
     {
         if (FireIndex < FireRecipe.Length && ItemToPickUp == FireRecipe[FireIndex] && canDig)
         {
-            isInOrder = true;
             FireIndex++;
+            isInOrder = true;
             if (FireIndex == FireRecipe.Length)
             {
                 Instantiate(Check, Fire.transform);
