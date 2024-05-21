@@ -9,7 +9,7 @@ using Unity.VisualScripting;
 public class RecipeManager : MonoBehaviour
 {
     private AudioManager audioManager;
-
+    // Je sais que le code n'est pas beau que mon âme de dev souffre mais je n'ai pas pu faire mieux, je ferais une refacto si j'ai le temps... :'(
     [Header("------------Singleton------------")]
     private static RecipeManager _instance;
     public static RecipeManager Instance
@@ -301,11 +301,40 @@ public class RecipeManager : MonoBehaviour
 
     public void ClearUI()
     {
-        foreach (Image item in WallJumpImage)
+        if (!canWallJump)
         {
-            Debug.Log(item.name);
-            item.color = new Color(0,0,0);
+            for (int i = 0; i < WallJumpImage.Length; i++)
+            {
+                WallJumpImage[i].color = new Color(0, 0, 0);
+            }
         }
+
+        if (!canFire)
+        {
+            foreach (Image FireItem in FireImage)
+            {
+                FireItem.color = new Color(0, 0, 0);
+            }
+        }
+
+        if (!canDig)
+        {
+            foreach (Image DigItem in DigImage)
+            {
+                DigItem.color = new Color(0, 0, 0);
+            }
+        }
+
+        if (!canGlide)
+        {
+            foreach (Image GlideItem in GlideImage)
+            {
+                Debug.Log("PLANER");
+                GlideItem.color = new Color(0, 0, 0);
+                Debug.Log(GlideItem.color);
+            }
+        }
+
     }
 
     IEnumerator RecipeCompleted(float time)

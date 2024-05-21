@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 {
     [Header("------------GameManager------------")]
     private static GameManager _Instance;
+    public UnityEvent OnSceneTuto = new UnityEvent();
+    public UnityEvent OnSceneLevel = new UnityEvent();
+    
     public static GameManager Instance
     {
         get
@@ -42,23 +45,20 @@ public class GameManager : MonoBehaviour
 
     void OnEnable() => DontDestroyOnLoad(gameObject);
 
-    [Header("------------Scene------------")]
-    public UnityEvent OnSceneTuto, OnSceneLevel;
-
-    // public void DialogueScene()
-    // {
-    //     if (SceneManager.GetActiveScene().buildIndex == 1 && OnSceneTuto != null)
-    //     {
-    //         OnSceneTuto.Invoke();
-    //     }
-    //     else
-    //     {
-    //         if (SceneManager.GetActiveScene().buildIndex == 2)
-    //         {
-    //             OnSceneLevel.Invoke();
-    //         }
-    //     }
-    // }
+    public void DialogueScene()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1 && OnSceneTuto != null)
+        {
+            OnSceneTuto.Invoke();
+        }
+        else
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                OnSceneLevel.Invoke();
+            }
+        }
+    }
 
     public bool getIsTutoScene()
     {

@@ -21,17 +21,10 @@ public class KillZone : MonoBehaviour
             // Met à jour la position du joueur à la position de respawn
             StartCoroutine(RespawnPlayer(0.5f));
         }
-        CheckPowerUpAndUI();
+        RecipeManager.Instance.ClearUI();
+        RecipeManager.Instance.ClearCheckmarks();
     }
 
-    private void CheckPowerUpAndUI()
-    {
-        if (!(RecipeManager.Instance.getCanGlide() || RecipeManager.Instance.getCanDig() || RecipeManager.Instance.getCanFire() || RecipeManager.Instance.getCanWallJump()))
-        {
-            RecipeManager.Instance.ClearUI();
-            RecipeManager.Instance.ClearCheckmarks();
-        }
-    }
 
     IEnumerator RespawnPlayer(float respawn)
     {
