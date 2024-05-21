@@ -85,7 +85,6 @@ public class PickUpItem : MonoBehaviour
             {
                 animator.SetTrigger("IsPickedUp");
             }
-
         }
 
         Invoke(nameof(Respawn), 5f);

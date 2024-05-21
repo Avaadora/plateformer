@@ -17,34 +17,23 @@ public class DialogueUI : MonoBehaviour
         typeWritterEffect = GetComponent<TypeWritterEffect>();
         CloseDialogueBox();
 
+        GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
+        GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
+
         RecipeManager.Instance.OnCanGlideChanged.AddListener(OnCanGlideChangedHandler);
         RecipeManager.Instance.OnCanDigChanged.AddListener(OnCanDigChangedHandler);
         RecipeManager.Instance.OnCanFireChanged.AddListener(OnCanFireChangedHandler);
         RecipeManager.Instance.OnCanWallJumpChanged.AddListener(OnCanWallJumpChangedHandler);
-
-        // GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
-        // GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
-        // StartCoroutine(WaitForGameManagerInitialization());
     }
-    // private IEnumerator WaitForGameManagerInitialization()
-    // {
-    //     while (GameManager.Instance == null || GameManager.Instance.OnSceneTuto == null || GameManager.Instance.OnSceneLevel == null)
-    //     {
-    //         yield return null;
-    //     }
-
-    //     GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
-    //     GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
-    // }
 
     public void OnEventTriggered()
     {
+        OnCanSceneChangedHandler();
+
         OnCanGlideChangedHandler();
         OnCanDigChangedHandler();
         OnCanFireChangedHandler();
         OnCanWallJumpChangedHandler();
-
-        // OnCanSceneChangedHandler();
     }
 
     public void ShowDialogue(DialogueObject ShowdialogueObject)
@@ -76,6 +65,11 @@ public class DialogueUI : MonoBehaviour
             ShowDialogue(dialogueObject[0]);
             hasShownDialogue = true;
         }
+        if (hasShownDialogue)
+        {
+            hasShownDialogue = false;
+
+        }
     }
     private void OnCanDigChangedHandler()
     {
@@ -83,6 +77,11 @@ public class DialogueUI : MonoBehaviour
         {
             ShowDialogue(dialogueObject[1]);
             hasShownDialogue = true;
+        }
+        if (hasShownDialogue)
+        {
+            hasShownDialogue = false;
+
         }
     }
 
@@ -101,22 +100,32 @@ public class DialogueUI : MonoBehaviour
             ShowDialogue(dialogueObject[4]);
             hasShownDialogue = true;
         }
+        if (hasShownDialogue)
+        {
+            hasShownDialogue = false;
+
+        }
     }
 
-    // private void OnCanSceneChangedHandler()
-    // {
-    //     if (GameManager.Instance.getIsTutoScene() && !hasShownDialogue)
-    //     {
-    //         ShowDialogue(dialogueObject[3]);
-    //         hasShownDialogue = true;
-    //     }
-    //     else
-    //     {
-    //         if (GameManager.Instance.getIsLevelScene() && !hasShownDialogue)
-    //         {
-    //             ShowDialogue(dialogueObject[5]);
-    //             hasShownDialogue = true;
-    //         }
-    //     }
-    // }
+    private void OnCanSceneChangedHandler()
+    {
+        if (GameManager.Instance.getIsTutoScene() && !hasShownDialogue)
+        {
+            ShowDialogue(dialogueObject[3]);
+            hasShownDialogue = true;
+        }
+        else
+        {
+            if (GameManager.Instance.getIsLevelScene() && !hasShownDialogue)
+            {
+                ShowDialogue(dialogueObject[5]);
+                hasShownDialogue = true;
+            }
+        }
+        if (hasShownDialogue)
+        {
+            hasShownDialogue = false;
+
+        }
+    }
 }

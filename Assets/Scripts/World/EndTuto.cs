@@ -10,6 +10,7 @@ public class EndTuto : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SceneController.Instance.LoadNextScene();
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);        
         }
     }
 }
