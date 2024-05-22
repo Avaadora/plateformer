@@ -24,6 +24,30 @@ public class PickUpItem : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
 
     }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && InputAction.Player.Dig.triggered)
+        {
+            if (Item.isDiggable && Item.Tag.Equals("Diggable"))
+            {
+                // Vérifier si l'objet appartient à la recette de cracher du feu
+                RecipeManager.Instance.CheckForFireRecipe(Item);
+                AudioManager._Instance.PlaySFX(audioManager.PickUp1);
+            }
+            if (RecipeManager.Instance.getIsInOrder())
+            {
+                animator.SetTrigger("IsPickedUp");
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                Invoke(nameof(Respawn), 5f);
+            }
+
+        }
+        // Invoke(nameof(Respawn), 5f);
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -56,39 +80,27 @@ public class PickUpItem : MonoBehaviour
             if (RecipeManager.Instance.getIsInOrder())
             {
                 animator.SetTrigger("IsPickedUp");
-            }
-        }
-        Invoke(nameof(Respawn), 5f);
-
-        // if (!(RecipeManager.Instance.getCanGlide() || RecipeManager.Instance.getCanDig() || RecipeManager.Instance.getCanFire()))
-        // {
-        //     Invoke(nameof(Respawn), 5f);
-        // }
-        // else
-        // {
-        //     gameObject.SetActive(false);
-        // }
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && InputAction.Player.Dig.triggered)
-        {
-            if (Item.isDiggable)
-            {
-                // Vérifier si l'objet appartient à la recette de cracher du feu
-                RecipeManager.Instance.CheckForFireRecipe(Item);
                 gameObject.SetActive(false);
-                AudioManager._Instance.PlaySFX(audioManager.PickUp1);
             }
-            if (RecipeManager.Instance.getIsInOrder())
+            else
             {
-                animator.SetTrigger("IsPickedUp");
+                Invoke(nameof(Respawn), 5f);
             }
         }
+        // Invoke(nameof(Respawn), 5f);
 
-        Invoke(nameof(Respawn), 5f);
+        if (RecipeManager.Instance.getIsInOrder())
+        {
+            gameObject.SetActive(false);
+
+        }
+        else
+        {
+            Invoke(nameof(Respawn), 5f);
+        }
     }
+
+
 
 
     private void Respawn()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {
-    private Vector3 respawnPosition;
+    private Vector2 respawnPosition;
     private GameObject Player;
 
     private void Start()
