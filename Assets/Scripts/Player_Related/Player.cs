@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     [SerializeField] private float FallGravityScaleMultiplier = 1f;
     private float WallCheckHeight = 0.1f;
-    private float WallCheckWidth = 0.5f;
+    private float WallCheckWidth = 1f;
     private float GroundCheckWidth = 0.2f;
     private float GroundCheckHeight = 0.1f;
     private float HorizontalInput, GravityScale;
