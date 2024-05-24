@@ -92,7 +92,8 @@ public class Player : MonoBehaviour
         }
         else
         {
-            GameManager.Instance.setIsJumping(false);
+            StartCoroutine(UpdateisJumpState(false));
+            // GameManager.Instance.setIsJumping(false);
             animator.SetBool("IsJumping", GameManager.Instance.getIsJumping());
         }
 
