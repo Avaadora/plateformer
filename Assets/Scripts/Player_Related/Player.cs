@@ -88,10 +88,13 @@ public class Player : MonoBehaviour
         if (MyInputActions.Player.Jump.IsPressed() && GameManager.Instance.getIsGrounded())
         {
             GameManager.Instance.setIsJumping(true);
+            animator.SetBool("IsJumping", GameManager.Instance.getIsJumping());
         }
         else
         {
+            // StartCoroutine(UpdateisJumpState(false));
             GameManager.Instance.setIsJumping(false);
+            animator.SetBool("IsJumping", GameManager.Instance.getIsJumping());
         }
 
         // PLANER
@@ -99,10 +102,12 @@ public class Player : MonoBehaviour
         {
             RecipeManager.Instance.setIsGliding(true);
             StartCoroutine(UpdateisJumpState(false));
+            animator.SetBool("IsGliding", RecipeManager.Instance.getIsGliding());
         }
         else
         {
             RecipeManager.Instance.setIsGliding(false);
+            animator.SetBool("IsGliding", RecipeManager.Instance.getIsGliding());
         }
 
         // WALL JUMP
