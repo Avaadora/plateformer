@@ -16,4 +16,5 @@ MonoBehaviour:
   ItemName: pie
   ItemDescription: Tarte
   Tag: Dig
-  ItemSprite: {fileID: 1470528732, guid: 57409d6ec1fe7184d9ac8fbea8aeb225, type: 3}
+  ItemSprite: {fileID: 21300000, guid: b029b53bdf6103d418c0ea0d038f36ff, type: 3}
+  isDiggable: 0

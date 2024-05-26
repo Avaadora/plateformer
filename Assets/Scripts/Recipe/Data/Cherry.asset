@@ -16,5 +16,5 @@ MonoBehaviour:
   ItemName: cherry
   ItemDescription: Cerise
   Tag: Diggable
-  ItemSprite: {fileID: -437332797, guid: 57409d6ec1fe7184d9ac8fbea8aeb225, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 453d50e3b3bcdb545bae558bfe2ee2f9, type: 3}
   isDiggable: 1

@@ -47,13 +47,13 @@ public class GameManager : MonoBehaviour
 
     public void DialogueScene()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1 && OnSceneTuto != null)
+        if (SceneManager.GetActiveScene().buildIndex == 2 && OnSceneTuto != null)
         {
             OnSceneTuto.Invoke();
         }
         else
         {
-            if (SceneManager.GetActiveScene().buildIndex == 2)
+            if (SceneManager.GetActiveScene().buildIndex == 3 && OnSceneLevel != null)
             {
                 OnSceneLevel.Invoke();
             }
@@ -62,12 +62,12 @@ public class GameManager : MonoBehaviour
 
     public bool getIsTutoScene()
     {
-        return SceneManager.GetActiveScene().buildIndex == 1;
+        return SceneManager.GetActiveScene().buildIndex == 2;
     }
 
     public bool getIsLevelScene()
     {
-        return SceneManager.GetActiveScene().buildIndex == 2;
+        return SceneManager.GetActiveScene().buildIndex == 3;
     }
 
     [Header("------------Player------------")]

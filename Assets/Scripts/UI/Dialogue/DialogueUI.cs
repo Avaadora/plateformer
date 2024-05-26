@@ -47,7 +47,7 @@ public class DialogueUI : MonoBehaviour
         foreach (string dialogue in StepDialogueObject.getDialogue())
         {
             yield return typeWritterEffect.Run(dialogue, LabelText);
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(2f);
         }
         CloseDialogueBox();
     }

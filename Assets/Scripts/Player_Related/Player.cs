@@ -153,11 +153,13 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Tuto"))
         {
             GameManager.Instance.DialogueScene();
+            other.gameObject.SetActive(false);
         }
 
-        if (other.CompareTag("Dig"))
+        if (other.CompareTag("Level"))
         {
             GameManager.Instance.DialogueScene();
+            other.gameObject.SetActive(false);
         }
     }
 

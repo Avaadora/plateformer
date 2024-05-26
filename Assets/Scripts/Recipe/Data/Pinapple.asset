@@ -16,5 +16,5 @@ MonoBehaviour:
   ItemName: pinapple
   ItemDescription: Ananas
   Tag: WallJump
-  ItemSprite: {fileID: 26215435, guid: 57409d6ec1fe7184d9ac8fbea8aeb225, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 1f5a14cacab42f74280bb712a38206a6, type: 3}
   isDiggable: 0

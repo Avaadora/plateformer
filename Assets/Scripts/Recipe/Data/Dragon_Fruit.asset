@@ -16,5 +16,5 @@ MonoBehaviour:
   ItemName: dragon_fruit
   ItemDescription: Fruit du dragon
   Tag: Diggable
-  ItemSprite: {fileID: -977114398, guid: 57409d6ec1fe7184d9ac8fbea8aeb225, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 003be32eb13c899459f9326ac4f25e4a, type: 3}
   isDiggable: 1
