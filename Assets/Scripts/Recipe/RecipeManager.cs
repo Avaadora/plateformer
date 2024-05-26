@@ -66,7 +66,10 @@ public class RecipeManager : MonoBehaviour
 
     static int GlideIndex, DigIndex, FireIndex, WallJumpIndex = 0;
 
-    public UnityEvent OnCanGlideChanged, OnCanDigChanged, OnCanFireChanged, OnCanWallJumpChanged;
+    public UnityEvent OnCanGlideChanged; 
+    public UnityEvent OnCanDigChanged; 
+    public UnityEvent OnCanFireChanged; 
+    public UnityEvent OnCanWallJumpChanged;
 
     [Header("------------Scene Management------------")]
     [SerializeField] private GameObject tutorialObject;
@@ -137,10 +140,14 @@ public class RecipeManager : MonoBehaviour
         switch (scene.buildIndex)
         {
             case 1:
-                tutorialObject.SetActive(true);
+                tutorialObject.SetActive(false);
                 levelObject.SetActive(false);
                 break;
             case 2:
+                tutorialObject.SetActive(true);
+                levelObject.SetActive(false);
+                break;
+            case 3:
                 tutorialObject.SetActive(false);
                 levelObject.SetActive(true);
                 break;

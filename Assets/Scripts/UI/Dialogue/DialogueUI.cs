@@ -11,11 +11,13 @@ public class DialogueUI : MonoBehaviour
 
     private TypeWritterEffect typeWritterEffect;
     private bool hasShownDialogue;
-
+    
     private void Start()
     {
         typeWritterEffect = GetComponent<TypeWritterEffect>();
         CloseDialogueBox();
+
+        SceneController.Instance.OnSceneIntro.AddListener(OnCanSceneIntroChangedHandler);
 
         GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
         GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
@@ -28,6 +30,7 @@ public class DialogueUI : MonoBehaviour
 
     public void OnEventTriggered()
     {
+        OnCanSceneIntroChangedHandler();
         OnCanSceneChangedHandler();
 
         OnCanGlideChangedHandler();
@@ -35,6 +38,8 @@ public class DialogueUI : MonoBehaviour
         OnCanFireChangedHandler();
         OnCanWallJumpChangedHandler();
     }
+
+
 
     public void ShowDialogue(DialogueObject ShowdialogueObject)
     {
@@ -107,6 +112,15 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
+    private void OnCanSceneIntroChangedHandler()
+    {
+        Debug.Log("EVENT SCENE : "+SceneController.Instance.getIsSceneIntro());
+        if (SceneController.Instance.getIsSceneIntro() && !hasShownDialogue)
+        {
+            ShowDialogue(dialogueObject[6]);
+            hasShownDialogue = true;
+        }
+    }
     private void OnCanSceneChangedHandler()
     {
         if (GameManager.Instance.getIsTutoScene() && !hasShownDialogue)
@@ -122,10 +136,10 @@ public class DialogueUI : MonoBehaviour
                 hasShownDialogue = true;
             }
         }
+
         if (hasShownDialogue)
         {
             hasShownDialogue = false;
-
         }
     }
 }

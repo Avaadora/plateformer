@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     private static GameManager _Instance;
     public UnityEvent OnSceneTuto = new UnityEvent();
     public UnityEvent OnSceneLevel = new UnityEvent();
-    
+    public UnityEvent OnSceneIntro = new UnityEvent();
+
     public static GameManager Instance
     {
         get
@@ -43,7 +44,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void OnEnable() => DontDestroyOnLoad(gameObject);
+    private void OnEnable()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void DialogueScene()
     {
