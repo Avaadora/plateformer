@@ -308,11 +308,13 @@ public class RecipeManager : MonoBehaviour
 
     public void ClearUI()
     {
-        if (!canWallJump)
+        Debug.Log("COUCOU : "+canWallJump);
+        if (canWallJump)
         {
+            
             for (int i = 0; i < WallJumpImage.Length; i++)
             {
-                WallJumpImage[i].color = new Color(0, 0, 0);
+                WallJumpImage[i].color = Color.black;
             }
         }
 
@@ -336,9 +338,7 @@ public class RecipeManager : MonoBehaviour
         {
             foreach (Image GlideItem in GlideImage)
             {
-                Debug.Log("PLANER");
                 GlideItem.color = new Color(0, 0, 0);
-                Debug.Log(GlideItem.color);
             }
         }
 

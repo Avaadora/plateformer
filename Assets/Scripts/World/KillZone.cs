@@ -16,13 +16,15 @@ public class KillZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        RecipeManager.Instance.RestartGameRecipe();
+        RecipeManager.Instance.ClearUI();
+        
         if (collision.CompareTag("Player"))
         {
             // Met à jour la position du joueur à la position de respawn
             StartCoroutine(RespawnPlayer(0.5f));
         }
-        RecipeManager.Instance.ClearUI();
-        RecipeManager.Instance.ClearCheckmarks();
+
     }
 
 
