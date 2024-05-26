@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class DialogueUI : MonoBehaviour
 
     private TypeWritterEffect typeWritterEffect;
     private bool hasShownDialogue;
-    
+
     private void Start()
     {
         typeWritterEffect = GetComponent<TypeWritterEffect>();
@@ -67,7 +68,7 @@ public class DialogueUI : MonoBehaviour
     {
         if (RecipeManager.Instance.getCanGlide() && !hasShownDialogue)
         {
-            ShowDialogue(dialogueObject[0]);
+            ShowDialogue(dialogueObject[1]);
             hasShownDialogue = true;
         }
         if (hasShownDialogue)
@@ -80,7 +81,7 @@ public class DialogueUI : MonoBehaviour
     {
         if (RecipeManager.Instance.getCanDig() && !hasShownDialogue)
         {
-            ShowDialogue(dialogueObject[1]);
+            ShowDialogue(dialogueObject[0]);
             hasShownDialogue = true;
         }
         if (hasShownDialogue)
@@ -114,7 +115,6 @@ public class DialogueUI : MonoBehaviour
 
     private void OnCanSceneIntroChangedHandler()
     {
-        Debug.Log("EVENT SCENE : "+SceneController.Instance.getIsSceneIntro());
         if (SceneController.Instance.getIsSceneIntro() && !hasShownDialogue)
         {
             ShowDialogue(dialogueObject[6]);

@@ -30,6 +30,7 @@ public class SceneController : MonoBehaviour
             // SceneManager.sceneLoaded += OnSceneLoaded;
         }
     }
+
     void OnDestroy()
     {
         if (_instance == this)
@@ -46,15 +47,12 @@ public class SceneController : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Scene Loaded: " + scene.name + " " + scene.buildIndex);
-        Debug.Log(SceneManager.GetActiveScene().buildIndex == 1);
         CheckIntro();
     }
 
     public void LoadNextScene()
     {
         StartCoroutine(LevelTransition());
-        CheckIntro();
     }
 
     IEnumerator LevelTransition()

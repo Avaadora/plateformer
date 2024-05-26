@@ -43,6 +43,9 @@ public class Player : MonoBehaviour
 
         MyInputActions.Player.Glide.started += ctx => StartGlide();
         MyInputActions.Player.Glide.canceled += ctx => StopGlide();
+
+        MyInputActions.Player.Dig.started += ctx => StartDig();
+        MyInputActions.Player.Dig.canceled += ctx => StopDig();
     }
 
     // Update is called once per frame
@@ -108,6 +111,17 @@ public class Player : MonoBehaviour
         {
             RecipeManager.Instance.setIsGliding(false);
             animator.SetBool("IsGliding", RecipeManager.Instance.getIsGliding());
+        }
+
+        if (GameManager.Instance.getIsGrounded() && MyInputActions.Player.Dig.IsPressed() && RecipeManager.Instance.getCanDig())
+        {
+            RecipeManager.Instance.setIsDigging(true);
+            animator.SetBool("IsDigging", RecipeManager.Instance.getIsDigging());
+        }
+        else
+        {
+            RecipeManager.Instance.setIsDigging(false);
+            animator.SetBool("IsDigging", RecipeManager.Instance.getIsDigging());
         }
 
         // WALL JUMP
@@ -252,6 +266,16 @@ public class Player : MonoBehaviour
     private void StopGlide()
     {
         RecipeManager.Instance.setIsGliding(false);
+    }
+
+    private void StartDig()
+    {
+        RecipeManager.Instance.setIsDigging(true);
+    }
+
+    private void StopDig()
+    {
+        RecipeManager.Instance.setIsDigging(false);
     }
 
     // Callback to draw gizmos that are pickable and always drawn.
