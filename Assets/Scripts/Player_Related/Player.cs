@@ -128,11 +128,22 @@ public class Player : MonoBehaviour
         if (isTouchingWallLeft && MyInputActions.Player.Jump.IsPressed())
         {
             WallJump(Vector2.right);
+            animator.SetBool("IsWallTouched", isTouchingWallLeft);
+        }
+        else
+        {
+            animator.SetBool("IsWallTouched", false);
         }
 
         if (isTouchingWallRight && MyInputActions.Player.Jump.IsPressed())
         {
             WallJump(Vector2.left);
+            animator.SetBool("IsWallTouched", isTouchingWallRight);
+            
+        }
+        else
+        {
+            animator.SetBool("IsWallTouched", false);
         }
 
 

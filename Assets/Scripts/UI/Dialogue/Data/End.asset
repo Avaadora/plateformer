@@ -10,10 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae87559c3ccd78c4ea6e198d621a9c0e, type: 3}
-  m_Name: Tuto
+  m_Name: End
   m_EditorClassIdentifier: 
   Dialogue:
-  - Bonjour je m'appelle Po, je suis un petit dragon en parcours initiatique !
-  - "J'ai pour mission de ramener le savoir de la cuisine \xE0 ma tribu."
-  - 'Mais pour l''instant je suis faible, j''ai besoin de manger pour devenir un
-    vrai dragon ! '
+  - "Et c'est ainsi que Po parti \xE0 l'aventure dans de nouveaux biomes."

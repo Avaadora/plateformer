@@ -40,8 +40,6 @@ public class DialogueUI : MonoBehaviour
         OnCanWallJumpChangedHandler();
     }
 
-
-
     public void ShowDialogue(DialogueObject ShowdialogueObject)
     {
         DialogueBox.SetActive(true);

@@ -16,7 +16,7 @@ public class KillZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        RecipeManager.Instance.RestartGameRecipe();
+        // RecipeManager.Instance.RestartGameRecipe();
         RecipeManager.Instance.ClearUI();
         
         if (collision.CompareTag("Player"))
