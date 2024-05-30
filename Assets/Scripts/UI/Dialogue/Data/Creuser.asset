@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Creuser
   m_EditorClassIdentifier: 
   Dialogue:
-  - "Recette termin\xE9e avec succ\xE8s !\nVous pouvez creuser !"
+  - "Je sens que mes pattes sont plus fortes ! Et si j'essayais de d\xE9terrer cette
+    chose ?"
   - Appuyer sur E pour creuser.

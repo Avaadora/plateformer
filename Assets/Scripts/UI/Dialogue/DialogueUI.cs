@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using System;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class DialogueUI : MonoBehaviour
         CloseDialogueBox();
 
         SceneController.Instance.OnSceneIntro.AddListener(OnCanSceneIntroChangedHandler);
+        SceneController.Instance.OnSceneEnd.AddListener(OnCanSceneEndChangedHandler);
 
         GameManager.Instance.OnSceneTuto.AddListener(OnCanSceneChangedHandler);
         GameManager.Instance.OnSceneLevel.AddListener(OnCanSceneChangedHandler);
@@ -32,6 +34,7 @@ public class DialogueUI : MonoBehaviour
     public void OnEventTriggered()
     {
         OnCanSceneIntroChangedHandler();
+        OnCanSceneEndChangedHandler();
         OnCanSceneChangedHandler();
 
         OnCanGlideChangedHandler();
@@ -119,6 +122,16 @@ public class DialogueUI : MonoBehaviour
             hasShownDialogue = true;
         }
     }
+
+    private void OnCanSceneEndChangedHandler()
+    {
+        if (SceneController.Instance.getIsSceneEnd() && !hasShownDialogue)
+        {
+            ShowDialogue(dialogueObject[7]);
+            hasShownDialogue = true;
+        }
+    }
+
     private void OnCanSceneChangedHandler()
     {
         if (GameManager.Instance.getIsTutoScene() && !hasShownDialogue)

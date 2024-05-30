@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 5834958348651084988}
   - component: {fileID: 4563283249180995385}
   - component: {fileID: 862340784525738561}
+  - component: {fileID: 5260347608472623515}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -352,6 +353,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6f7f4de37d6794b9cf8a8bff86a24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &5260347608472623515
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810576362174138708}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57de42bf51ca5f44fb83048b5db8857c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8645096160506913094
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +400,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2859171895246083550}
   m_Father: {fileID: 6728871138384035864}

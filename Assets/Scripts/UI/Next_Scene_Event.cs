@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Next_Scene_Event : MonoBehaviour
 {
-public void LoadingSceneCinematic(int _newScene)
+public void LoadingSceneCinematic()
     {
-        SceneManager.LoadScene(_newScene);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

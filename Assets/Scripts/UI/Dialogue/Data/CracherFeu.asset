@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CracherFeu
   m_EditorClassIdentifier: 
   Dialogue:
-  - "Recette termin\xE9e avec succ\xE8s !\nVous pouvez cracher du feu !"
+  - "Graouh ! Je vais pouvoir me r\xE9chauffer maintenant que je peux cracher du
+    feu."

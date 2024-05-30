@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
             Flip();
             Move();
         }
-
+        HandleJumpingAndWallJumping();
         // SAUTER
         if (MyInputActions.Player.Jump.IsPressed() && GameManager.Instance.getIsGrounded())
         {
@@ -123,29 +123,6 @@ public class Player : MonoBehaviour
             RecipeManager.Instance.setIsDigging(false);
             animator.SetBool("IsDigging", RecipeManager.Instance.getIsDigging());
         }
-
-        // WALL JUMP
-        if (isTouchingWallLeft && MyInputActions.Player.Jump.IsPressed())
-        {
-            WallJump(Vector2.right);
-            animator.SetBool("IsWallTouched", isTouchingWallLeft);
-        }
-        else
-        {
-            animator.SetBool("IsWallTouched", false);
-        }
-
-        if (isTouchingWallRight && MyInputActions.Player.Jump.IsPressed())
-        {
-            WallJump(Vector2.left);
-            animator.SetBool("IsWallTouched", isTouchingWallRight);
-            
-        }
-        else
-        {
-            animator.SetBool("IsWallTouched", false);
-        }
-
 
         if (GameManager.Instance.getIsJumping())
         {
@@ -222,12 +199,35 @@ public class Player : MonoBehaviour
         RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, -GameManager.Instance.getGlideSpeed());
     }
 
-    private void WallJump(Vector2 wallDirection)
+  private void HandleJumpingAndWallJumping()
     {
-        Vector2 jumpDirection = Vector2.up + wallDirection;
+        if (MyInputActions.Player.Jump.IsPressed() && GameManager.Instance.getIsGrounded())
+        {
+            GameManager.Instance.setIsJumping(true);
+            animator.SetBool("IsJumping", true);
+            Jump();
+        }
+        else if (MyInputActions.Player.Jump.IsPressed() && (isTouchingWallLeft || isTouchingWallRight))
+        {
+            WallJump();
+        }
+        else
+        {
+            GameManager.Instance.setIsJumping(false);
+            animator.SetBool("IsJumping", false);
+        }
+
+        animator.SetBool("IsWallTouched", isTouchingWallLeft || isTouchingWallRight);
+    }
+
+    private void WallJump()
+    {
+        Vector2 wallJumpDirection = isTouchingWallLeft ? Vector2.right : Vector2.left;
+        Vector2 jumpDirection = Vector2.up + wallJumpDirection;
         // jumpDirection.Normalize();
 
         RbPlayer.velocity = jumpDirection * GameManager.Instance.getJumpForce();
+        // animator.SetTrigger("WallJump");
     }
 
     private void UpdateGroundCheckOffset()

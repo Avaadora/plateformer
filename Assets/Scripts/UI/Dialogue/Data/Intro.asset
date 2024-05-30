@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Intro
   m_EditorClassIdentifier: 
   Dialogue:
-  - "Il \xE9tait une fois..."
-  - Un dragon qui s'appelait Po
+  - "Il \xE9tait une fois, un petit dragon du nom de Po. Il venait de la tribu des
+    Grasgon. "
+  - Les Grasgon sont des dragons avides de savoir et de nouvelles connaissances.
+  - "Chaque petit dragon en \xE2ge de quitter son nid part d\xE9couvrir un nouveau
+    savoir pour enrichir sa tribu."
+  - "Po part donc d\xE9couvrir la cuisine et ses myst\xE8res..."

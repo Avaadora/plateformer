@@ -50,7 +50,7 @@ MonoBehaviour:
   SFXSound: {fileID: 9045145408960131304}
   Background: {fileID: 8300000, guid: 2a4496c9554ed3548a031550b4f4a022, type: 3}
   RecipeCompleted: {fileID: 8300000, guid: f7410e49fe056f54e9da28ad38017944, type: 3}
-  Walk: {fileID: 0}
+  Walk: {fileID: 8300000, guid: f181b5c87f8b4324c929ff167e276223, type: 3}
   PickUp1: {fileID: 8300000, guid: c5578cdfdc34d4a4ea36fcc2f10934a5, type: 3}
   PickUp2: {fileID: 8300000, guid: a2872d0ec1fd77a43baded15f3452d1a, type: 3}
   PickUp3: {fileID: 8300000, guid: 31b4bd3a989fcff4b825e7d97f7b5ba8, type: 3}

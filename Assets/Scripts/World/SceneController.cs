@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     public UnityEvent OnSceneIntro;
+    public UnityEvent OnSceneEnd;
 
     private static SceneController _instance;
     public static SceneController Instance
@@ -48,6 +49,7 @@ public class SceneController : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         CheckIntro();
+        CheckEnd();
     }
 
     public void LoadNextScene()
@@ -74,6 +76,19 @@ public class SceneController : MonoBehaviour
     public bool getIsSceneIntro()
     {
         return SceneManager.GetActiveScene().buildIndex == 1;
+    }
+
+    private void CheckEnd()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 4 && OnSceneEnd != null)
+        {
+            OnSceneEnd.Invoke();
+        }
+    }
+
+    public bool getIsSceneEnd()
+    {
+        return SceneManager.GetActiveScene().buildIndex == 4;
     }
 
 }

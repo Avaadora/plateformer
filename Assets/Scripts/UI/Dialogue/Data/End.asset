@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   Dialogue:
-  - "Et c'est ainsi que Po parti \xE0 l'aventure dans de nouveaux biomes."
+  - "Et c'est ainsi que Po parti \xE0 l'aventure dans de nouvelles zones a explorer."
+  - "Fort de ses nouvelles capacit\xE9s, il a pu affronter le froid glacial de lointaines
+    contr\xE9es enneig\xE9es. "
+  - "Il s'en va maintenant vers de grandes \xE9tendues de sable, qui sait o\xF9 son
+    chemin le m\xE8nera."
+  - "La qu\xEAte de Po pour devenir un vrai dragon ne fait que commencer !"

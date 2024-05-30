@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Level
   m_EditorClassIdentifier: 
   Dialogue:
-  - Aller c'est parti ! En route pour devenir un vrai dragon !
+  - Allez c'est parti ! En route pour devenir un vrai dragon !
+  - "Je dois \xEAtre capable de me d\xE9placer dans les airs, de d\xE9terrer ma nourriture
+    et de pouvoir me r\xE9chauffer."
