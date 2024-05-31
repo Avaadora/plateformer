@@ -1,0 +1,1447 @@
+fileFormatVersion: 2
+guid: 3d66697d4d08a6e4aba49ba7b8d5d235
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Piment_Anim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3456
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bfafe9b66bd19b49844ec0040f0f91a
+      internalID: 1825831413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_1
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 3456
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42caafe531858146888f6edd50a2966
+      internalID: -406223867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_2
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 3456
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f87a0f95a0fea744aee9b00e20b3b28
+      internalID: -631076741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_3
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 3456
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1321cd567e58c6341b5e09b99a745054
+      internalID: -973078866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_4
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 3456
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111b0c867b6d5494f93cb39f72fa171a
+      internalID: -127104258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_5
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 3456
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5d0a682c5cc0f478a44c1dfd91d479
+      internalID: -352081916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_6
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 3456
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830393c15c1804540a0abf2ed0cb12ed
+      internalID: -1201047288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec158bffab3909443a833b756154944b
+      internalID: -82992283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_8
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8101ee21ef755f42942ab917799a27e
+      internalID: -177301832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_9
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2806daab77a486142b6de479a3569a39
+      internalID: -641982907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_10
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f98280f7ea91d648b192a50b6bc4a96
+      internalID: -1407639594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_11
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028efe82c33534c4dbe49780bf3f31d9
+      internalID: -774322842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_12
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a001adbb40fe414bb007a5043c70790
+      internalID: -193504859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_13
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a50dce7d143d94d93a97461779a778
+      internalID: -857625814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a918da8590e22d48ab39011e9830712
+      internalID: -266613756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_15
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884a44053897a0c4a96f903cbee49846
+      internalID: 1436165530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_16
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414aeb4cc46406b4181ebe373d9f87d9
+      internalID: -1093208762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_17
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccdf54b18a150a04a813115f8eeae014
+      internalID: -69178626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_18
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108c1539b22c0274db3c62f5ce881ad2
+      internalID: -1783540005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_19
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9243ee8efd9e1d48b618a11ef34f948
+      internalID: -1648065149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_20
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2a6d629c26f3b41a7e7199d65fb329
+      internalID: 2107629781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5b6e74e6be5364899cd97380b33945
+      internalID: -1040554599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_22
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e269f227e5ee36148ad7500c63afcd3b
+      internalID: -1151881738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_23
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8ab641f0d964b4a940063cdc357490
+      internalID: 1225498226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_24
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf9fcb8b39b080478f978cc20dae711
+      internalID: 1720442965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_25
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0494595a7d7ae4f9d107807015b06a
+      internalID: -909787707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_26
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84edd0fe5b202b848897d18359ad1f8e
+      internalID: 1229864872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_27
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d9a9689b50f78478248f1804b4dbc7
+      internalID: 560375094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa6f89a0f2cc9e4c811a5170d24cf91
+      internalID: 834023378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_29
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6deec6167a66b848b925c8c8a2e75f2
+      internalID: -1751455769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_30
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd8282a078359a418e235bc522918bc
+      internalID: -223569123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_31
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfdb72e5491100499f3c2701e817f72
+      internalID: 1444114663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_32
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc61044363efca4eae67d3804b6bc75
+      internalID: 2080058348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_33
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db00abecfa1a7c6468184937f045c2f6
+      internalID: 238089303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_34
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83edb031119a5f94c9f837990d7d0c88
+      internalID: 924626245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8553afde2a12db4c9ce06af641b9b03
+      internalID: 309190621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_36
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f194c7def7748484cb915dec0d496fda
+      internalID: -1184574192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_37
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d862eb11e44d07408c3ee667d2866c3
+      internalID: 277237972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_38
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1895c87d16eb97e44a17ace1903e794b
+      internalID: -503975183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_39
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4f406fc202f2e4ba2d612e37df91d1
+      internalID: 223863731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_40
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945d01c5eedd97b4aaf0e32ed477fdfb
+      internalID: 1336823932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_41
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d871fa880c9807d49a21cd1e81654ee0
+      internalID: -201676204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbbf8b0c7b15694e808119062a751e0
+      internalID: 1447283094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_43
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c128bf1693bd1a04685fabeb9b7c163f
+      internalID: 554472786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_44
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0d5ee2b78e1404ca00955e1e686af1
+      internalID: -709154866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_45
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce04cdcdaaddb64facea7164591607f
+      internalID: -1818828354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_46
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa76ee2a1ddaec4193c96ea7702b6b5
+      internalID: -707472264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_47
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9fd5632429b6147b24243812289cba
+      internalID: -304215863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_48
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b2dd4ba08882f48afed5245ab46806
+      internalID: -2010702383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafeddabb5b92f54ba3e3e126cb98b42
+      internalID: -1266450031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_50
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8da3340d642cc42ae592768d2a5152
+      internalID: 625932992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_51
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19d7217fbf0e8f45add9492fdbee199
+      internalID: 664024757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_52
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2ca7a9a636e3940a54398ea6cff265
+      internalID: -133328049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_53
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbee970e8c5ad1e45b10e1eb0ce64a32
+      internalID: 1825085890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_54
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360493c536dc2734cb4994e67be794f6
+      internalID: 1230865855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_55
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cf43b5b643241479655d484094d905
+      internalID: -1592977269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423b254aa366da44bb9a09b355e51d72
+      internalID: -736017892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_57
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 0
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e24f73a6d71bda4681058d44cf3772f
+      internalID: -717809980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_58
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 0
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0af2e31035066f4e89e11404b127ff0
+      internalID: 1553831936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piment_Anim_59
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 0
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6139183e696a8945bdc6e8bbb06ce12
+      internalID: -112957545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Piment_Anim_0: 1825831413
+      Piment_Anim_1: -406223867
+      Piment_Anim_10: -1407639594
+      Piment_Anim_11: -774322842
+      Piment_Anim_12: -193504859
+      Piment_Anim_13: -857625814
+      Piment_Anim_14: -266613756
+      Piment_Anim_15: 1436165530
+      Piment_Anim_16: -1093208762
+      Piment_Anim_17: -69178626
+      Piment_Anim_18: -1783540005
+      Piment_Anim_19: -1648065149
+      Piment_Anim_2: -631076741
+      Piment_Anim_20: 2107629781
+      Piment_Anim_21: -1040554599
+      Piment_Anim_22: -1151881738
+      Piment_Anim_23: 1225498226
+      Piment_Anim_24: 1720442965
+      Piment_Anim_25: -909787707
+      Piment_Anim_26: 1229864872
+      Piment_Anim_27: 560375094
+      Piment_Anim_28: 834023378
+      Piment_Anim_29: -1751455769
+      Piment_Anim_3: -973078866
+      Piment_Anim_30: -223569123
+      Piment_Anim_31: 1444114663
+      Piment_Anim_32: 2080058348
+      Piment_Anim_33: 238089303
+      Piment_Anim_34: 924626245
+      Piment_Anim_35: 309190621
+      Piment_Anim_36: -1184574192
+      Piment_Anim_37: 277237972
+      Piment_Anim_38: -503975183
+      Piment_Anim_39: 223863731
+      Piment_Anim_4: -127104258
+      Piment_Anim_40: 1336823932
+      Piment_Anim_41: -201676204
+      Piment_Anim_42: 1447283094
+      Piment_Anim_43: 554472786
+      Piment_Anim_44: -709154866
+      Piment_Anim_45: -1818828354
+      Piment_Anim_46: -707472264
+      Piment_Anim_47: -304215863
+      Piment_Anim_48: -2010702383
+      Piment_Anim_49: -1266450031
+      Piment_Anim_5: -352081916
+      Piment_Anim_50: 625932992
+      Piment_Anim_51: 664024757
+      Piment_Anim_52: -133328049
+      Piment_Anim_53: 1825085890
+      Piment_Anim_54: 1230865855
+      Piment_Anim_55: -1592977269
+      Piment_Anim_56: -736017892
+      Piment_Anim_57: -717809980
+      Piment_Anim_58: 1553831936
+      Piment_Anim_59: -112957545
+      Piment_Anim_6: -1201047288
+      Piment_Anim_7: -82992283
+      Piment_Anim_8: -177301832
+      Piment_Anim_9: -641982907
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

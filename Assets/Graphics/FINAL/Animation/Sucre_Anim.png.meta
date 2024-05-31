@@ -1,0 +1,1315 @@
+fileFormatVersion: 2
+guid: 09d7be005a9c44c4a934df6566c16fcd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sucre_Anim_0
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a33017657a6384396b87f4fcb9ba11
+      internalID: 1459246591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_1
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38abc52c312b704f9400be74e321aba
+      internalID: 808837389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_2
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f211eff08680de6439ed7448520e346b
+      internalID: -1293618871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_3
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d7d0db4c46e1842911a2765b4c0e46
+      internalID: 747740447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_4
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c440f1f7f8c038742a2ed6c64ab26344
+      internalID: 264793141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_5
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 3024
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a87d9dca7f95d429c4d16e45eefe23
+      internalID: 1133941088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0611cff41ccf742865215aa16ad739
+      internalID: 1079036308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_7
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae5035253d41d045999cd64d2e5c594
+      internalID: 652610998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_8
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431e20746b9a4c840b8901ed6cbe0cd1
+      internalID: 1732742484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_9
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a09e2fc306d3d74fa991f7274334e67
+      internalID: 1940197142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_10
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16226daf23b34f48a504a44eb56b84b
+      internalID: -20855641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_11
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d018308aefd628459c52ebe12669b73
+      internalID: 1818088154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_12
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 2592
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2515d990248b7fa428f2b22dc1d44660
+      internalID: 364906078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd849da4d2f228b4793f546dcc48aaf9
+      internalID: 1504931825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_14
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fc732b24d23e042913777087d825ab
+      internalID: -1786310284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_15
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4ff1a032cb47448a03480e1438dbd4
+      internalID: -1790030524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_16
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5344d69df00cc9443aac8f85bc9473f5
+      internalID: -1428051062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_17
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c585909f0477c874fb97584f70a8c149
+      internalID: -1121577760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_18
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fd568c74b99034db0b26ea763bec24
+      internalID: 1353255621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_19
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 2160
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1993037cfb3789041aefedd0fcf6cbe7
+      internalID: 2119226320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce11c67ad73e7c043afec9cfd1092a69
+      internalID: 701728715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_21
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92bfa1d4247aad4995833e73b4d09e4
+      internalID: 342928531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_22
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f6642b537688d42a1f57cf5faaf1a4
+      internalID: -1787292332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_23
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc4d22163de2394ea9e38dbd97dd37e
+      internalID: 1190632066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_24
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37479c40c3fa6d409756229925240ed
+      internalID: 2037124469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_25
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495632a35973f73498742d512434aaf1
+      internalID: -257909882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_26
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1728
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3fe58dbb77ac74683098c46e99916d
+      internalID: 1369761195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cc78bbf754ca44d9b2e9edc759c136
+      internalID: -1948257736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_28
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be5351ac6d512246a11e2b6666bd58d
+      internalID: 996637009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_29
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddfd282a732831944b59fc4bdd421657
+      internalID: -1629361337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_30
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04a08e1c8d50484881c6fda59751e7d
+      internalID: 580758042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_31
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ae17e238905614fb1777b6343c261e
+      internalID: -1487794888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_32
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92be311dba9f88244bc96b882fd6fd0d
+      internalID: 1121001624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_33
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e222547d72c094e92f1d4797d7a92e
+      internalID: 1446984430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b6c9c2be70a024cb856a6040cc39ee
+      internalID: -952585717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_35
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c73743497d6c547acbb85a48a00a60
+      internalID: -488559938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_36
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd5532a6ee44ea459e11837b915efe3
+      internalID: -410329460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_37
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf10a29087208bd499ab3a7c898d67be
+      internalID: 1455203586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_38
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ccf4a1b523e02478d09d7b89fcae53
+      internalID: -1634741222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_39
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46a60b149eb238408c6585eceb18dc4
+      internalID: 762184809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_40
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c48148bd77188742b31307cec685322
+      internalID: -1125441772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76c4c112da631b4a9a372936064152c
+      internalID: 1324764084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_42
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32fa41f71214174fb291710e7e12585
+      internalID: -1230522607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_43
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e4cf161ca295c42ba02ca285dd03b3
+      internalID: 14634228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_44
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcfdc908dc2da24985b5c72fc2f350c
+      internalID: -1845865490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_45
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5040ece1782f16343a8572c5d8a153cd
+      internalID: -1628639164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_46
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5138fec457f29d4eb187385f9285ba0
+      internalID: -2056353425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_47
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8e3d1d06747b644b9081cea4e437f0
+      internalID: 1989104268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66584b2e80dd04c44870524885cf1f95
+      internalID: 712550202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_49
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 0
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9488c69f80e1b4cbc0f55b3f134445
+      internalID: 73008965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_50
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 0
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f6f395dee3b7845bb817a351d27f70
+      internalID: -1988233504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_51
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 0
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a1589861f37d94a90060e2d2616573
+      internalID: -742625863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_52
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 0
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3eb639dddea924faee3e43a4b84bbc
+      internalID: -1365120924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sucre_Anim_53
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 0
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e8cb21d23c9444fb1d92ba9f112d9f
+      internalID: -859996194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sucre_Anim_0: 1459246591
+      Sucre_Anim_1: 808837389
+      Sucre_Anim_10: -20855641
+      Sucre_Anim_11: 1818088154
+      Sucre_Anim_12: 364906078
+      Sucre_Anim_13: 1504931825
+      Sucre_Anim_14: -1786310284
+      Sucre_Anim_15: -1790030524
+      Sucre_Anim_16: -1428051062
+      Sucre_Anim_17: -1121577760
+      Sucre_Anim_18: 1353255621
+      Sucre_Anim_19: 2119226320
+      Sucre_Anim_2: -1293618871
+      Sucre_Anim_20: 701728715
+      Sucre_Anim_21: 342928531
+      Sucre_Anim_22: -1787292332
+      Sucre_Anim_23: 1190632066
+      Sucre_Anim_24: 2037124469
+      Sucre_Anim_25: -257909882
+      Sucre_Anim_26: 1369761195
+      Sucre_Anim_27: -1948257736
+      Sucre_Anim_28: 996637009
+      Sucre_Anim_29: -1629361337
+      Sucre_Anim_3: 747740447
+      Sucre_Anim_30: 580758042
+      Sucre_Anim_31: -1487794888
+      Sucre_Anim_32: 1121001624
+      Sucre_Anim_33: 1446984430
+      Sucre_Anim_34: -952585717
+      Sucre_Anim_35: -488559938
+      Sucre_Anim_36: -410329460
+      Sucre_Anim_37: 1455203586
+      Sucre_Anim_38: -1634741222
+      Sucre_Anim_39: 762184809
+      Sucre_Anim_4: 264793141
+      Sucre_Anim_40: -1125441772
+      Sucre_Anim_41: 1324764084
+      Sucre_Anim_42: -1230522607
+      Sucre_Anim_43: 14634228
+      Sucre_Anim_44: -1845865490
+      Sucre_Anim_45: -1628639164
+      Sucre_Anim_46: -2056353425
+      Sucre_Anim_47: 1989104268
+      Sucre_Anim_48: 712550202
+      Sucre_Anim_49: 73008965
+      Sucre_Anim_5: 1133941088
+      Sucre_Anim_50: -1988233504
+      Sucre_Anim_51: -742625863
+      Sucre_Anim_52: -1365120924
+      Sucre_Anim_53: -859996194
+      Sucre_Anim_6: 1079036308
+      Sucre_Anim_7: 652610998
+      Sucre_Anim_8: 1732742484
+      Sucre_Anim_9: 1940197142
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
