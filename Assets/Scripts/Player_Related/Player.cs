@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
 
     private InputController MyInputActions;
 
+    private AudioManager audioManager;
+
     void Awake()
     {
         RbPlayer = GetComponent<Rigidbody2D>();
@@ -46,6 +48,8 @@ public class Player : MonoBehaviour
 
         MyInputActions.Player.Dig.started += ctx => StartDig();
         MyInputActions.Player.Dig.canceled += ctx => StopDig();
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -84,9 +88,12 @@ public class Player : MonoBehaviour
         if (!(HorizontalInput > 0 && isTouchingWallRight) || (HorizontalInput < 0 && isTouchingWallLeft))
         {
             Flip();
-            Move();
+            Move(); ;
+            HandleWalkSound();
         }
+
         HandleJumpingAndWallJumping();
+
         // SAUTER
         if (MyInputActions.Player.Jump.IsPressed() && GameManager.Instance.getIsGrounded())
         {
@@ -186,6 +193,21 @@ public class Player : MonoBehaviour
         RbPlayer.velocity = Vector2.SmoothDamp(RbPlayer.velocity, targetVelocity, ref zeroVelocity, GameManager.Instance.getSmoothing());
     }
 
+    private void HandleWalkSound()
+    {
+        if (Mathf.Abs(HorizontalInput) > 0.1f && GameManager.Instance.getIsGrounded())
+        {
+            if (!AudioManager._Instance.SFXSound.isPlaying)
+            {
+                AudioManager._Instance.PlayWalkSound(3f);
+            }
+        }
+        else
+        {
+            AudioManager._Instance.StopWalkSound();
+        }
+    }
+
     private void Jump()
     {
         //Vector2 horizontalVelocity = new Vector2(RbPlayer.velocity.x, 0f);
@@ -199,7 +221,7 @@ public class Player : MonoBehaviour
         RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, -GameManager.Instance.getGlideSpeed());
     }
 
-  private void HandleJumpingAndWallJumping()
+    private void HandleJumpingAndWallJumping()
     {
         if (MyInputActions.Player.Jump.IsPressed() && GameManager.Instance.getIsGrounded())
         {

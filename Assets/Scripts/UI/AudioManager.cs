@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [Header("------------Audio Source------------")]
-    [SerializeField] AudioSource MainTheme, SFXSound;
+    [SerializeField] public AudioSource MainTheme, SFXSound, WalkSound;
 
     [Header("------------Audio Clip------------")]
     public AudioClip Background, RecipeCompleted, Walk, PickUp1, PickUp2, PickUp3, UiButton;
@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+
     }
 
     private void Start()
@@ -37,5 +37,19 @@ public class AudioManager : MonoBehaviour
         SFXSound.PlayOneShot(clip);
     }
 
+    public void PlayWalkSound(float pitch)
+    {
+        WalkSound.pitch = pitch;
+        if (!WalkSound.isPlaying)
+        {
+            WalkSound.clip = Walk;
+            WalkSound.loop = true; // Boucle le son de marche
+            WalkSound.Play();
+        }
+    }
 
+    public void StopWalkSound()
+    {
+        WalkSound.Stop();
+    }
 }

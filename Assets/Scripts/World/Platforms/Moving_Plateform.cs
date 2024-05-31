@@ -7,7 +7,7 @@ public class Moving_Plateform : Plateforme_Mobile
 {
     private List<Vector2> LastKnowChildPostion = new List<Vector2>();
     private int NextCheckpoint = 0;
-    private float Speed = 5.5f;
+    private float Speed = 3f;
     private int Sens = 1;
 
     [SerializeField] private bool IsPingPong;

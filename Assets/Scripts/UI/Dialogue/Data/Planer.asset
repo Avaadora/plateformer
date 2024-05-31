@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Planer
   m_EditorClassIdentifier: 
   Dialogue:
-  - "Je peux planer c'est g\xE9nial !"
+  - "Je peux planer, c'est g\xE9nial !"
   - Maintenez le BTN DROIT de la souris pour planer.

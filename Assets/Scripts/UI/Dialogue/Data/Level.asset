@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue:
   - Allez c'est parti ! En route pour devenir un vrai dragon !
-  - "Je dois \xEAtre capable de me d\xE9placer dans les airs, de d\xE9terrer ma nourriture
-    et de pouvoir me r\xE9chauffer."
+  - "Je dois \xEAtre capable de me d\xE9placer dans les airs."
+  - Je pourrais planer avec mes petites ailes !
+  - "Pouvoir creuser pour aller chercher de la nourriture est aussi une bonne id\xE9e... "
+  - Hmmm...
+  - "Peut-\xEAtre que j'arriverai \xE0 cracher du feu, qui sait ?"
