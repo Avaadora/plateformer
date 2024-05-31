@@ -7,6 +7,7 @@ public class DigUpItem : MonoBehaviour
     [SerializeField] private Item Item;
 
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject ShowKeycap;
 
     private InputController InputAction;
     private AudioManager audioManager;
@@ -16,14 +17,24 @@ public class DigUpItem : MonoBehaviour
         InputAction = new InputController();
         InputAction.Player.Enable();
 
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        ShowKeycap.SetActive(false);
 
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && RecipeManager.Instance.getCanDig())
+        {
+            ShowKeycap.SetActive(true);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player") && InputAction.Player.Dig.triggered)
         {
+
             if (Item.isDiggable && Item.Tag.Equals("Diggable"))
             {
                 // Vérifier si l'objet appartient à la recette de cracher du feu

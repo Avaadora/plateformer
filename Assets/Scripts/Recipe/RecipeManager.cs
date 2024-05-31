@@ -66,9 +66,9 @@ public class RecipeManager : MonoBehaviour
 
     static int GlideIndex, DigIndex, FireIndex, WallJumpIndex = 0;
 
-    public UnityEvent OnCanGlideChanged; 
-    public UnityEvent OnCanDigChanged; 
-    public UnityEvent OnCanFireChanged; 
+    public UnityEvent OnCanGlideChanged;
+    public UnityEvent OnCanDigChanged;
+    public UnityEvent OnCanFireChanged;
     public UnityEvent OnCanWallJumpChanged;
 
     [Header("------------Scene Management------------")]
@@ -308,40 +308,12 @@ public class RecipeManager : MonoBehaviour
 
     public void ClearUI()
     {
-        Debug.Log("COUCOU : "+canWallJump);
-        if (canWallJump)
+        if (!(canDig || canGlide || canFire || canWallJump) )
         {
-            
-            for (int i = 0; i < WallJumpImage.Length; i++)
-            {
-                WallJumpImage[i].color = Color.black;
-            }
+            isInOrder = false;
         }
 
-        if (!canFire)
-        {
-            foreach (Image FireItem in FireImage)
-            {
-                FireItem.color = new Color(0, 0, 0);
-            }
-        }
-
-        if (!canDig)
-        {
-            foreach (Image DigItem in DigImage)
-            {
-                DigItem.color = new Color(0, 0, 0);
-            }
-        }
-
-        if (!canGlide)
-        {
-            foreach (Image GlideItem in GlideImage)
-            {
-                GlideItem.color = new Color(0, 0, 0);
-            }
-        }
-
+       
     }
 
     IEnumerator RecipeCompleted(float time)

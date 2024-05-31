@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c4807408ecf5f434fb3ca13ad96e9a25
+guid: de9fdf6b97cdeb641ab6b69559f03420
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pomme_Anim_0
+      name: Pomme_Anim_V2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 8640
-        width: 1920
-        height: 1080
+        y: 3456
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3e29d8abe386464c831cb1ffc46aac9
-      internalID: -1424606041
+      spriteID: 19ef428f0c3c1ea4f9207469a50a0c11
+      internalID: 831316340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_1
+      name: Pomme_Anim_V2_1
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 8640
-        width: 1920
-        height: 1080
+        x: 406
+        y: 3456
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c08b371cb5cb0240ac3ff0f68404aa2
-      internalID: -6081710
+      spriteID: 0a6f4e730bd9cf646bfdf805f34bd5c2
+      internalID: 1495528849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_2
+      name: Pomme_Anim_V2_2
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 8640
-        width: 1920
-        height: 1080
+        x: 812
+        y: 3456
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09596a71587a0524ba36d1d1531c7ee9
-      internalID: 1580015751
+      spriteID: 8b848aab2efe9cc499c6f6b96b43488c
+      internalID: -1780680999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_3
+      name: Pomme_Anim_V2_3
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 8640
-        width: 1920
-        height: 1080
+        x: 1218
+        y: 3456
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e56a1a4829ca8504f90094ca963bf4ac
-      internalID: 131599350
+      spriteID: 595f1c36a9bcf2e488b890510ff6b7ed
+      internalID: 1690952747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_4
+      name: Pomme_Anim_V2_4
       rect:
         serializedVersion: 2
-        x: 7680
-        y: 8640
-        width: 1920
-        height: 1080
+        x: 1624
+        y: 3456
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d31aaec7daf475d4b93c936864691a06
-      internalID: 251243253
+      spriteID: c8430730fad9681429b07cc6f1b4fd07
+      internalID: 1353459422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_5
+      name: Pomme_Anim_V2_5
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 8640
-        width: 1920
-        height: 1080
+        x: 2030
+        y: 3456
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a97e92443e7694c9c976c0d9c9ac17
-      internalID: 1332312906
+      spriteID: e6dca1a040329c6479dea1a166dbc4b9
+      internalID: 1404274239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_6
+      name: Pomme_Anim_V2_6
       rect:
         serializedVersion: 2
-        x: 11520
-        y: 8640
-        width: 1920
-        height: 1080
+        x: 2436
+        y: 3456
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,167 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfc8deac144fb22479d154ac59b1f9cb
-      internalID: -1187647192
+      spriteID: bdb9759dba11cdb4ba5344966a0d1bb4
+      internalID: -1566047771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_7
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 7560
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6340eabb7c1671429b5112118f82fce
-      internalID: -1536017159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_8
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 7560
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c8c7b638e6a8054f864aa8bff4fcb6b
-      internalID: -621027164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_9
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 7560
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b91425289106944191f64ae41cc22ae
-      internalID: -1153104247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_10
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 7560
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7615d218b2bb09468857bb8f4483074
-      internalID: 186001403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_11
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 7560
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d505fd95de4a5f45a5f9fbf6d551a70
-      internalID: 1495117425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_12
-      rect:
-        serializedVersion: 2
-        x: 9600
-        y: 7560
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76f71b9b910751645ad1134d07b1bfe2
-      internalID: 1603937763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_13
-      rect:
-        serializedVersion: 2
-        x: 11520
-        y: 7560
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa9c589d9f55cb4459294d8ede547aac
-      internalID: 913258230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_14
+      name: Pomme_Anim_V2_7
       rect:
         serializedVersion: 2
         x: 0
-        y: 6480
-        width: 1920
-        height: 1080
+        y: 3024
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 852a0d31074766a479f52a8ce4f6fc24
-      internalID: 190870333
+      spriteID: a2ac5f9063ad55144bf67ba1687c43cf
+      internalID: -1149003658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_15
+      name: Pomme_Anim_V2_8
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 6480
-        width: 1920
-        height: 1080
+        x: 406
+        y: 3024
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab92adc7f2cc30d4c9281e3e1ea232f6
-      internalID: 324526080
+      spriteID: b87a172ee07bf5d4197f95f426733add
+      internalID: 1676263566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_16
+      name: Pomme_Anim_V2_9
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 6480
-        width: 1920
-        height: 1080
+        x: 812
+        y: 3024
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd29886ebbbebb14193f1eb5d2991637
-      internalID: -1498514520
+      spriteID: 336d5c27d41e95a42a617a52f91debf3
+      internalID: 294639343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_17
+      name: Pomme_Anim_V2_10
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 6480
-        width: 1920
-        height: 1080
+        x: 1218
+        y: 3024
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efa1ed43c1891df46a644c9a58cf476d
-      internalID: 812099457
+      spriteID: 0b0595647e748a84e9cb9ce2bfadc0ee
+      internalID: -301164854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_18
+      name: Pomme_Anim_V2_11
       rect:
         serializedVersion: 2
-        x: 7680
-        y: 6480
-        width: 1920
-        height: 1080
+        x: 1624
+        y: 3024
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d20774d2acdd124aaebab7bae76c036
-      internalID: -1626177543
+      spriteID: 6a6ed22cc2979554db1f53b802255099
+      internalID: 1955677467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_19
+      name: Pomme_Anim_V2_12
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 6480
-        width: 1920
-        height: 1080
+        x: 2030
+        y: 3024
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,20 +376,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93846643f5ec3c245967ac68d7525f6a
-      internalID: 1725735366
+      spriteID: bf780aa55539a384bb34ae56da058e89
+      internalID: 610727976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_20
+      name: Pomme_Anim_V2_13
       rect:
         serializedVersion: 2
-        x: 11520
-        y: 6480
-        width: 1920
-        height: 1080
+        x: 2436
+        y: 3024
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,167 +397,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81264646b8508304aab017827f68da5c
-      internalID: -1333896082
+      spriteID: 07a5d52bfbf0c4543b4cb4e504424c70
+      internalID: -1744208016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_21
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 5400
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64662b2ca20b1ae44822bd2d23ef234e
-      internalID: -567106910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_22
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 5400
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdbd7cd135b0e2a4ab4411ced93cbea0
-      internalID: -311687629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_23
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 5400
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1eb5d7bc92f513447b95d8c7200ad908
-      internalID: 1245731301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_24
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 5400
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8396d2362ff701b46a4ce4ec85aaa181
-      internalID: 520041452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_25
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 5400
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23ef5b8cc79fdec4692f46ceaff0fb17
-      internalID: 310107954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_26
-      rect:
-        serializedVersion: 2
-        x: 9600
-        y: 5400
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdf2f91d4f4ed9745a99052aa6c46427
-      internalID: -1003955373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_27
-      rect:
-        serializedVersion: 2
-        x: 11520
-        y: 5400
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57e80884128115c4eb9cade3b0c1adee
-      internalID: 1541260253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_28
+      name: Pomme_Anim_V2_14
       rect:
         serializedVersion: 2
         x: 0
-        y: 4320
-        width: 1920
-        height: 1080
+        y: 2592
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -712,20 +418,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22b8f611ee21f634a936cc8e205e5ce6
-      internalID: 638107972
+      spriteID: d547e714f9a3ea54b98cce247fee0602
+      internalID: -725565434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_29
+      name: Pomme_Anim_V2_15
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 4320
-        width: 1920
-        height: 1080
+        x: 406
+        y: 2592
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,20 +439,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 657b5a8ddfcf2e342b941c006a3d1fea
-      internalID: 1706598871
+      spriteID: 4320220880b4f98469b97fb339320539
+      internalID: 899669681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_30
+      name: Pomme_Anim_V2_16
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 4320
-        width: 1920
-        height: 1080
+        x: 812
+        y: 2592
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -754,20 +460,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b5cc0a93dcefde40b28e2fc88531cfa
-      internalID: 1040892284
+      spriteID: 9a19ea8c625ae394885842e06cbdd1ec
+      internalID: 689419605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_31
+      name: Pomme_Anim_V2_17
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 4320
-        width: 1920
-        height: 1080
+        x: 1218
+        y: 2592
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -775,20 +481,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b03bf58725f271f4f8390252f19e5dfa
-      internalID: 412801825
+      spriteID: 049dadc7af43c0b4a81b7fd292d586f4
+      internalID: -905935695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_32
+      name: Pomme_Anim_V2_18
       rect:
         serializedVersion: 2
-        x: 7680
-        y: 4320
-        width: 1920
-        height: 1080
+        x: 1624
+        y: 2592
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -796,20 +502,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d412c96f5e312041bc0a5009d75f381
-      internalID: 696890009
+      spriteID: 319113141925f3a489d75522bd8c1e84
+      internalID: -955309979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_33
+      name: Pomme_Anim_V2_19
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 4320
-        width: 1920
-        height: 1080
+        x: 2030
+        y: 2592
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -817,20 +523,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9378b31d1655b349b16ca5efd7ce9a8
-      internalID: 1000078742
+      spriteID: 39c8fc0f7a1d4234abb848c60aadb0a1
+      internalID: -1583229438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_34
+      name: Pomme_Anim_V2_20
       rect:
         serializedVersion: 2
-        x: 11520
-        y: 4320
-        width: 1920
-        height: 1080
+        x: 2436
+        y: 2592
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -838,167 +544,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bbd518dc90d0484e99a766bce18a454
-      internalID: -1630171156
+      spriteID: 3c8457b4c045d0441be156f267032e0d
+      internalID: -652702032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_35
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fddf2af1c1614d046896cbff0ae74ec1
-      internalID: -2025724703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_36
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6429c9836a5a7e4408daf6bd29ae4204
-      internalID: -948223878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_37
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f3202276e33d6246b60eb486e54bc74
-      internalID: 1288091643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_38
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54099e9d9c03a5242b4f87e9f06323b2
-      internalID: -1353130531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_39
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d1ee4f9361bf7943a45e314aa2d3cde
-      internalID: -2090662066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_40
-      rect:
-        serializedVersion: 2
-        x: 9600
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da539b207dd8faf439a6fbf5911ebd0a
-      internalID: -1428272376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_41
-      rect:
-        serializedVersion: 2
-        x: 11520
-        y: 3240
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38106897125453d4dacc829c68f564a1
-      internalID: 908626305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pomme_Anim_42
+      name: Pomme_Anim_V2_21
       rect:
         serializedVersion: 2
         x: 0
         y: 2160
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1006,20 +565,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d760680331cb5944b93a9345edfb739
-      internalID: 824303960
+      spriteID: b788fb341ad03574c9258785e675ef25
+      internalID: 347028540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_43
+      name: Pomme_Anim_V2_22
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 406
         y: 2160
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1027,20 +586,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 855fb6e804de45442b3d75ddcf548e31
-      internalID: 1626987678
+      spriteID: 9b78617418c8ed0459bea26a7beab7fe
+      internalID: 860040634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_44
+      name: Pomme_Anim_V2_23
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 812
         y: 2160
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1048,20 +607,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f50f65efe9936642abf60e8ac1a424b
-      internalID: -986413565
+      spriteID: d225312652985cc40977fda2158c006b
+      internalID: 1256385325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_45
+      name: Pomme_Anim_V2_24
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 1218
         y: 2160
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1069,20 +628,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26e2ea764480a734ab26c365a2ab97f1
-      internalID: 955856454
+      spriteID: 9e0e2904a3e9caa42b5d04a0977aa935
+      internalID: 249994660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_46
+      name: Pomme_Anim_V2_25
       rect:
         serializedVersion: 2
-        x: 7680
+        x: 1624
         y: 2160
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1090,20 +649,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0ba484be68558b4892a949ac5fe1820
-      internalID: 1504165313
+      spriteID: 1a0c6ce2c0424884bb238357e4e6825a
+      internalID: 160631888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_47
+      name: Pomme_Anim_V2_26
       rect:
         serializedVersion: 2
-        x: 9600
+        x: 2030
         y: 2160
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1111,20 +670,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4d6a5ead339d9b4db3e776b2026de20
-      internalID: 858749833
+      spriteID: e19c2797564dc384db8570accd9eb273
+      internalID: 1600790190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_48
+      name: Pomme_Anim_V2_27
       rect:
         serializedVersion: 2
-        x: 11520
+        x: 2436
         y: 2160
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1132,20 +691,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5056dbd054392c448fab4d9f3d8d62a
-      internalID: -117195527
+      spriteID: 8084e259f6cc2e44cbd4ec4ae6ebc91d
+      internalID: 2138537173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_49
+      name: Pomme_Anim_V2_28
       rect:
         serializedVersion: 2
         x: 0
-        y: 1080
-        width: 1920
-        height: 1080
+        y: 1728
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1153,20 +712,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81f55c05c5b6c0543af687ee654f2b17
-      internalID: 799670429
+      spriteID: 557db79594a2ab9488be02306d8c868a
+      internalID: -1255266650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_50
+      name: Pomme_Anim_V2_29
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 1080
-        width: 1920
-        height: 1080
+        x: 406
+        y: 1728
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1174,20 +733,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6df3c773838f5a4b835075a3affe3c8
-      internalID: 541262065
+      spriteID: ef003555124dcd6498ee9c3012d9ea86
+      internalID: -1041637429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_51
+      name: Pomme_Anim_V2_30
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 1080
-        width: 1920
-        height: 1080
+        x: 812
+        y: 1728
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1195,20 +754,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d3e6fe6de390c14ea808e6d84b34424
-      internalID: -916596425
+      spriteID: a87311e1e1bdcd148acc1c303bd54422
+      internalID: -963456697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_52
+      name: Pomme_Anim_V2_31
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 1080
-        width: 1920
-        height: 1080
+        x: 1218
+        y: 1728
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1216,20 +775,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dea7a0bf4ad55d149af3c6a70f92b217
-      internalID: 2139144976
+      spriteID: 7de9499191b73d243b9cb00e56ad7c12
+      internalID: -1444928832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_53
+      name: Pomme_Anim_V2_32
       rect:
         serializedVersion: 2
-        x: 7680
-        y: 1080
-        width: 1920
-        height: 1080
+        x: 1624
+        y: 1728
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1237,20 +796,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67c7b126ee7fded439c004388220d678
-      internalID: -226219313
+      spriteID: b649ef0846aabcd438b29a0efa076429
+      internalID: -1261759693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_54
+      name: Pomme_Anim_V2_33
       rect:
         serializedVersion: 2
-        x: 9600
-        y: 1080
-        width: 1920
-        height: 1080
+        x: 2030
+        y: 1728
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1258,20 +817,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cab625c6c0c7e04c9b489e9cb6b6b08
-      internalID: -26441013
+      spriteID: 68043a450b2dd29489da84404a58e8c2
+      internalID: 1111499586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_55
+      name: Pomme_Anim_V2_34
       rect:
         serializedVersion: 2
-        x: 11520
-        y: 1080
-        width: 1920
-        height: 1080
+        x: 2436
+        y: 1728
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1279,20 +838,461 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 381b206b9682674478962857f7957f9d
-      internalID: -201460414
+      spriteID: 7a971083f0f048a458713b7d03061836
+      internalID: -263418403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_56
+      name: Pomme_Anim_V2_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1aa4e613bd42d4b9809064c6686402
+      internalID: -703910944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_36
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137e12013024f164f849ebe251f9ee39
+      internalID: 1605265600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_37
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94efc3d577723447a2dc70148e3c0a2
+      internalID: 538447473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_38
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf725f364a4dbc5439309b2715e24d44
+      internalID: 1927620877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_39
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981641564df25c642841501aea4268b9
+      internalID: -1705868467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_40
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76ee5f81b36082459dcc32a843810ea
+      internalID: -1137395538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_41
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1296
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdf9101e042d2e448f0a8c50d6d9719
+      internalID: 685402010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e170906c3f2c6bc4b804a91927e88e92
+      internalID: -86967872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_43
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6597df1b060436847965189456bbf73f
+      internalID: 944909592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_44
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5e6f8267f4fcc44adcdaca33402bc2
+      internalID: 1741744406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_45
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8944e6664e794fe47bb77c71902b3426
+      internalID: 1815388374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_46
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd6fc076fe18654f90d708aab87b4c9
+      internalID: 732580883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_47
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc54f0ee28ed25e46a21507edffb1e8e
+      internalID: 1813629138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_48
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 864
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ea26d72a34e8f46a5fa8e0a36f6f8e
+      internalID: -306595516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77dd0d5f74affc642b7f815dbf9231bf
+      internalID: -1025157907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_50
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73690b45de3ee7741aadabeb89606c4f
+      internalID: -613591397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_51
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0217a50c85a1224a9296448cdfdfd70
+      internalID: -590112364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_52
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6851f2b2001ffb74091de7e107d7fc61
+      internalID: 1344090334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_53
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd855cb89b5cbe04093376f6313e05be
+      internalID: -1452607714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_54
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88fb6535988f6f49b50958ad4357eb7
+      internalID: -372746634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_55
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 432
+        width: 406
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4545f62b3cd874885f43597e5e1d4a
+      internalID: -1894758471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pomme_Anim_V2_56
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1300,20 +1300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1eab13a98a19d442bd9852e95407486
-      internalID: -2133844157
+      spriteID: 4277e4a089ea9d1499f5c575d878c8c2
+      internalID: -618084724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_57
+      name: Pomme_Anim_V2_57
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 406
         y: 0
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1321,20 +1321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3f819e1379564b488dd30f4dcef5dda
-      internalID: -1897452344
+      spriteID: 032dbeb711677194480cb05608affc79
+      internalID: -1199021099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_58
+      name: Pomme_Anim_V2_58
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 812
         y: 0
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1342,20 +1342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07aae07646c2ba448991e8426183e915
-      internalID: 1320375482
+      spriteID: 7a0e0c17d45bada4c9a1f0655c512ea4
+      internalID: -1823695873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pomme_Anim_59
+      name: Pomme_Anim_V2_59
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 1218
         y: 0
-        width: 1920
-        height: 1080
+        width: 406
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1363,8 +1363,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68abc1135b1e4214787925bf5b001477
-      internalID: -1064989843
+      spriteID: 110cccb6d6212144fbf55cad16b70ab9
+      internalID: -935628446
       vertices: []
       indices: 
       edges: []
@@ -1380,66 +1380,66 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pomme_Anim_0: -1424606041
-      Pomme_Anim_1: -6081710
-      Pomme_Anim_10: 186001403
-      Pomme_Anim_11: 1495117425
-      Pomme_Anim_12: 1603937763
-      Pomme_Anim_13: 913258230
-      Pomme_Anim_14: 190870333
-      Pomme_Anim_15: 324526080
-      Pomme_Anim_16: -1498514520
-      Pomme_Anim_17: 812099457
-      Pomme_Anim_18: -1626177543
-      Pomme_Anim_19: 1725735366
-      Pomme_Anim_2: 1580015751
-      Pomme_Anim_20: -1333896082
-      Pomme_Anim_21: -567106910
-      Pomme_Anim_22: -311687629
-      Pomme_Anim_23: 1245731301
-      Pomme_Anim_24: 520041452
-      Pomme_Anim_25: 310107954
-      Pomme_Anim_26: -1003955373
-      Pomme_Anim_27: 1541260253
-      Pomme_Anim_28: 638107972
-      Pomme_Anim_29: 1706598871
-      Pomme_Anim_3: 131599350
-      Pomme_Anim_30: 1040892284
-      Pomme_Anim_31: 412801825
-      Pomme_Anim_32: 696890009
-      Pomme_Anim_33: 1000078742
-      Pomme_Anim_34: -1630171156
-      Pomme_Anim_35: -2025724703
-      Pomme_Anim_36: -948223878
-      Pomme_Anim_37: 1288091643
-      Pomme_Anim_38: -1353130531
-      Pomme_Anim_39: -2090662066
-      Pomme_Anim_4: 251243253
-      Pomme_Anim_40: -1428272376
-      Pomme_Anim_41: 908626305
-      Pomme_Anim_42: 824303960
-      Pomme_Anim_43: 1626987678
-      Pomme_Anim_44: -986413565
-      Pomme_Anim_45: 955856454
-      Pomme_Anim_46: 1504165313
-      Pomme_Anim_47: 858749833
-      Pomme_Anim_48: -117195527
-      Pomme_Anim_49: 799670429
-      Pomme_Anim_5: 1332312906
-      Pomme_Anim_50: 541262065
-      Pomme_Anim_51: -916596425
-      Pomme_Anim_52: 2139144976
-      Pomme_Anim_53: -226219313
-      Pomme_Anim_54: -26441013
-      Pomme_Anim_55: -201460414
-      Pomme_Anim_56: -2133844157
-      Pomme_Anim_57: -1897452344
-      Pomme_Anim_58: 1320375482
-      Pomme_Anim_59: -1064989843
-      Pomme_Anim_6: -1187647192
-      Pomme_Anim_7: -1536017159
-      Pomme_Anim_8: -621027164
-      Pomme_Anim_9: -1153104247
+      Pomme_Anim_V2_0: 831316340
+      Pomme_Anim_V2_1: 1495528849
+      Pomme_Anim_V2_10: -301164854
+      Pomme_Anim_V2_11: 1955677467
+      Pomme_Anim_V2_12: 610727976
+      Pomme_Anim_V2_13: -1744208016
+      Pomme_Anim_V2_14: -725565434
+      Pomme_Anim_V2_15: 899669681
+      Pomme_Anim_V2_16: 689419605
+      Pomme_Anim_V2_17: -905935695
+      Pomme_Anim_V2_18: -955309979
+      Pomme_Anim_V2_19: -1583229438
+      Pomme_Anim_V2_2: -1780680999
+      Pomme_Anim_V2_20: -652702032
+      Pomme_Anim_V2_21: 347028540
+      Pomme_Anim_V2_22: 860040634
+      Pomme_Anim_V2_23: 1256385325
+      Pomme_Anim_V2_24: 249994660
+      Pomme_Anim_V2_25: 160631888
+      Pomme_Anim_V2_26: 1600790190
+      Pomme_Anim_V2_27: 2138537173
+      Pomme_Anim_V2_28: -1255266650
+      Pomme_Anim_V2_29: -1041637429
+      Pomme_Anim_V2_3: 1690952747
+      Pomme_Anim_V2_30: -963456697
+      Pomme_Anim_V2_31: -1444928832
+      Pomme_Anim_V2_32: -1261759693
+      Pomme_Anim_V2_33: 1111499586
+      Pomme_Anim_V2_34: -263418403
+      Pomme_Anim_V2_35: -703910944
+      Pomme_Anim_V2_36: 1605265600
+      Pomme_Anim_V2_37: 538447473
+      Pomme_Anim_V2_38: 1927620877
+      Pomme_Anim_V2_39: -1705868467
+      Pomme_Anim_V2_4: 1353459422
+      Pomme_Anim_V2_40: -1137395538
+      Pomme_Anim_V2_41: 685402010
+      Pomme_Anim_V2_42: -86967872
+      Pomme_Anim_V2_43: 944909592
+      Pomme_Anim_V2_44: 1741744406
+      Pomme_Anim_V2_45: 1815388374
+      Pomme_Anim_V2_46: 732580883
+      Pomme_Anim_V2_47: 1813629138
+      Pomme_Anim_V2_48: -306595516
+      Pomme_Anim_V2_49: -1025157907
+      Pomme_Anim_V2_5: 1404274239
+      Pomme_Anim_V2_50: -613591397
+      Pomme_Anim_V2_51: -590112364
+      Pomme_Anim_V2_52: 1344090334
+      Pomme_Anim_V2_53: -1452607714
+      Pomme_Anim_V2_54: -372746634
+      Pomme_Anim_V2_55: -1894758471
+      Pomme_Anim_V2_56: -618084724
+      Pomme_Anim_V2_57: -1199021099
+      Pomme_Anim_V2_58: -1823695873
+      Pomme_Anim_V2_59: -935628446
+      Pomme_Anim_V2_6: -1566047771
+      Pomme_Anim_V2_7: -1149003658
+      Pomme_Anim_V2_8: 1676263566
+      Pomme_Anim_V2_9: 294639343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
